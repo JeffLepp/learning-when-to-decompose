@@ -8,64 +8,64 @@
 
 ## 1. Working baseline and initial model
 
-The project asks two questions:
+### Research questions
 
-- When does breaking a task into subtasks (decomposition) let a *small, locally run* language model solve tasks it otherwise fails?
-- Can a supervised model learn to predict, before any generation, which model-and-strategy combination will succeed most cheaply?
+1. When does breaking a task into smaller pieces (decomposition) let a *small, locally run* language model solve tasks it otherwise fails?
+2. Can a machine-learning model predict, before running anything, which model and strategy will succeed most cheaply?
 
-**Pipeline.** The pipeline runs end to end on two tasks:
+### Tasks
 
-- **SCAN**, a public benchmark that maps commands such as `jump around left twice and walk` to action sequences;
-- **ChainOps**, a synthetic task we generated: chains of list operations such as "Start with [3, 8, 1, 5]. Reverse the list. Then remove every odd number." Because it is generated, no model could have memorized it.
+| Task | Example input | Why it was chosen |
+| --- | --- | --- |
+| SCAN | `jump around left twice and walk` → robot actions | Standard compositional benchmark |
+| ChainOps | "Start with [3, 8, 1, 5]. Reverse the list. Then remove every odd number." | New synthetic task, so no model can have memorized it |
 
-Every item is attempted by four local Qwen3 models (0.6B, 1.7B, 4B, 8B) using each of these strategies:
+### Models and strategies
 
-- **direct** (one answer);
-- **few-shot direct**;
-- **thinking** (private reasoning before answering);
-- **coarse decomposition:** the model plans and solves clause-sized pieces, and code repeats and concatenates them;
-- **fine decomposition:** the model parses the full structure and solves only atomic pieces;
-- two **diagnostic** conditions that separate planning errors from execution errors. *Gold plan* supplies the correct plan, and the model executes the pieces. *Code execution* lets the model plan, and code executes the pieces.
+Four local Qwen3 models (0.6B, 1.7B, 4B, 8B) attempt every item with every strategy:
 
-Diagnostics are never treated as usable strategies. Every call logs its tokens, time, and failures.
+| Strategy | What happens |
+| --- | --- |
+| Direct / few-shot (baselines) | The model answers in one step, with or without worked examples |
+| Thinking | The model reasons privately before answering |
+| Coarse decomposition | The model plans clause-sized pieces and solves each; code combines them |
+| Fine decomposition | The model parses the full structure and solves only tiny pieces |
+| Gold plan (diagnostic only) | The correct plan is supplied, which isolates execution errors from planning errors |
 
-**Baselines:**
+### Initial learned model
 
-- The direct and few-shot strategies are the solving baselines.
-- The initial learned controller is a logistic-regression and random-forest router. It was trained on a first 8B pilot (96 training, 32 validation, 32 audit commands). Validation selected logistic regression with threshold 0.5. On the audit set it used 6.9% fewer tokens than always decomposing, but answered one fewer command correctly (15/32 vs. 16/32).
-- The full router library is built and tested. It reproduces those pilot numbers exactly. It also adds three new input families: word-frequency (TF-IDF) features, activation probes that read the model's hidden states before it generates, and confidence-based cascades.
+A logistic-regression router trained on an 8B pilot (96 training, 32 validation, 32 test commands) predicts whether decomposition is needed. It used 6.9% fewer tokens than always decomposing, but got one fewer answer right (15/32 vs. 16/32). The expanded router adds richer features, including the model's internal activations.
 
 ## 2. Quantitative result and visualization
 
+### Accuracy by model size and strategy
+
 ![Development accuracy by model size and strategy](figures/checkpoint3_dev_accuracy.png)
 
-*Figure regenerated from the label files by `figures/make_checkpoint_fig.py`.*
+| Task | Model | Direct | Few-shot | Coarse decomp. | Fine decomp. | Thinking* |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| SCAN | 0.6B | 0.0% | 1.8% | 0.9% | 1.8% | 0% |
+| SCAN | 1.7B | 2.7% | 8.9% | 26.8% | 20.5% | 10% |
+| SCAN | 8B | 8.9% | 36.6% | **97.3%** | 95.5% | 55% |
+| ChainOps | 0.6B | 7.1% | 1.8% | 9.8% | 8.0% | 40% |
+| ChainOps | 1.7B | 17.0% | 13.4% | 18.8% | 44.6% | **95%** |
+| ChainOps | 8B | 33.0% | 38.4% | 41.1% | 91.1% | 100% |
 
-Development split, exact-match accuracy with 95% Wilson intervals. There are 112 items per cell; thinking was run on 20 items. Tokens are the mean input plus output tokens across all calls.
+*Exact-match accuracy on the development split: 112 items per cell, thinking 20 items. Example 95% interval: SCAN 8B coarse decomposition, 92.4–99.1%.*
 
-| Task | Model | Direct | Few-shot | Coarse decomp. | Fine decomp. | Thinking (n=20) | Gold plan (diag.) |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SCAN | 0.6B | 0.0% | 1.8% | 0.9% | 1.8% | 0% | 9.8% |
-| SCAN | 1.7B | 2.7% | 8.9% | 26.8% | 20.5% | 10% | 34.8% |
-| SCAN | 8B | 8.9% [4.9, 15.7] | 36.6% | **97.3% [92.4, 99.1]** | 95.5% | 55% | 100% |
-| ChainOps | 0.6B | 7.1% | 1.8% | 9.8% | 8.0% | 40% | 15.2% |
-| ChainOps | 1.7B | 17.0% | 13.4% | 18.8% | 44.6% | **95% [76.4, 99.1]** | 48.2% |
-| ChainOps | 8B | 33.0% | 38.4% | 41.1% | 91.1% [84.3, 95.1] | 100% | 92.0% |
+### Cost
 
-**Cost.**
+Decomposition at 8B uses about 4–5× the tokens of a direct answer (roughly 1,200–1,800 vs. 260–370). Thinking is similar in tokens but far slower: about 25 s per SCAN item at 8B, compared with about 1 s for decomposition.
 
-- Decomposition at 8B costs about 1,170–1,800 tokens per item, against about 260–370 for direct.
-- Thinking costs about 750–1,700 tokens. It is also far slower: about 25 s per SCAN item at 8B, against about 1 s for decomposition.
+### Early machine-learning result
 
-**ML feasibility result.** The task is predicting whether decomposition will succeed for the 8B model. Data: the 128 pilot training and validation commands, with nested cross-validation and 95% bootstrap intervals.
+This test predicts whether decomposition will succeed for the 8B model, using 128 pilot commands and cross-validation.
 
-| Features | AUROC |
-| --- | --- |
-| Activation probe on the model's hidden state, before generation | 0.855 [0.815, 0.941] |
-| TF-IDF word features | 0.834 [0.786, 0.929] |
-| Structural counts | 0.787 [0.716, 0.884] |
-
-The probe's layer was chosen on the same data, so its number is optimistic.
+| Features used | AUROC (0.5 = chance) |
+| --- | ---: |
+| Model's internal activations, before generating | 0.855 |
+| Word frequencies (TF-IDF) | 0.834 |
+| Simple structural counts | 0.787 |
 
 ## 3. What was run and what we observed
 
@@ -95,12 +95,10 @@ The probe's layer was chosen on the same data, so its number is optimistic.
 
 ## 5. Next step
 
-1. Rerun the 4B model on the development split and freeze all prompts.
-2. Collect the main label set: about 1,200 items per task across all model × strategy combinations, roughly 17 GPU-hours.
-3. Extract activation features for every model size.
-4. Train and select routers on the training and validation splits only. Compare structural, TF-IDF, and activation-probe features, plus confidence-based cascades, against the best single strategy and the perfect-router bound. Report learning curves and calibration.
-5. Freeze the design. Then evaluate once on the holdout and on the out-of-distribution splits.
-6. Write the final analysis of decomposition and thinking as two ways of trading model size for inference compute.
+- **Collect the full dataset overnight:** about 1,200 items per task across all model and strategy combinations, including the corrected 4B model.
+- **Train the router:** compare feature types (structural, word frequency, internal activations) and a cheap-first escalation strategy, against always using the best single strategy.
+- **Evaluate once on held-out data,** including harder out-of-distribution items, after the design is frozen.
+- **Write the final analysis:** decomposition and thinking as two ways to trade model size for compute.
 
 ## References
 
