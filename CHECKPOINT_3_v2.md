@@ -1,20 +1,25 @@
 # Final Project Milestone 3
 
 **Learning When to Decompose Complex Tasks for Local Language Models**
-**Team member:** Jefferson Kline
-**Course:** CS 437, Machine Learning
+
+**Team member:** Jefferson Kline · **Course:** CS 437, Machine Learning
+
+**Code and data:** [github.com/JeffLepp/learning-when-to-decompose](https://github.com/JeffLepp/learning-when-to-decompose)
 
 ## 1. Working baseline and initial model
 
 The project asks two questions:
+
 - When does breaking a task into subtasks (decomposition) let a *small, locally run* language model solve tasks it otherwise fails?
 - Can a supervised model learn to predict, before any generation, which model-and-strategy combination will succeed most cheaply?
 
 **Pipeline.** The pipeline runs end to end on two tasks:
+
 - **SCAN**, a public benchmark that maps commands such as `jump around left twice and walk` to action sequences;
 - **ChainOps**, a synthetic task we generated: chains of list operations such as "Start with [3, 8, 1, 5]. Reverse the list. Then remove every odd number." Because it is generated, no model could have memorized it.
 
 Every item is attempted by four local Qwen3 models (0.6B, 1.7B, 4B, 8B) using each of these strategies:
+
 - **direct** (one answer);
 - **few-shot direct**;
 - **thinking** (private reasoning before answering);
@@ -25,6 +30,7 @@ Every item is attempted by four local Qwen3 models (0.6B, 1.7B, 4B, 8B) using ea
 Diagnostics are never treated as usable strategies. Every call logs its tokens, time, and failures.
 
 **Baselines:**
+
 - The direct and few-shot strategies are the solving baselines.
 - The initial learned controller is a logistic-regression and random-forest router. It was trained on a first 8B pilot (96 training, 32 validation, 32 audit commands). Validation selected logistic regression with threshold 0.5. On the audit set it used 6.9% fewer tokens than always decomposing, but answered one fewer command correctly (15/32 vs. 16/32).
 - The full router library is built and tested. It reproduces those pilot numbers exactly. It also adds three new input families: word-frequency (TF-IDF) features, activation probes that read the model's hidden states before it generates, and confidence-based cascades.
@@ -47,6 +53,7 @@ Development split, exact-match accuracy with 95% Wilson intervals. There are 112
 | ChainOps | 8B | 33.0% | 38.4% | 41.1% | 91.1% [84.3, 95.1] | 100% | 92.0% |
 
 **Cost.**
+
 - Decomposition at 8B costs about 1,170–1,800 tokens per item, against about 260–370 for direct.
 - Thinking costs about 750–1,700 tokens. It is also far slower: about 25 s per SCAN item at 8B, against about 1 s for decomposition.
 
@@ -63,11 +70,13 @@ The probe's layer was chosen on the same data, so its number is optimistic.
 ## 3. What was run and what we observed
 
 **What was run:**
+
 - The data was split into development, router-training, validation, holdout, and out-of-distribution partitions before any model was run.
 - Prompts were tuned on the development split only, within a fixed and logged budget of rounds. Direct and decomposition prompts received comparable effort.
 - All model × strategy combinations were then run on the development split.
 
 **What we observed:**
+
 1. **Decomposition transforms capable models.** The 8B model goes from 9% (direct) to 97% (coarse decomposition) on SCAN, and from 33% to 91% (fine decomposition) on ChainOps.
 2. **There is a capability floor.** With the correct plan supplied, the 0.6B model still scores only 10% on SCAN, so it cannot reliably execute steps as small as "jump left". At 8B, gold-plan execution is perfect. All of its remaining errors are therefore planning errors.
 3. **Thinking competes with decomposition, depending on the task.** On ChainOps, 1.7B with thinking (95%, n=20) matches 8B with decomposition. Model size and inference compute can partly substitute for each other, but not below the floor.

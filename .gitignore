@@ -16,3 +16,4 @@ results/v2/runs/**/calls.jsonl
 results/v2/runs/**/warmup.jsonl
 results/v2/router/synthetic*/**/*.joblib
 results/v2/router/**/frozen/*.joblib
+build/
