@@ -9,3 +9,4 @@ probe_cache/
 *.safetensors
 .claude/
 workspace_logs/
+.gpu.lock
