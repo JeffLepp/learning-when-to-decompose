@@ -1,0 +1,24 @@
+{
+  "source": "https://github.com/brendenlake/SCAN",
+  "commit": "c4b756cbc010d75c912f16c42c8f15dc6b7e6c8f",
+  "seed": 437,
+  "files": {
+    "README.md": "a383edc2fcc023202b12cafcf937754a681637afbb4ac930ac577d2fa2036c53",
+    "LICENSE": "5caff9408d400e1d9b271bf48b967154cdf6a37c16c965f91775da3af9291f67",
+    "length_split/tasks_train_length.txt": "b034212dc7cf87ce62f3a067dd6ad49c4d5cd18d51d615d13825516bcb1ebbc2",
+    "length_split/tasks_test_length.txt": "0760752ed34a75116ae11dcc1ee17526b7500060da1366540730fa24894d7db3"
+  },
+  "partition_counts": {
+    "development": 128,
+    "controller_train": 10000,
+    "validation": 3000,
+    "audit": 3862
+  },
+  "official_test_count": 3920,
+  "partition_sha256": {
+    "development": "3f9282ebeb83cce1f0cde87b1fa705be4417c60f5814cf7853160524c8050d6c",
+    "controller_train": "5d45227a66e88fed8ec991fadef91595e9e00d8e88eee703d5e1608c1e6a0cab",
+    "validation": "78fc84f55233940d00d1ca7f5ae2fd0278523196d0fef2939c36b0b02f16a62b",
+    "audit": "c72cb871c483fa2d6db00a52f32616fc4072d738c1ea42f060f209b3715d9bda"
+  }
+}

@@ -1,0 +1,37 @@
+Final Project Milestone 2
+Learning When to Decompose Complex Tasks for Local Language Models
+
+Source: Text supplied by Jefferson Kline in conversation on 2026-11-15.
+This is a transcription of the supplied text, not the original PDF.
+
+1. Team members: Jefferson Kline
+2. Problem statement: Breaking a complex task into simpler subtasks may improve a local
+language model’s accuracy, but additional steps also increase computational cost and can
+introduce errors. This project will investigate whether a trained controller can learn when
+decomposition is beneficial, improving accuracy and efficiency compared with always solving
+tasks directly or always decomposing them.
+3. Dataset and source: We will use the public SCAN dataset, which pairs compositional
+language commands with their corresponding action sequences. Its predefined splits allow
+evaluation on longer sequences and unfamiliar combinations. We will generate
+controller-training labels by running direct and decomposed execution on training examples and
+recording correctness, runtime, and token usage.
+4. Input, output, and learning objective: The controller will receive prompt features such as
+length, text embeddings, and command structure. It will predict the probability that each
+execution strategy produces the correct result. The objective is to select the least
+computationally expensive strategy that meets a validation-selected success threshold.
+5. Evaluation strategy: We will compare the learned controller against direct-only and
+decomposition-only baselines using the same local language model. Primary metrics will be
+exact-match accuracy, average runtime, and token usage. We will also evaluate generalization
+to unseen command compositions. Controller training, threshold selection, and final testing will
+use separate partitions to prevent test-data leakage.
+6. Initial methods: We will begin with logistic regression and random forests for predicting
+strategy success. Direct execution will produce the complete action sequence in one response.
+Decomposed execution will produce structured subtasks, solve them individually, and combine
+their outputs using code. Format validation will check intermediate outputs, while reference
+action sequences will determine final correctness.
+7. Division of work: Jefferson Kline will lead dataset preparation, the local-model execution
+pipeline, and controller development. Additional team responsibilities, if applicable, will be
+divided among evaluation, error analysis, and the final report.
+8. Major changes: The proposed topic is changing from music recommendation to learned
+task-decomposition selection for local language models. The revised project retains a clear
+supervised-learning objective while supporting a practical system for reliable local AI execution.

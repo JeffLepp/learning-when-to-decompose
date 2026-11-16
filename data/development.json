@@ -1,0 +1,2168 @@
+[
+  {
+    "id": "f6878090e4631210",
+    "command": "walk opposite left twice after jump around right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "f92508adeac0ce55",
+    "command": "run left thrice after jump left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "c6c307d20987d4eb",
+    "command": "run opposite left twice and turn right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "002c81350de97132",
+    "command": "look opposite right thrice and turn opposite right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "853f820b9ca8a132",
+    "command": "run opposite right twice and walk left thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "e9d62c6355dfe170",
+    "command": "look twice after walk thrice",
+    "target": [
+      "I_WALK",
+      "I_WALK",
+      "I_WALK",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "219dd659a5092a77",
+    "command": "turn opposite left and walk opposite left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "0a75c1f5de5d0a57",
+    "command": "look twice after walk opposite left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "8e9f225104de71a6",
+    "command": "jump left and look left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "bf6ac31cfeb90d54",
+    "command": "jump right thrice and look twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "091a8e5a6d6f7e43",
+    "command": "look opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "1072cd632fb289a1",
+    "command": "look after jump left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "2603dea69795e3e8",
+    "command": "look right twice and look around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "ec5e83b39125fc25",
+    "command": "run left twice and turn left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "a11a3b620e624ebd",
+    "command": "jump right thrice after jump around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "eecbee011778c7dc",
+    "command": "jump around left and run opposite left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "8da12e78d8347c30",
+    "command": "turn around left thrice after look left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "30402a46c51ddf9a",
+    "command": "turn around right thrice and look around left",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "7ff88840423b7f3a",
+    "command": "look opposite left twice after look opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "9043faf3f4d30367",
+    "command": "walk right after jump opposite left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "82342d6c05928c37",
+    "command": "walk left and walk left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "765107a674fb1336",
+    "command": "walk left and turn around right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "5035d292d6b4f261",
+    "command": "turn right after turn around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "c8f2d2c5c1a3c360",
+    "command": "run opposite left twice and run",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "38f3a9654d2edcc7",
+    "command": "walk around left twice after run",
+    "target": [
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "e14b190afabc2505",
+    "command": "turn left thrice after walk around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "598fe4938338d4cc",
+    "command": "look left twice after run left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "107eca46b4131147",
+    "command": "turn around right twice after look left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "4bf11a0cd9edb4f3",
+    "command": "run around right twice and look right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "b9f016fad23b8b54",
+    "command": "jump twice after walk opposite right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_JUMP",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "0e652e8fbaf0f11a",
+    "command": "jump opposite right and walk left",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "1132a300e3b5469e",
+    "command": "jump right after run right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "28503aef188a6afd",
+    "command": "turn around right after jump right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "9eea4e77eb9efb0f",
+    "command": "look opposite right twice after look twice",
+    "target": [
+      "I_LOOK",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "25aec5997ae76121",
+    "command": "walk opposite right thrice and turn opposite right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "63bb5e200c4ba557",
+    "command": "run twice and run opposite right",
+    "target": [
+      "I_RUN",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "9d19ee925eb990ff",
+    "command": "turn around left and turn right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "1889166d79f3b720",
+    "command": "walk opposite right thrice after turn around right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "acbd39eb3b5b3f93",
+    "command": "jump opposite right thrice and jump right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "5894e8701a405922",
+    "command": "run around left twice and look twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "3a227ab8b4da7631",
+    "command": "look and run opposite right thrice",
+    "target": [
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "c166d04912e74178",
+    "command": "jump opposite left and jump right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "92d70bbb9d7f7389",
+    "command": "jump opposite right thrice and turn opposite right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "8cc0256d110286a8",
+    "command": "run right thrice and jump opposite right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "77a0d4bcbca71e57",
+    "command": "walk opposite right after jump around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "d55274181f522268",
+    "command": "jump opposite left twice and walk opposite right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "9faad6f5a837c2c8",
+    "command": "run around right and look thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_LOOK",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "657a294e7c95c1e7",
+    "command": "jump after jump opposite right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "b5e8e2370f81d481",
+    "command": "look opposite right and turn opposite left twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "93b4d6f85acf8e45",
+    "command": "walk opposite left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "cd36d5edc4cec00f",
+    "command": "run after jump right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "63727868221c4aa1",
+    "command": "walk right after walk right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "c92847dc9ad7d2ab",
+    "command": "walk opposite left twice and run thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_RUN",
+      "I_RUN",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "1a68cae04c43dbe8",
+    "command": "walk opposite right twice after turn right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "52a3c4cad98de952",
+    "command": "walk left and run right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "34c1bca529150ab6",
+    "command": "jump right twice and look around left",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "71a324b24eec58c4",
+    "command": "look right twice and run around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "aadf885fdc430212",
+    "command": "turn left after walk thrice",
+    "target": [
+      "I_WALK",
+      "I_WALK",
+      "I_WALK",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "8c8924e50874b72c",
+    "command": "turn right twice after walk thrice",
+    "target": [
+      "I_WALK",
+      "I_WALK",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "ddb3a14bc6797f6e",
+    "command": "jump opposite left twice and run opposite right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "e8786d1a449d692c",
+    "command": "run around right after look opposite left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "a5307344aa7c5f1e",
+    "command": "look thrice and turn right thrice",
+    "target": [
+      "I_LOOK",
+      "I_LOOK",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "98636370a60247cb",
+    "command": "look left thrice after turn around left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "f592afabbe77402d",
+    "command": "look around right and turn opposite right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "e261eb3cbc5d2225",
+    "command": "walk left thrice after walk right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "0f0c5a60326e8d4d",
+    "command": "walk opposite left thrice and jump around right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "69de0334b06eff15",
+    "command": "look opposite left thrice after look around right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "6fcd1862d2d420ce",
+    "command": "turn around left twice and turn opposite right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "2b0db8f603683279",
+    "command": "jump thrice and walk opposite right twice",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "13f0a9e4e1be2bcf",
+    "command": "turn opposite left thrice and look",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "d7cd9cc586cbd041",
+    "command": "walk around right twice after look thrice",
+    "target": [
+      "I_LOOK",
+      "I_LOOK",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "8f167ba0bedca97a",
+    "command": "jump around left twice after look left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "19a9419d5cb29683",
+    "command": "run left thrice after turn around left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "5fd59b0dc6555383",
+    "command": "jump opposite left thrice and look right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "16f28ba2c84edf9b",
+    "command": "run opposite left twice after walk opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "7ccbb4e2418c6108",
+    "command": "turn around right twice after turn right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "7251a59660f8886d",
+    "command": "walk thrice after walk around left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_WALK",
+      "I_WALK",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "ab477daf7cb67c6c",
+    "command": "jump opposite right thrice and run thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_RUN",
+      "I_RUN",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "0cb707e0aa89001a",
+    "command": "run after run opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "bc0a2a43ef3fdff1",
+    "command": "run right thrice and look twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_LOOK",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "14aa641eb563c8f5",
+    "command": "look opposite left after turn around right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "a1eacbdbb3524086",
+    "command": "walk around left and jump around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "137bac415dd24a4a",
+    "command": "run right twice after jump around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "e07dd08a3ff3d49e",
+    "command": "turn left thrice and look opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "e2dc36e4e61555c8",
+    "command": "walk opposite right after run around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "4a12abb3bec47923",
+    "command": "turn around left and run opposite right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "f0bc7b99a369c62f",
+    "command": "jump around left twice and jump opposite right twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "3f096829c65523a5",
+    "command": "look around right twice after walk right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "d2d4d30594985132",
+    "command": "walk right twice after run thrice",
+    "target": [
+      "I_RUN",
+      "I_RUN",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "9631422db16e5842",
+    "command": "look left twice after turn opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "b3a941c4028c76f4",
+    "command": "run left thrice after jump thrice",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "d37873ce2fb8124f",
+    "command": "jump opposite right twice after look around left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "bd6239792cea1f9a",
+    "command": "walk left twice and run left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "6f1d08331661a9bb",
+    "command": "turn right and run right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "22ea501f587b1915",
+    "command": "jump thrice and walk",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "c6ee8e225b04d191",
+    "command": "turn opposite left twice and look around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "104bdae64d380e05",
+    "command": "look opposite right and jump opposite left",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "2036f5ac5b306a3e",
+    "command": "turn left after walk around right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "568f171d6404adfa",
+    "command": "turn opposite right thrice and jump around left twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "740fa5a803da305d",
+    "command": "turn opposite right after jump opposite right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "cce8235ae6524c26",
+    "command": "turn around left twice after turn right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "f26dd9fdafbb0115",
+    "command": "jump opposite left after run right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "38bb375a0e4b2564",
+    "command": "jump twice after jump twice",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "3bb1aa4ddf079bdd",
+    "command": "jump left twice after walk left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "3e255aac0679b910",
+    "command": "turn right after look around left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "5c17435d07a8f5fd",
+    "command": "run left twice and jump",
+    "target": [
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "c9f634cdb17c4d4b",
+    "command": "jump around left and jump around right",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "857b0574a7c144bb",
+    "command": "walk opposite left thrice after turn left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "72334f903130cfd5",
+    "command": "walk opposite left twice and run opposite left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "7bb4466835139df5",
+    "command": "jump around right twice and turn right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "62337f64f43e25cd",
+    "command": "look left thrice and look right thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "c0448c25886c540e",
+    "command": "jump opposite right and look right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "c1edc4378ea89f73",
+    "command": "turn left twice after turn around left twice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "9487b0a1ac86e013",
+    "command": "turn around left after look opposite right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "5a22be3038e175fe",
+    "command": "run left thrice after walk opposite left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "b010555176488796",
+    "command": "look around left after jump left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "e4d6c6ce72a6f1ec",
+    "command": "walk opposite right twice and run opposite right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "79d13a444d1b6145",
+    "command": "look around right twice and turn left twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT"
+    ]
+  },
+  {
+    "id": "5dc638f47be79e23",
+    "command": "jump thrice and run opposite left twice",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "1e953045dc08211b",
+    "command": "jump twice and run left thrice",
+    "target": [
+      "I_JUMP",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "6e54be7eb8f65ac8",
+    "command": "walk around right after look right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "bb9a42b7d28e34bc",
+    "command": "jump opposite right after walk opposite right thrice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_WALK",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT",
+      "I_JUMP"
+    ]
+  },
+  {
+    "id": "5c28d0bc9caddbfe",
+    "command": "turn around left twice and walk opposite left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_WALK"
+    ]
+  },
+  {
+    "id": "fcafbab74c90f6aa",
+    "command": "look around left twice after turn left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "5d0edf1701f582d7",
+    "command": "look opposite left thrice and look left",
+    "target": [
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_LOOK",
+      "I_TURN_LEFT",
+      "I_LOOK"
+    ]
+  },
+  {
+    "id": "e9cfe84886471c38",
+    "command": "turn opposite right after jump left thrice",
+    "target": [
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_LEFT",
+      "I_JUMP",
+      "I_TURN_RIGHT",
+      "I_TURN_RIGHT"
+    ]
+  },
+  {
+    "id": "94e6de8d5d67749d",
+    "command": "run opposite left thrice after run right twice",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_RIGHT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN",
+      "I_TURN_LEFT",
+      "I_TURN_LEFT",
+      "I_RUN"
+    ]
+  },
+  {
+    "id": "618ce8d70a6f64c1",
+    "command": "look right thrice and walk right",
+    "target": [
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_LOOK",
+      "I_TURN_RIGHT",
+      "I_WALK"
+    ]
+  }
+]

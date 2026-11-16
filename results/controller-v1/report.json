@@ -1,0 +1,303 @@
+{
+  "runs": {
+    "train": "train-8b-v1",
+    "validation": "validation-8b-v1",
+    "audit": "audit-8b-v1",
+    "target": 0.8,
+    "name": "controller-v1"
+  },
+  "selected_family": "logistic_regression",
+  "selected_threshold": 0.5,
+  "validation_target_met": false,
+  "selection_validation_metrics": {
+    "threshold": 0.5,
+    "n": 32,
+    "correct": 10,
+    "accuracy": 0.3125,
+    "accuracy_wilson_95": [
+      0.17952352116618736,
+      0.4856699969803239
+    ],
+    "mean_total_tokens": 629.9375,
+    "mean_seconds_replayed": 0.9078976562499861,
+    "decomposition_fraction": 0.875
+  },
+  "search": {
+    "logistic_regression": {
+      "validation_candidates": [
+        {
+          "threshold": 0,
+          "n": 32,
+          "correct": 1,
+          "accuracy": 0.03125,
+          "accuracy_wilson_95": [
+            0.005537717362550945,
+            0.15744607800372734
+          ],
+          "mean_total_tokens": 241.8125,
+          "mean_seconds_replayed": 0.8581183937499759,
+          "decomposition_fraction": 0.0
+        },
+        {
+          "threshold": 0.25,
+          "n": 32,
+          "correct": 9,
+          "accuracy": 0.28125,
+          "accuracy_wilson_95": [
+            0.15564406845647866,
+            0.4537483693811179
+          ],
+          "mean_total_tokens": 615.1875,
+          "mean_seconds_replayed": 0.8929493499999808,
+          "decomposition_fraction": 0.84375
+        },
+        {
+          "threshold": 0.5,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        },
+        {
+          "threshold": 0.6,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        },
+        {
+          "threshold": 0.7,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        },
+        {
+          "threshold": 0.8,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        },
+        {
+          "threshold": 0.9,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        },
+        {
+          "threshold": 0.95,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 629.9375,
+          "mean_seconds_replayed": 0.9078976562499861,
+          "decomposition_fraction": 0.875
+        }
+      ],
+      "validation_brier_by_strategy": [
+        0.04847415163669746,
+        0.1866746165090512
+      ]
+    },
+    "random_forest": {
+      "validation_candidates": [
+        {
+          "threshold": 0,
+          "n": 32,
+          "correct": 1,
+          "accuracy": 0.03125,
+          "accuracy_wilson_95": [
+            0.005537717362550945,
+            0.15744607800372734
+          ],
+          "mean_total_tokens": 241.8125,
+          "mean_seconds_replayed": 0.8581183937499759,
+          "decomposition_fraction": 0.0
+        },
+        {
+          "threshold": 0.25,
+          "n": 32,
+          "correct": 9,
+          "accuracy": 0.28125,
+          "accuracy_wilson_95": [
+            0.15564406845647866,
+            0.4537483693811179
+          ],
+          "mean_total_tokens": 615.1875,
+          "mean_seconds_replayed": 0.8929493499999808,
+          "decomposition_fraction": 0.84375
+        },
+        {
+          "threshold": 0.5,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        },
+        {
+          "threshold": 0.6,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        },
+        {
+          "threshold": 0.7,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        },
+        {
+          "threshold": 0.8,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        },
+        {
+          "threshold": 0.9,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        },
+        {
+          "threshold": 0.95,
+          "n": 32,
+          "correct": 10,
+          "accuracy": 0.3125,
+          "accuracy_wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ],
+          "mean_total_tokens": 644.75,
+          "mean_seconds_replayed": 0.924213668750042,
+          "decomposition_fraction": 0.90625
+        }
+      ],
+      "validation_brier_by_strategy": [
+        0.03380941676739617,
+        0.20169936748915657
+      ]
+    }
+  },
+  "training_success_counts": [
+    8,
+    40
+  ],
+  "audit": {
+    "direct": {
+      "n": 32,
+      "correct": 3,
+      "accuracy": 0.09375,
+      "accuracy_wilson_95": [
+        0.032400962626319516,
+        0.24218499335778831
+      ],
+      "mean_total_tokens": 257.3125,
+      "mean_seconds_replayed": 1.085909187499965,
+      "decomposition_fraction": 0.0
+    },
+    "decomposed": {
+      "n": 32,
+      "correct": 16,
+      "accuracy": 0.5,
+      "accuracy_wilson_95": [
+        0.33630614316859386,
+        0.6636938568314061
+      ],
+      "mean_total_tokens": 671.40625,
+      "mean_seconds_replayed": 0.8760366124998313,
+      "decomposition_fraction": 1.0
+    },
+    "controller": {
+      "n": 32,
+      "correct": 15,
+      "accuracy": 0.46875,
+      "accuracy_wilson_95": [
+        0.30869129901682335,
+        0.6355076206742619
+      ],
+      "mean_total_tokens": 625.09375,
+      "mean_seconds_replayed": 0.8371605374997557,
+      "decomposition_fraction": 0.875
+    }
+  },
+  "audit_oracle_accuracy_upper_bound": 0.5625,
+  "classifier_and_routing_batch_seconds": 0.0010022999995271675,
+  "caveats": [
+    "Exploratory small sample; official test untouched.",
+    "Runtime is paired-run replay, not an end-to-end deployment benchmark.",
+    "Routing timing excludes feature extraction and cost prediction; measure full overhead in final evaluation.",
+    "Total input plus output tokens is a cost proxy, not FLOPs or energy.",
+    "Validation success threshold is empirical, not a per-example success guarantee.",
+    "Accuracy intervals are marginal Wilson intervals, not paired significance tests."
+  ]
+}

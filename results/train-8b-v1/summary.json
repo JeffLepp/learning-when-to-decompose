@@ -1,0 +1,26 @@
+{
+  "direct": {
+    "n": 96,
+    "correct": 8,
+    "accuracy": 0.08333333333333333,
+    "mean_seconds": 0.8127219291666469,
+    "mean_prompt_tokens": 185.54166666666666,
+    "mean_completion_tokens": 53.333333333333336,
+    "invalid": 3
+  },
+  "decomposed": {
+    "n": 96,
+    "correct": 40,
+    "accuracy": 0.4166666666666667,
+    "mean_seconds": 0.8961491583333819,
+    "mean_prompt_tokens": 619.9583333333334,
+    "mean_completion_tokens": 52.875,
+    "invalid": 3
+  },
+  "paired_outcomes": {
+    "both_wrong": 54,
+    "decomposed_only_correct": 34,
+    "direct_only_correct": 2,
+    "both_correct": 6
+  }
+}

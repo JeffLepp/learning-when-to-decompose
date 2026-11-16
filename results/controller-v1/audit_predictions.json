@@ -1,0 +1,386 @@
+[
+  {
+    "id": "01c05a371b0d290d",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0008491034918918784,
+      0.21312343944677864
+    ],
+    "predicted_token_costs": [
+      215.61293195366727,
+      676.0621816092404
+    ]
+  },
+  {
+    "id": "c950042cddc34970",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0006362842873535288,
+      0.0729429231714654
+    ],
+    "predicted_token_costs": [
+      234.03850273092937,
+      678.270360626302
+    ]
+  },
+  {
+    "id": "6893e4a4f1c616ec",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.007604543941726812,
+      0.17098527922134438
+    ],
+    "predicted_token_costs": [
+      235.3517479593421,
+      697.0472141398333
+    ]
+  },
+  {
+    "id": "e668c07a4d27be00",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.06517362000116717,
+      0.2956465800680565
+    ],
+    "predicted_token_costs": [
+      214.58763507798523,
+      657.7609267983908
+    ]
+  },
+  {
+    "id": "f3005c0edabbfa5d",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.001909263355050989,
+      0.07146814807922759
+    ],
+    "predicted_token_costs": [
+      237.65435767887092,
+      690.2765990310857
+    ]
+  },
+  {
+    "id": "b4b16885cf6f7e0a",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.009970900353478208,
+      0.9385258845815176
+    ],
+    "predicted_token_costs": [
+      229.59012929880595,
+      681.4002904048566
+    ]
+  },
+  {
+    "id": "3fb82a6fabf225dd",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0006863813333823186,
+      0.09201637726223187
+    ],
+    "predicted_token_costs": [
+      233.39282438639802,
+      675.5716992517285
+    ]
+  },
+  {
+    "id": "75b057bcef38e9e4",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0006672515979782913,
+      0.0642369999493063
+    ],
+    "predicted_token_costs": [
+      252.83999970862476,
+      685.9337503885004
+    ]
+  },
+  {
+    "id": "1ca7f45216754561",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.00012060296420593506,
+      0.5530231427675356
+    ],
+    "predicted_token_costs": [
+      286.409592391269,
+      677.4430284168444
+    ]
+  },
+  {
+    "id": "0eb515aae8c649e1",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0002414873677807619,
+      0.45436513895939684
+    ],
+    "predicted_token_costs": [
+      275.3647246283129,
+      667.3709248937334
+    ]
+  },
+  {
+    "id": "ef0ce987b55aea08",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.013367426758241914,
+      0.04987736225264904
+    ],
+    "predicted_token_costs": [
+      212.99866073305776,
+      667.723988808577
+    ]
+  },
+  {
+    "id": "d6c90d1fa8c83742",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.028876427562727736,
+      0.4873164053540898
+    ],
+    "predicted_token_costs": [
+      245.12521811010632,
+      697.1346640494007
+    ]
+  },
+  {
+    "id": "5d941d3563cd70bc",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.004073516280874166,
+      0.6359421656456591
+    ],
+    "predicted_token_costs": [
+      212.32809344903455,
+      678.8773714210625
+    ]
+  },
+  {
+    "id": "31fdd30b522209ed",
+    "choice": "direct",
+    "success_probabilities": [
+      0.5058825500272868,
+      0.8985957061527474
+    ],
+    "predicted_token_costs": [
+      210.97705327434008,
+      649.1194977555125
+    ]
+  },
+  {
+    "id": "b9acdf97ce047306",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0004179946342302954,
+      0.0060628911413177795
+    ],
+    "predicted_token_costs": [
+      241.1722806554471,
+      675.478116228242
+    ]
+  },
+  {
+    "id": "9db58898adfbfe6c",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.03289310507094493,
+      0.14877614778514475
+    ],
+    "predicted_token_costs": [
+      214.3919255654476,
+      673.4375502887634
+    ]
+  },
+  {
+    "id": "1a050af1b9fc46fa",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0002537067882036336,
+      0.3415420047192945
+    ],
+    "predicted_token_costs": [
+      296.3085722806604,
+      690.4517742665829
+    ]
+  },
+  {
+    "id": "9e8fd1f036c9df93",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.002623494707375363,
+      0.23224278871743595
+    ],
+    "predicted_token_costs": [
+      277.6998922017525,
+      681.1271497660833
+    ]
+  },
+  {
+    "id": "e008306069547f32",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.023140513584137472,
+      0.900298156040559
+    ],
+    "predicted_token_costs": [
+      235.08452362670016,
+      683.2715424444837
+    ]
+  },
+  {
+    "id": "3d067d2bf7c1c750",
+    "choice": "direct",
+    "success_probabilities": [
+      0.8631703002726724,
+      0.8340975578753618
+    ],
+    "predicted_token_costs": [
+      208.7453279325164,
+      666.9952610042176
+    ]
+  },
+  {
+    "id": "63ad5316f65e8a49",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.036883915330457984,
+      0.7932101426544255
+    ],
+    "predicted_token_costs": [
+      214.82564285387815,
+      679.4768123118712
+    ]
+  },
+  {
+    "id": "514bcda102c0602b",
+    "choice": "direct",
+    "success_probabilities": [
+      0.7679781987523644,
+      0.9154527840764938
+    ],
+    "predicted_token_costs": [
+      209.486241814558,
+      663.3145167920316
+    ]
+  },
+  {
+    "id": "f77c92d3beafbf5c",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.002577284668603024,
+      0.1001370159552631
+    ],
+    "predicted_token_costs": [
+      214.28923132504755,
+      676.9533042243704
+    ]
+  },
+  {
+    "id": "79c76483a7dd594c",
+    "choice": "decomposed",
+    "success_probabilities": [
+      9.956204913283271e-05,
+      0.5921363611382895
+    ],
+    "predicted_token_costs": [
+      232.3306512213278,
+      670.263353799795
+    ]
+  },
+  {
+    "id": "adfe44601c2871e7",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.006418533489183802,
+      0.5308234299424013
+    ],
+    "predicted_token_costs": [
+      235.95735252720272,
+      693.214063248542
+    ]
+  },
+  {
+    "id": "08239a170ae76842",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0026675468066266993,
+      0.15536984135319631
+    ],
+    "predicted_token_costs": [
+      216.79827902734525,
+      672.1892924583589
+    ]
+  },
+  {
+    "id": "0e667401e3dececf",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.0026717339169812122,
+      0.9057534837230676
+    ],
+    "predicted_token_costs": [
+      321.35339751098576,
+      675.5319561680147
+    ]
+  },
+  {
+    "id": "3fbbf377fe381268",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.001998141752315504,
+      0.002397619318985735
+    ],
+    "predicted_token_costs": [
+      230.52008415646975,
+      670.5600319581521
+    ]
+  },
+  {
+    "id": "b012a1c0aef484f0",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.005268651014482925,
+      0.21088713579681004
+    ],
+    "predicted_token_costs": [
+      215.70124661531278,
+      675.554034521851
+    ]
+  },
+  {
+    "id": "dde557c8be770cdf",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.4311768730515957,
+      0.7156595803703574
+    ],
+    "predicted_token_costs": [
+      213.49005516606707,
+      645.3338159068313
+    ]
+  },
+  {
+    "id": "8229f1627aa19723",
+    "choice": "direct",
+    "success_probabilities": [
+      0.8296181782528442,
+      0.8375193651755678
+    ],
+    "predicted_token_costs": [
+      210.35395043419777,
+      648.5395931132848
+    ]
+  },
+  {
+    "id": "fc5af095ac8eeb68",
+    "choice": "decomposed",
+    "success_probabilities": [
+      0.1728446813937335,
+      0.335750425005531
+    ],
+    "predicted_token_costs": [
+      209.49702264793174,
+      668.5276721208787
+    ]
+  }
+]

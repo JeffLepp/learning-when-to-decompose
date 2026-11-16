@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+
+.venv-probe/
+__pycache__/
+*.pyc
+hf_models/
+probe_cache/
+*.safetensors
+.claude/
+workspace_logs/

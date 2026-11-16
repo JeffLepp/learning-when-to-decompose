@@ -1,0 +1,22 @@
+Source: Requirements supplied directly by the user in conversation.
+Course: CS 437, machine learning. Final project checkpoint / Milestone 3.
+
+Each team should provide:
+
+At least one working baseline, initial model, clustering result, recommendation result, or other appropriate analysis.
+
+One quantitative result or meaningful visualization.
+
+A brief explanation of what was run and what the team observed.
+
+Any important issues discovered so far.
+
+The next step for the project.
+
+Confirmed user preferences after clarification:
+- Prepare this checkpoint from verified results, then expand the experiments.
+- Do not worry about the deadline.
+- No submission format or length requirement was specified.
+- Compile durable project context for a completely fresh session so its agent can make its own informed plan.
+
+The CS 415 Milestone 2 Word report on the E: drive is a separate YouTube/Neo4j project, not this project's specification.

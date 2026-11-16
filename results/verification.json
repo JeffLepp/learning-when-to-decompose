@@ -1,0 +1,26 @@
+{
+  "pilot-v1": {
+    "records": 48,
+    "scoring_tokens_source_and_summary": "passed"
+  },
+  "pilot-8b-v1": {
+    "records": 48,
+    "scoring_tokens_source_and_summary": "passed"
+  },
+  "train-8b-v1": {
+    "records": 192,
+    "scoring_tokens_source_and_summary": "passed"
+  },
+  "validation-8b-v1": {
+    "records": 64,
+    "scoring_tokens_source_and_summary": "passed"
+  },
+  "audit-8b-v1": {
+    "records": 64,
+    "scoring_tokens_source_and_summary": "passed"
+  },
+  "saved_controller": {
+    "predictions": 32,
+    "reload_routing_and_metrics": "passed"
+  }
+}

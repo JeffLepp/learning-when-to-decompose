@@ -1,0 +1,73 @@
+{
+  "model": "qwen3:8b",
+  "model_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "endpoint": "http://127.0.0.1:11434/api/",
+  "seed": 437,
+  "partition": "development",
+  "count": 24,
+  "rules": "Translate SCAN commands into action tokens.\nwalk = I_WALK; run = I_RUN; jump = I_JUMP; look = I_LOOK.\nturn left = I_TURN_LEFT; turn right = I_TURN_RIGHT.\nFor an action left/right, turn once that direction then perform the action.\nFor an action opposite left/right, turn twice then perform the action once.\nFor an action around left/right, repeat (one turn then the action) four times.\nturn opposite left/right means two turns. turn around left/right means four turns.\ntwice repeats the entire preceding clause twice; thrice repeats it three times.\nA and B executes A then B. A after B executes B then A.\nReturn only the requested JSON. Do not explain.",
+  "plan_instruction": "Make a plan, not action tokens. Return {\"steps\":[{\"command\":\"...\",\"repeat\":1}]}.\nEach step command is one original clause with only its final twice/thrice removed.\nPut that repetition in repeat (1, 2, or 3). Preserve around/opposite and direction.\nSplit and/after into two steps. For after, reverse the clause order.\nDo not expand around/opposite into additional steps. Do not solve the steps.",
+  "action_schema": {
+    "type": "object",
+    "properties": {
+      "actions": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "I_WALK",
+            "I_RUN",
+            "I_JUMP",
+            "I_LOOK",
+            "I_TURN_LEFT",
+            "I_TURN_RIGHT"
+          ]
+        },
+        "minItems": 1,
+        "maxItems": 128
+      }
+    },
+    "required": [
+      "actions"
+    ],
+    "additionalProperties": false
+  },
+  "plan_schema": {
+    "type": "object",
+    "properties": {
+      "steps": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string"
+            },
+            "repeat": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          "required": [
+            "command",
+            "repeat"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "steps"
+    ],
+    "additionalProperties": false
+  },
+  "temperature": 0,
+  "think": false,
+  "num_ctx": 4096,
+  "num_predict": 512,
+  "code_sha256": "e4f28a2549b8e5b28005fc5227d18b113a108b05b2a1fa3b0eb406f23b9b81a6",
+  "data_manifest_sha256": "4f62e5489643a46292a79836b83e480d215a618b921374a20ce130d72cd40977"
+}
