@@ -1,0 +1,47 @@
+ M v2/router/README.md
+ M v2/router/data.py
+ M v2/router/evaluate.py
+ M v2/router/models.py
+ M v2/router/plots.py
+ M v2/tests/test_router_plots.py
+?? results/v2/router/mode_a_chainops/
+?? results/v2/router/mode_a_scan/
+?? results/v2/router/p4-v1adapter-f/
+?? results/v2/router/p4-v1adapter/
+?? results/v2/router/sim_check/figures/
+?? results/v2/router/synthetic16-f/
+?? results/v2/router/synthetic16/
+?? results/v2/router/taskF-baseline-tests.log
+?? results/v2/router/taskF-evidence.json
+?? results/v2/router/taskF-exit-check.log
+?? results/v2/router/taskF-git-status.txt
+?? results/v2/router/taskF-one-shot.json
+?? results/v2/router/taskF-platt-baseline.json
+?? results/v2/router/taskF-readback.log
+?? results/v2/router/taskF-run-tests.py
+?? results/v2/router/taskF-synthetic-final.log
+?? results/v2/router/taskF-synthetic-p4.log
+?? results/v2/router/taskF-tests-verified.log
+?? results/v2/router/taskF-tests.log
+?? results/v2/router/taskF-v1-p4.log
+?? results/v2/router/taskF-v1-repro.log
+?? results/v2/router/task_d/
+?? results/v2/router/task_e/
+?? results/v2/router/v1_adapter/figures/
+?? v2/__init__.py
+?? v2/build_data.py
+?? v2/build_labels.py
+?? v2/domains/
+?? v2/harness.py
+?? v2/harness_promptdev.py
+?? v2/router/bootstrap.py
+?? v2/router/predictor_report.py
+?? v2/router/readback_p4.py
+?? v2/router/run_final.py
+?? v2/router/run_p4.py
+?? v2/router/synth_labels.py
+?? v2/router/workflow.py
+?? v2/tests/test_foundations.py
+?? v2/tests/test_promptdev.py
+?? v2/tests/test_router_d1.py
+?? v2/tests/test_router_p4.py

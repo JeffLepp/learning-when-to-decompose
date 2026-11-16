@@ -1,0 +1,6 @@
+{
+  "S0": "Round 1 count/verb confusion persists: replace symbolic rules with literal wording and add exact clause-length/repetition checks.",
+  "S1": "Round 1 copied action/count errors: use four diverse worked pool examples, explicit output lengths, and a strong new-task boundary.",
+  "S3": "Round 1 opposite-turn count and after errors: clarify turn-only lengths, retain focused clause examples, and emphasize separate clause spans.",
+  "S4": "Round 1 leaf examples induced extra actions: remove leaf examples and use three short atomic cases; reinforce after clause-span ordering."
+}

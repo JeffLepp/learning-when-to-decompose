@@ -1,0 +1,5 @@
+{
+  "returncode": 1,
+  "refused": true,
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\v2\\router\\run_final.py\", line 130, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\v2\\router\\run_final.py\", line 126, in main\n    run(**vars(parser.parse_args()))\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\v2\\router\\run_final.py\", line 73, in run\n    raise RuntimeError(f'Final evaluation already completed for {split}')\nRuntimeError: Final evaluation already completed for holdout\n"
+}

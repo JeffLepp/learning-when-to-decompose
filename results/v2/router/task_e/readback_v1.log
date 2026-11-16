@@ -1,0 +1,15 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\p4-v1adapter",
+      "split": "router_val",
+      "s2": false,
+      "policies": 41,
+      "items": 32,
+      "passed": true,
+      "report_sha256": "e036eb7290a2c6fcee3ae3d8f33a4888140922e3b954cdf65209331084118337"
+    }
+  ],
+  "limits": "Selected decisions/costs and aggregate AUC replayed. Bootstrap CIs and model fitting not independently rerun."
+}

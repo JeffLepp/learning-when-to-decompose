@@ -12,6 +12,9 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 ROOT = Path(__file__).resolve().parents[2]
+DEPLOYABLE_MAIN = ('S0', 'S1', 'S3', 'S4')
+MODELS = ('qwen3:0.6b', 'qwen3:1.7b', 'qwen3:4b', 'qwen3:8b')
+DIAGNOSTIC = ('G1', 'G2')
 COLUMNS = (
     'id split model strategy correct total_tokens prompt_tokens completion_tokens '
     'wall_seconds n_calls error mean_logprob min_logprob answer_sha1'
@@ -67,6 +70,47 @@ class ArmTable:
         return self.select(item_mask=np.isfinite(self.success[:, cols]).all(axis=1))
 
 
+def main_arms(table):
+    """D1.5 deployable main arms, preserving the table's column order."""
+    return [a for a in table.arms if a.split('|')[1] in DEPLOYABLE_MAIN
+            and a.split('|')[1] not in DIAGNOSTIC]
+
+
+def main_table(table, expected_n_arms=16):
+    """D1.5 main coverage must be complete; never silently discard an item.
+
+    Pass expected_n_arms=None for the historical two-arm adapter.
+    """
+    arms = main_arms(table)
+    if not arms or (expected_n_arms is not None and len(arms) != expected_n_arms):
+        raise ValueError(f'Expected {expected_n_arms} main arms, found {len(arms)}')
+    selected = table.select(arms=arms)
+    complete = selected.complete(arms)
+    if len(complete.ids) != len(table.ids) or not np.isfinite(selected.cost).all():
+        raise ValueError('Missing main arm success or cost; refusing to drop items')
+    assert not any(a.split('|')[1] in DIAGNOSTIC for a in complete.arms)
+    return complete
+
+
+def s2_table(table):
+    """D1.5 separate subset with S2 observed for every registered model.
+
+    Require complete main coverage first. If an entire S2 model column is absent,
+    the subset is empty; output columns are main and available registered S2 arms.
+    """
+    main = main_table(table)
+    required = [f'{model}|S2' for model in MODELS]
+    arms = [a for a in table.arms if a in main.arms or a in required]
+    selected = table.select(arms=arms)
+    if not set(required).issubset(table.arms):
+        selected = selected.select(item_mask=np.zeros(len(table.ids), dtype=bool))
+    else:
+        selected = selected.complete(required)
+        selected = selected.select(item_mask=np.isfinite(selected.cost).all(axis=1))
+    assert not any(a.split('|')[1] in DIAGNOSTIC for a in selected.arms)
+    return selected
+
+
 def write_labels(path, rows):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -82,7 +126,9 @@ def write_labels(path, rows):
             writer.writerow(row)
 
 
-def load_labels(path):
+def load_labels(path, splits=None):
+    """Load only requested splits, filtering rows before validation/alignment."""
+    requested = None if splits is None else set(splits)
     grouped, seen, splits = {}, set(), {}
     with Path(path).open(newline='', encoding='utf-8-sig') as stream:
         reader = csv.DictReader(stream)
@@ -90,6 +136,8 @@ def load_labels(path):
         if missing:
             raise ValueError(f'Missing label columns: {sorted(missing)}')
         for row in reader:
+            if requested is not None and row['split'] not in requested:
+                continue
             key = (row['id'], row['model'], row['strategy'])
             if key in seen:
                 raise ValueError(f'Duplicate label row: {key}')
@@ -262,6 +310,64 @@ def load_activations(npy_path, index_path, ids):
     if missing:
         raise ValueError(f'Missing activation ids: {sorted(missing)}')
     return np.asarray(matrix[[lookup[id_] for id_ in ids]], dtype=float)
+
+
+def model_dir_name(model):
+    """WS2 model-directory convention, e.g. qwen3:0.6b -> qwen3-0.6b."""
+    return model.replace(':', '-')
+
+
+def available_layer_keys(features_dir, model):
+    index = Path(features_dir) / model_dir_name(model) / 'index.json'
+    return list(json.loads(index.read_text(encoding='utf-8'))['files'])
+
+
+def _probe_models(variant, arms):
+    if variant not in {'own', 'small'}:
+        raise ValueError('F3 variant must be own or small')
+    return ([a.split('|')[0] for a in arms] if variant == 'own'
+            else ['qwen3:0.6b'] * len(arms))
+
+
+def load_f3(features_dir, ids, layer_key, variant, arms):
+    """D1.2: one ID-aligned matrix per arm from own-size or 0.6B probes.
+
+    layer_key is a WS2 files key (layer and pooling). No split-name translation
+    is used: only the caller's explicitly requested IDs are returned.
+    """
+    models = _probe_models(variant, arms)
+    ids, loaded = list(ids), {}
+    for model in dict.fromkeys(models):
+        directory = Path(features_dir) / model_dir_name(model)
+        index_path = directory / 'index.json'
+        index = json.loads(index_path.read_text(encoding='utf-8'))
+        if layer_key not in index['files']:
+            raise ValueError(f'Missing activation layer {layer_key} for {model}')
+        loaded[model] = load_activations(directory / index['files'][layer_key], index_path, ids)
+    return [loaded[model] for model in models]
+
+
+def probe_overhead(table, variant, arms, features_dir=None):
+    """D1.2 charge: S0 prompt tokens once per distinct probed model per item."""
+    models = dict.fromkeys(_probe_models(variant, arms))
+    overhead = np.zeros(len(table.ids))
+    for model in models:
+        arm = f'{model}|S0'
+        if arm not in table.arms:
+            if features_dir is None:
+                raise ValueError(f'Missing probe S0 arm: {arm}')
+            # Historical adapter has no small-model labels. WS2 records the
+            # actual tokenized S0 probe prompt length, aligned by item ID.
+            path = Path(features_dir) / model_dir_name(model) / 'index.json'
+            index = json.loads(path.read_text(encoding='utf-8'))
+            lookup = dict(zip(index['ids'], index['n_tokens'], strict=True))
+            values = np.array([lookup[id_] for id_ in table.ids], dtype=float)
+        else:
+            values = table.prompt_tokens[:, table.arms.index(arm)]
+        if not np.isfinite(values).all() or (values < 0).any():
+            raise ValueError(f'Missing or invalid S0 prompt tokens: {arm}')
+        overhead += values
+    return overhead
 
 
 def posthoc_features(table, executed, target=None):

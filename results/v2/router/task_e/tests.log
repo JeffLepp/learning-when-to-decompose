@@ -1,0 +1,36 @@
+......................................F3-own: selected L04_last on validation
+F3-small: selected L04_mean on validation
+F1: six learners fitted and five-fold calibration selected
+F2: six learners fitted and five-fold calibration selected
+F3-own: six learners fitted and five-fold calibration selected
+F3-small: six learners fitted and five-fold calibration selected
+Frozen 75 policies; evaluating validation with 200 paired bootstrap replicates
+F1: learning curves completed
+F2: learning curves completed
+F3-own: learning curves completed
+P4 completed: C:\Users\jeffe\Desktop\fall26\437\FinalProject\results\v2\router\test_p4_234m6600\p4; 225.57s
+Frozen holdout complete: 3.01s
+Frozen ood_length complete: 2.75s
+Final driver total: 8.77s
+.F1: six learners fitted and five-fold calibration selected
+F2: six learners fitted and five-fold calibration selected
+Frozen 25 policies; evaluating validation with 200 paired bootstrap replicates
+F1: learning curves completed
+F2: learning curves completed
+P4 completed: C:\Users\jeffe\Desktop\fall26\437\FinalProject\results\v2\router\test_p4_234m6600\plain; 7.15s
+F3-own: selected L36_mean on validation
+F3-small: selected L16_last on validation
+F1: six learners fitted and five-fold calibration selected
+F2: six learners fitted and five-fold calibration selected
+F3-own: six learners fitted and five-fold calibration selected
+F3-small: six learners fitted and five-fold calibration selected
+Frozen 39 policies; evaluating validation with 200 paired bootstrap replicates
+F1: learning curves completed
+F2: learning curves completed
+F3-own: learning curves completed
+P4 completed: C:\Users\jeffe\Desktop\fall26\437\FinalProject\results\v2\router\test_p4_234m6600\features; 52.66s
+..................
+----------------------------------------------------------------------
+Ran 57 tests in 331.568s
+
+OK

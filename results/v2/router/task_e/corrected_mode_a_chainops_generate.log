@@ -1,0 +1,15 @@
+{
+  "generator": "v2.router.synth_labels",
+  "mode": "A",
+  "domain": "chainops",
+  "seed": 437,
+  "labels_sha256": "e1b32af2df6d91e5a0d2d4c182d5ac3a14aa6f09bc5c7eef88e8eec257bf0cae",
+  "items_dir": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\data\\v2\\chainops",
+  "item_sha256": {
+    "router_train.jsonl": "92b2041d9986a9a7b65213098ba6531c3829a9a2a9d531c75f9b9cfe97b4c636",
+    "router_val.jsonl": "44b93bb8d4e8f1b46e74d3b363c750495c4a45e0e179d4e6d6ebfd3171c087cf"
+  },
+  "n_items": 800,
+  "n_rows": 14200,
+  "note": "Synthetic labels; no model calls."
+}

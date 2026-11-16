@@ -1,0 +1,1932 @@
+{
+  "qwen3:1.7b/S0": {
+    "categories": {
+      "wrong_order": 3,
+      "wrong_values_or_counts": 49,
+      "truncated": 7
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: turn opposite left and walk opposite left\nAnswer JSON:",
+            "response": "{\n  \"actions\": [\n    \"I_TURN_LEFT\",\n    \"I_TURN_LEFT\",\n    \"I_WALK\",\n    \"I_TURN_LEFT\",\n    \"I_TURN_LEFT\"\n  ]\n}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_RUN",
+          "I_RUN",
+          "I_JUMP",
+          "I_JUMP",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: look twice after walk opposite left thrice\nAnswer JSON:",
+            "response": "{\n  \"actions\": [\n    \"I_LOOK\",\n    \"I_LOOK\",\n    \"I_TURN_LEFT\",\n    \"I_TURN_LEFT\",\n    \"I_TURN_LEFT\",\n    \"I_RUN\",\n    \"I_RUN\",\n    \"I_RUN\",\n    \"I_JUMP\",\n    \"I_JUMP\",\n    \"I_JUMP\",\n    \"I_LOOK\",\n    \"I_LOOK\",\n    \"I_LOOK\"\n  ]\n}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump left and look left\nAnswer JSON:",
+            "response": "{\n  \"actions\": [\n    \"I_JUMP\",\n    \"I_TURN_LEFT\",\n    \"I_LOOK\",\n    \"I_TURN_LEFT\"\n  ]\n}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_WALK",
+          "I_JUMP",
+          "I_WALK",
+          "I_JUMP",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump right thrice and look twice\nAnswer JSON:",
+            "response": "{\n  \"actions\": [\n    \"I_JUMP\",\n    \"I_WALK\",\n    \"I_JUMP\",\n    \"I_WALK\",\n    \"I_JUMP\",\n    \"I_WALK\",\n    \"I_LOOK\",\n    \"I_LOOK\"\n  ]\n}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S1": {
+    "categories": {
+      "wrong_values_or_counts": 55,
+      "truncated": 1,
+      "wrong_order": 1
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: turn opposite left and walk opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: look twice after walk opposite left thrice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_LOOK",
+          "I_JUMP",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump left and look left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_LOOK\",\"I_JUMP\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_JUMP",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump right thrice and look twice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_JUMP\",\"I_JUMP\",\"I_LOOK\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S3": {
+    "categories": {
+      "execution_with_correct_plan": 18,
+      "plan_mismatch": 23,
+      "invalid_plan": 2
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "turn opposite left",
+              "repeat": 1
+            },
+            {
+              "command": "walk opposite left",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: turn opposite left and walk opposite left\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"turn opposite left\",\"repeat\":1},{\"command\":\"walk opposite left\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: turn opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: walk opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "look",
+              "repeat": 2
+            },
+            {
+              "command": "walk opposite left",
+              "repeat": 3
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: look twice after walk opposite left thrice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"look\",\"repeat\":2},{\"command\":\"walk opposite left\",\"repeat\":3}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: look\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: walk opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "jump",
+              "repeat": 3
+            },
+            {
+              "command": "look",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: jump right thrice and look twice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"jump\",\"repeat\":3},{\"command\":\"look\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: jump\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: look\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "look right",
+              "repeat": 2
+            },
+            {
+              "command": "look around right",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: look right twice and look around right twice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"look right\",\"repeat\":2},{\"command\":\"look around right\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: look right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: look around right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S4": {
+    "categories": {
+      "execution_with_correct_plan": 27,
+      "invalid_plan": 2,
+      "plan_mismatch": 28
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: turn opposite left and walk opposite left\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"turn opposite left\",\"action\":\"turn\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":1},{\"command\":\"walk opposite left\",\"action\":\"walk\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: turn left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: walk left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": null,
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "invalid_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: look twice after walk opposite left thrice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"look\",\"action\":\"look\",\"direction\":\"none\",\"modifier\":\"opposite\",\"repeat\":2},{\"command\":\"walk\",\"action\":\"walk\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":3}]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: jump left and look left\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"jump left\",\"action\":\"jump\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":1},{\"command\":\"look left\",\"action\":\"look\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: jump left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: look left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: jump right thrice and look twice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"jump right\",\"action\":\"jump\",\"direction\":\"right\",\"modifier\":\"none\",\"repeat\":3},{\"command\":\"look\",\"action\":\"look\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: jump right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_RIGHT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: look\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S0": {
+    "categories": {
+      "wrong_values_or_counts": 46,
+      "wrong_order": 10,
+      "truncated": 3
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: turn opposite left and walk opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: look twice after walk opposite left thrice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump left and look left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: jump right thrice and look twice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_RIGHT\",\"I_JUMP\",\"I_TURN_RIGHT\",\"I_JUMP\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S1": {
+    "categories": {
+      "wrong_values_or_counts": 45,
+      "wrong_order": 4
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: turn opposite left and walk opposite left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK",
+          "I_LOOK",
+          "I_LOOK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: look twice after walk opposite left thrice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_LOOK\",\"I_LOOK\",\"I_LOOK\",\"I_LOOK\",\"I_LOOK\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: look right twice and look around right twice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "ec5e83b39125fc25",
+        "input": "run left twice and turn left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "turn",
+              "command": "turn left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "END OF EXAMPLES. Solve only this NEW COMMAND: run left twice and turn left thrice\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_RUN\",\"I_TURN_LEFT\",\"I_RUN\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S4": {
+    "categories": {
+      "execution_with_correct_plan": 46,
+      "plan_mismatch": 1
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: turn opposite left and walk opposite left\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"turn opposite left\",\"action\":\"turn\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":1},{\"command\":\"walk opposite left\",\"action\":\"walk\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: turn left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: walk left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look twice",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: look twice after walk opposite left thrice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"walk opposite left\",\"action\":\"walk\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":3},{\"command\":\"look twice\",\"action\":\"look\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: turn left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: walk left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_WALK\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: look\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: jump left and look left\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"jump left\",\"action\":\"jump\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":1},{\"command\":\"look left\",\"action\":\"look\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: jump left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: look left\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\", \"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: look right twice and look around right twice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"look right\",\"action\":\"look\",\"direction\":\"right\",\"modifier\":\"none\",\"repeat\":2},{\"command\":\"look around right\",\"action\":\"look\",\"direction\":\"right\",\"modifier\":\"around\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "NEW COMMAND: look right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_LOOK\", \"I_TURN_RIGHT\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S3": {
+    "categories": {
+      "plan_mismatch": 1,
+      "invalid_plan": 1
+    },
+    "examples": [
+      {
+        "id": "8cc0256d110286a8",
+        "input": "run right thrice and jump opposite right",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_JUMP"
+        ],
+        "prediction": [
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_JUMP"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "run right",
+              "repeat": 3
+            },
+            {
+              "command": "jump opposite right",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "jump",
+              "command": "jump opposite right",
+              "direction": "right",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: run right thrice and jump opposite right\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"run right\",\"repeat\":3},{\"command\":\"jump opposite right\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: run right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_RUN\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "END OF EXAMPLES. Translate only this NEW COMMAND: jump opposite right\nAnswer JSON:",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_JUMP\"]}"
+          }
+        ]
+      },
+      {
+        "id": "d2d4d30594985132",
+        "input": "walk right twice after run thrice",
+        "target": [
+          "I_RUN",
+          "I_RUN",
+          "I_RUN",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_WALK"
+        ],
+        "prediction": null,
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "walk",
+              "command": "walk right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "invalid_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "END OF EXAMPLES. Parse only this NEW COMMAND: walk right twice after run thrice\nPlan JSON:",
+            "response": "{\"steps\":[{\"command\":\"run thrice\",\"repeat\":3},{\"command\":\"walk right\",\"repeat\":2}]}"
+          }
+        ]
+      }
+    ]
+  }
+}

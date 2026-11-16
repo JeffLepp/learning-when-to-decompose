@@ -1,0 +1,785 @@
+{
+  "domain": "chainops",
+  "split": "dev",
+  "models": {
+    "qwen3:1.7b": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "qwen3:8b": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+  },
+  "model_order": [
+    "qwen3:1.7b",
+    "qwen3:8b"
+  ],
+  "strategies": [
+    "S0",
+    "S1",
+    "S3",
+    "S4"
+  ],
+  "prompts": {
+    "version": "chainops_v1",
+    "domain": "chainops",
+    "exemplar_ids": [
+      "fd443a793df1b5ba",
+      "4912d5d5e7da1e22",
+      "e4ee4674fd1a57b8",
+      "5e7e4bf81a7bf742",
+      "923bc544f7c48372",
+      "906dbd1c992a219e",
+      "a94ff622f75e4224",
+      "491cb9849acf517e",
+      "88215075612c733f",
+      "af720f70121036d1",
+      "e79b4d99c18750d7",
+      "23fb4e03dc29a322",
+      "da60648f1730ed6a",
+      "59eb31c3795b0015",
+      "65af34f3535f1ff8",
+      "b2a745ef9c1882b9"
+    ],
+    "S0": {
+      "direct": {
+        "system": "Execute list instructions exactly. A list has positions ordered from first to last; duplicate values occupy separate positions. Each operation replaces the current list. The next instruction uses that NEW list. Never reuse the initial list after a step.\nExact semantics (operation name: meaning):\nreverse: read ALL entries from last to first, reversing their order. This is not sorting or rotation.\nsort_asc: arrange ALL entries smallest to largest, preserving duplicates.\nsort_desc: arrange ALL entries largest to smallest, preserving duplicates.\nremove_first k: delete exactly positions 1 through k; keep everything AFTER position k. k is a count, not a value.\nkeep_first k: keep exactly positions 1 through k and discard the rest.\nremove_all x: delete EVERY entry whose VALUE equals x. Keep other entries in their existing order.\nadd k: add k to EVERY value, keeping positions and length unchanged.\nmultiply k: multiply EVERY value by k, keeping positions and length unchanged.\nkeep_even: keep values divisible by 2, including 0; remove odd values. Preserve order.\nkeep_odd: keep values not divisible by 2; remove even values including 0. Preserve order.\nrotate_left k: split AFTER the first k entries into prefix and suffix; output the entire suffix followed by the entire prefix. Preserve order INSIDE each part. All entries appear once.\nswap_ends: exchange ONLY the first and last entries; every middle entry stays in its place. Length zero or one is unchanged.\nappend x: attach ONE copy of x after the last entry; all previous entries stay unchanged.\nunique: scan left to right, keeping the first occurrence of each value; discard later occurrences without sorting.\nSynonyms: reverse order=reverse; smallest to largest=sort_asc; largest to smallest=sort_desc; delete first=remove_first; retain first=keep_first; delete every equal to=remove_all; increase=add; scale by factor=multiply; remove odd=keep_even; remove even=keep_odd; move first k to end=rotate_left; exchange first/last=swap_ends; place after last=append; first occurrence=unique.\nDo only the requested operations in their written order. Repeated instructions must each be executed. Output only {\"answer\":[integers]} for the FINAL list, including [] when empty. Do not concatenate intermediate lists, add explanations, or invent entries.",
+        "instruction": "Read the starting list, apply each instruction once in order, and keep track of the updated list after EACH instruction. Check positions, counts, and duplicate values. Return only the final list as {\"answer\":[...]}; stop after its closing bracket.",
+        "template": "Task: {input}\nFinal JSON:",
+        "examples": []
+      }
+    },
+    "S1": {
+      "direct": {
+        "system": "Execute list instructions exactly. A list has positions ordered from first to last; duplicate values occupy separate positions. Each operation replaces the current list. The next instruction uses that NEW list. Never reuse the initial list after a step.\nExact semantics (operation name: meaning):\nreverse: read ALL entries from last to first, reversing their order. This is not sorting or rotation.\nsort_asc: arrange ALL entries smallest to largest, preserving duplicates.\nsort_desc: arrange ALL entries largest to smallest, preserving duplicates.\nremove_first k: delete exactly positions 1 through k; keep everything AFTER position k. k is a count, not a value.\nkeep_first k: keep exactly positions 1 through k and discard the rest.\nremove_all x: delete EVERY entry whose VALUE equals x. Keep other entries in their existing order.\nadd k: add k to EVERY value, keeping positions and length unchanged.\nmultiply k: multiply EVERY value by k, keeping positions and length unchanged.\nkeep_even: keep values divisible by 2, including 0; remove odd values. Preserve order.\nkeep_odd: keep values not divisible by 2; remove even values including 0. Preserve order.\nrotate_left k: split AFTER the first k entries into prefix and suffix; output the entire suffix followed by the entire prefix. Preserve order INSIDE each part. All entries appear once.\nswap_ends: exchange ONLY the first and last entries; every middle entry stays in its place. Length zero or one is unchanged.\nappend x: attach ONE copy of x after the last entry; all previous entries stay unchanged.\nunique: scan left to right, keeping the first occurrence of each value; discard later occurrences without sorting.\nSynonyms: reverse order=reverse; smallest to largest=sort_asc; largest to smallest=sort_desc; delete first=remove_first; retain first=keep_first; delete every equal to=remove_all; increase=add; scale by factor=multiply; remove odd=keep_even; remove even=keep_odd; move first k to end=rotate_left; exchange first/last=swap_ends; place after last=append; first occurrence=unique.\nDo only the requested operations in their written order. Repeated instructions must each be executed. Output only {\"answer\":[integers]} for the FINAL list, including [] when empty. Do not concatenate intermediate lists, add explanations, or invent entries.",
+        "instruction": "Read the starting list, apply each instruction once in order, and keep track of the updated list after EACH instruction. Check positions, counts, and duplicate values. Return only the final list as {\"answer\":[...]}; stop after its closing bracket.",
+        "template": "Task: {input}\nFinal JSON:",
+        "examples": [
+          {
+            "id": "923bc544f7c48372",
+            "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.\nWorked states: Keep only the first 4 elements. => [3, 0, 4, 0]\nFinal JSON:",
+            "output": {
+              "answer": [
+                3,
+                0,
+                4,
+                0
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.\nWorked states: Remove duplicates, keeping the first occurrence of each number. => [8, 10, 1, 13]; Keep only odd numbers. => [1, 13]\nFinal JSON:",
+            "output": {
+              "answer": [
+                1,
+                13
+              ]
+            }
+          },
+          {
+            "id": "e4ee4674fd1a57b8",
+            "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.\nWorked states: Add 5 to each number. => [7, 18, 23, 5, 16, 22]; Keep only odd numbers. => [7, 23, 5]; Remove all occurrences of 23. => [7, 5]\nFinal JSON:",
+            "output": {
+              "answer": [
+                7,
+                5
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.\nWorked states: Swap the first and last elements. => [12, 2, 18, 2]; Keep only the first 3 elements. => [12, 2, 18]; Multiply each number by 3. => [36, 6, 54]; Append 1 to the end of the list. => [36, 6, 54, 1]\nFinal JSON:",
+            "output": {
+              "answer": [
+                36,
+                6,
+                54,
+                1
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.\nWorked states: Sort the list in descending order. => [14, 8, 7, 6]; Rotate left by 3 positions (move the first 3 elements to the end). => [6, 14, 8, 7]; Reverse the list. => [7, 8, 14, 6]; Remove the first 1 elements. => [8, 14, 6]\nFinal JSON:",
+            "output": {
+              "answer": [
+                8,
+                14,
+                6
+              ]
+            }
+          },
+          {
+            "id": "5e7e4bf81a7bf742",
+            "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.\nWorked states: Sort the list in ascending order. => [5, 7, 14, 14, 16, 16]; Rotate left by 5 positions (move the first 5 elements to the end). => [16, 5, 7, 14, 14, 16]; Keep only even numbers. => [16, 14, 14, 16]; Remove duplicates, keeping the first occurrence of each number. => [16, 14]\nFinal JSON:",
+            "output": {
+              "answer": [
+                16,
+                14
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "S2": {
+      "direct": {
+        "system": "Execute list instructions exactly. A list has positions ordered from first to last; duplicate values occupy separate positions. Each operation replaces the current list. The next instruction uses that NEW list. Never reuse the initial list after a step.\nExact semantics (operation name: meaning):\nreverse: read ALL entries from last to first, reversing their order. This is not sorting or rotation.\nsort_asc: arrange ALL entries smallest to largest, preserving duplicates.\nsort_desc: arrange ALL entries largest to smallest, preserving duplicates.\nremove_first k: delete exactly positions 1 through k; keep everything AFTER position k. k is a count, not a value.\nkeep_first k: keep exactly positions 1 through k and discard the rest.\nremove_all x: delete EVERY entry whose VALUE equals x. Keep other entries in their existing order.\nadd k: add k to EVERY value, keeping positions and length unchanged.\nmultiply k: multiply EVERY value by k, keeping positions and length unchanged.\nkeep_even: keep values divisible by 2, including 0; remove odd values. Preserve order.\nkeep_odd: keep values not divisible by 2; remove even values including 0. Preserve order.\nrotate_left k: split AFTER the first k entries into prefix and suffix; output the entire suffix followed by the entire prefix. Preserve order INSIDE each part. All entries appear once.\nswap_ends: exchange ONLY the first and last entries; every middle entry stays in its place. Length zero or one is unchanged.\nappend x: attach ONE copy of x after the last entry; all previous entries stay unchanged.\nunique: scan left to right, keeping the first occurrence of each value; discard later occurrences without sorting.\nSynonyms: reverse order=reverse; smallest to largest=sort_asc; largest to smallest=sort_desc; delete first=remove_first; retain first=keep_first; delete every equal to=remove_all; increase=add; scale by factor=multiply; remove odd=keep_even; remove even=keep_odd; move first k to end=rotate_left; exchange first/last=swap_ends; place after last=append; first occurrence=unique.\nDo only the requested operations in their written order. Repeated instructions must each be executed. Output only {\"answer\":[integers]} for the FINAL list, including [] when empty. Do not concatenate intermediate lists, add explanations, or invent entries.",
+        "instruction": "Read the starting list, apply each instruction once in order, and keep track of the updated list after EACH instruction. Check positions, counts, and duplicate values. Return only the final list as {\"answer\":[...]}; stop after its closing bracket.",
+        "template": "Task: {input}\nFinal JSON:",
+        "examples": []
+      }
+    },
+    "S3": {
+      "plan": {
+        "system": "You divide list instructions into ordered chunks. Do not execute them. Output only {\"chunks\":[strings]}.",
+        "instruction": "Ignore the initial Start with sentence. Copy the operation sentences in their original order. Group sentences 1 and 2 in the first string, sentences 3 and 4 in the second string, and so on. An unpaired last sentence gets its own string. Every string contains ONE or TWO operation sentences, NEVER three. Each sentence ends with a period; join two with exactly \" Then \". Do not put a leading Then in a string. Do not drop repeated operations. Do not include the starting list, calculations, labels, or explanations. Return only {\"chunks\":[...]}.",
+        "template": "Task: {input}",
+        "examples": [
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.",
+            "output": {
+              "chunks": [
+                "Sort the list in descending order. Then Rotate left by 3 positions (move the first 3 elements to the end).",
+                "Reverse the list. Then Remove the first 1 elements."
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.",
+            "output": {
+              "chunks": [
+                "Swap the first and last elements. Then Keep only the first 3 elements.",
+                "Multiply each number by 3. Then Append 1 to the end of the list."
+              ]
+            }
+          },
+          {
+            "id": "e4ee4674fd1a57b8",
+            "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.",
+            "output": {
+              "chunks": [
+                "Add 5 to each number. Then Keep only odd numbers.",
+                "Remove all occurrences of 23."
+              ]
+            }
+          },
+          {
+            "id": "5e7e4bf81a7bf742",
+            "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.",
+            "output": {
+              "chunks": [
+                "Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end).",
+                "Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number."
+              ]
+            }
+          },
+          {
+            "id": "923bc544f7c48372",
+            "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.",
+            "output": {
+              "chunks": [
+                "Keep only the first 4 elements."
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+            "output": {
+              "chunks": [
+                "Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers."
+              ]
+            }
+          }
+        ]
+      },
+      "execute": {
+        "system": "Execute list instructions exactly. A list has positions ordered from first to last; duplicate values occupy separate positions. Each operation replaces the current list. The next instruction uses that NEW list. Never reuse the initial list after a step.\nExact semantics (operation name: meaning):\nreverse: read ALL entries from last to first, reversing their order. This is not sorting or rotation.\nsort_asc: arrange ALL entries smallest to largest, preserving duplicates.\nsort_desc: arrange ALL entries largest to smallest, preserving duplicates.\nremove_first k: delete exactly positions 1 through k; keep everything AFTER position k. k is a count, not a value.\nkeep_first k: keep exactly positions 1 through k and discard the rest.\nremove_all x: delete EVERY entry whose VALUE equals x. Keep other entries in their existing order.\nadd k: add k to EVERY value, keeping positions and length unchanged.\nmultiply k: multiply EVERY value by k, keeping positions and length unchanged.\nkeep_even: keep values divisible by 2, including 0; remove odd values. Preserve order.\nkeep_odd: keep values not divisible by 2; remove even values including 0. Preserve order.\nrotate_left k: split AFTER the first k entries into prefix and suffix; output the entire suffix followed by the entire prefix. Preserve order INSIDE each part. All entries appear once.\nswap_ends: exchange ONLY the first and last entries; every middle entry stays in its place. Length zero or one is unchanged.\nappend x: attach ONE copy of x after the last entry; all previous entries stay unchanged.\nunique: scan left to right, keeping the first occurrence of each value; discard later occurrences without sorting.\nSynonyms: reverse order=reverse; smallest to largest=sort_asc; largest to smallest=sort_desc; delete first=remove_first; retain first=keep_first; delete every equal to=remove_all; increase=add; scale by factor=multiply; remove odd=keep_even; remove even=keep_odd; move first k to end=rotate_left; exchange first/last=swap_ends; place after last=append; first occurrence=unique.\nDo only the requested operations in their written order. Repeated instructions must each be executed. Output only {\"answer\":[integers]} for the FINAL list, including [] when empty. Do not concatenate intermediate lists, add explanations, or invent entries.",
+        "instruction": "Starting from Current list, execute the supplied one or two operations ONLY. If two operations are supplied, the second uses the updated result of the first. Count deleted/retained positions carefully. Output only the final {\"answer\":[...]}, not a concatenation of intermediate states.",
+        "template": "Current list: {state}\nInstructions: {command}",
+        "examples": [
+          {
+            "id": "923bc544f7c48372",
+            "input": "Current list: [3, 0, 4, 0, 18]\nInstructions: Keep only the first 4 elements.",
+            "output": {
+              "answer": [
+                3,
+                0,
+                4,
+                0
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Current list: [8, 10, 1, 13, 8]\nInstructions: Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+            "output": {
+              "answer": [
+                1,
+                13
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [14, 6, 8, 7]\nInstructions: Sort the list in descending order. Then Rotate left by 3 positions (move the first 3 elements to the end).",
+            "output": {
+              "answer": [
+                6,
+                14,
+                8,
+                7
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [6, 14, 8, 7]\nInstructions: Reverse the list. Then Remove the first 1 elements.",
+            "output": {
+              "answer": [
+                8,
+                14,
+                6
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Current list: [2, 2, 18, 12]\nInstructions: Swap the first and last elements. Then Keep only the first 3 elements.",
+            "output": {
+              "answer": [
+                12,
+                2,
+                18
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Current list: [12, 2, 18]\nInstructions: Multiply each number by 3. Then Append 1 to the end of the list.",
+            "output": {
+              "answer": [
+                36,
+                6,
+                54,
+                1
+              ]
+            }
+          },
+          {
+            "id": "23fb4e03dc29a322",
+            "input": "Current list: [1, 16, 1]\nInstructions: Add 1 to each number. Then Keep only even numbers.",
+            "output": {
+              "answer": [
+                2,
+                2
+              ]
+            }
+          },
+          {
+            "id": "23fb4e03dc29a322",
+            "input": "Current list: [2, 2]\nInstructions: Remove the first 1 elements.",
+            "output": {
+              "answer": [
+                2
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "S4": {
+      "parse": {
+        "system": "Translate natural-language list instructions to operation names and arguments. Do not calculate list values. Return only JSON.",
+        "instruction": "Ignore Start with. Emit exactly one {\"op\":NAME,\"arg\":VALUE} per operation sentence, preserving sentence order and repetitions. Use these mappings:\nreverse/reverse order -> reverse; ascending/smallest to largest -> sort_asc; descending/largest to smallest -> sort_desc;\nremove/delete first k -> remove_first; keep/retain first k -> keep_first; remove all/delete every equal to x -> remove_all;\nadd/increase by k -> add; multiply/scale by factor k -> multiply;\nkeep even/remove odd -> keep_even; keep odd/remove even -> keep_odd;\nrotate left/move first k to end -> rotate_left; swap/exchange first and last -> swap_ends;\nappend/place x after last -> append; remove duplicates/keep first occurrence -> unique.\nFor remove_first, keep_first, remove_all, add, multiply, rotate_left, append, arg is the stated integer. For all other operations arg is null. Never use a list value as an argument unless the instruction states it. Return {\"ops\":[...]} only, with no start field.",
+        "template": "Task: {input}",
+        "examples": [
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.",
+            "output": {
+              "ops": [
+                {
+                  "op": "sort_desc",
+                  "arg": null
+                },
+                {
+                  "op": "rotate_left",
+                  "arg": 3
+                },
+                {
+                  "op": "reverse",
+                  "arg": null
+                },
+                {
+                  "op": "remove_first",
+                  "arg": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.",
+            "output": {
+              "ops": [
+                {
+                  "op": "swap_ends",
+                  "arg": null
+                },
+                {
+                  "op": "keep_first",
+                  "arg": 3
+                },
+                {
+                  "op": "multiply",
+                  "arg": 3
+                },
+                {
+                  "op": "append",
+                  "arg": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": "e4ee4674fd1a57b8",
+            "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.",
+            "output": {
+              "ops": [
+                {
+                  "op": "add",
+                  "arg": 5
+                },
+                {
+                  "op": "keep_odd",
+                  "arg": null
+                },
+                {
+                  "op": "remove_all",
+                  "arg": 23
+                }
+              ]
+            }
+          },
+          {
+            "id": "5e7e4bf81a7bf742",
+            "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.",
+            "output": {
+              "ops": [
+                {
+                  "op": "sort_asc",
+                  "arg": null
+                },
+                {
+                  "op": "rotate_left",
+                  "arg": 5
+                },
+                {
+                  "op": "keep_even",
+                  "arg": null
+                },
+                {
+                  "op": "unique",
+                  "arg": null
+                }
+              ]
+            }
+          },
+          {
+            "id": "923bc544f7c48372",
+            "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.",
+            "output": {
+              "ops": [
+                {
+                  "op": "keep_first",
+                  "arg": 4
+                }
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+            "output": {
+              "ops": [
+                {
+                  "op": "unique",
+                  "arg": null
+                },
+                {
+                  "op": "keep_odd",
+                  "arg": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "leaf": {
+        "system": "Execute list instructions exactly. A list has positions ordered from first to last; duplicate values occupy separate positions. Each operation replaces the current list. The next instruction uses that NEW list. Never reuse the initial list after a step.\nExact semantics (operation name: meaning):\nreverse: read ALL entries from last to first, reversing their order. This is not sorting or rotation.\nsort_asc: arrange ALL entries smallest to largest, preserving duplicates.\nsort_desc: arrange ALL entries largest to smallest, preserving duplicates.\nremove_first k: delete exactly positions 1 through k; keep everything AFTER position k. k is a count, not a value.\nkeep_first k: keep exactly positions 1 through k and discard the rest.\nremove_all x: delete EVERY entry whose VALUE equals x. Keep other entries in their existing order.\nadd k: add k to EVERY value, keeping positions and length unchanged.\nmultiply k: multiply EVERY value by k, keeping positions and length unchanged.\nkeep_even: keep values divisible by 2, including 0; remove odd values. Preserve order.\nkeep_odd: keep values not divisible by 2; remove even values including 0. Preserve order.\nrotate_left k: split AFTER the first k entries into prefix and suffix; output the entire suffix followed by the entire prefix. Preserve order INSIDE each part. All entries appear once.\nswap_ends: exchange ONLY the first and last entries; every middle entry stays in its place. Length zero or one is unchanged.\nappend x: attach ONE copy of x after the last entry; all previous entries stay unchanged.\nunique: scan left to right, keeping the first occurrence of each value; discard later occurrences without sorting.\nSynonyms: reverse order=reverse; smallest to largest=sort_asc; largest to smallest=sort_desc; delete first=remove_first; retain first=keep_first; delete every equal to=remove_all; increase=add; scale by factor=multiply; remove odd=keep_even; remove even=keep_odd; move first k to end=rotate_left; exchange first/last=swap_ends; place after last=append; first occurrence=unique.\nDo only the requested operations in their written order. Repeated instructions must each be executed. Output only {\"answer\":[integers]} for the FINAL list, including [] when empty. Do not concatenate intermediate lists, add explanations, or invent entries.",
+        "instruction": "Apply exactly the ONE supplied instruction to Current list. For positional operations count entries from the left starting at 1. Preserve duplicates unless explicitly asked to remove them. Verify output length and order. Return only {\"answer\":[...]}.",
+        "template": "Current list: {state}\nInstructions: {command}",
+        "examples": [
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [6, 14, 8, 7]\nInstructions: Reverse the list.",
+            "output": {
+              "answer": [
+                7,
+                8,
+                14,
+                6
+              ]
+            }
+          },
+          {
+            "id": "5e7e4bf81a7bf742",
+            "input": "Current list: [5, 14, 7, 14, 16, 16]\nInstructions: Sort the list in ascending order.",
+            "output": {
+              "answer": [
+                5,
+                7,
+                14,
+                14,
+                16,
+                16
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [14, 6, 8, 7]\nInstructions: Sort the list in descending order.",
+            "output": {
+              "answer": [
+                14,
+                8,
+                7,
+                6
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [7, 8, 14, 6]\nInstructions: Remove the first 1 elements.",
+            "output": {
+              "answer": [
+                8,
+                14,
+                6
+              ]
+            }
+          },
+          {
+            "id": "923bc544f7c48372",
+            "input": "Current list: [3, 0, 4, 0, 18]\nInstructions: Keep only the first 4 elements.",
+            "output": {
+              "answer": [
+                3,
+                0,
+                4,
+                0
+              ]
+            }
+          },
+          {
+            "id": "e4ee4674fd1a57b8",
+            "input": "Current list: [7, 23, 5]\nInstructions: Remove all occurrences of 23.",
+            "output": {
+              "answer": [
+                7,
+                5
+              ]
+            }
+          },
+          {
+            "id": "23fb4e03dc29a322",
+            "input": "Current list: [1, 16, 1]\nInstructions: Add 1 to each number.",
+            "output": {
+              "answer": [
+                2,
+                17,
+                2
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Current list: [12, 2, 18]\nInstructions: Multiply each number by 3.",
+            "output": {
+              "answer": [
+                36,
+                6,
+                54
+              ]
+            }
+          },
+          {
+            "id": "23fb4e03dc29a322",
+            "input": "Current list: [2, 17, 2]\nInstructions: Keep only even numbers.",
+            "output": {
+              "answer": [
+                2,
+                2
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Current list: [8, 10, 1, 13]\nInstructions: Keep only odd numbers.",
+            "output": {
+              "answer": [
+                1,
+                13
+              ]
+            }
+          },
+          {
+            "id": "fd443a793df1b5ba",
+            "input": "Current list: [14, 8, 7, 6]\nInstructions: Rotate left by 3 positions (move the first 3 elements to the end).",
+            "output": {
+              "answer": [
+                6,
+                14,
+                8,
+                7
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Current list: [2, 2, 18, 12]\nInstructions: Swap the first and last elements.",
+            "output": {
+              "answer": [
+                12,
+                2,
+                18,
+                2
+              ]
+            }
+          },
+          {
+            "id": "4912d5d5e7da1e22",
+            "input": "Current list: [36, 6, 54]\nInstructions: Append 1 to the end of the list.",
+            "output": {
+              "answer": [
+                36,
+                6,
+                54,
+                1
+              ]
+            }
+          },
+          {
+            "id": "906dbd1c992a219e",
+            "input": "Current list: [8, 10, 1, 13, 8]\nInstructions: Remove duplicates, keeping the first occurrence of each number.",
+            "output": {
+              "answer": [
+                8,
+                10,
+                1,
+                13
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "prompts_sha256": "ab2654437944d349f73b99584c179de615572c4bc005422385e8038a1018a9c5",
+  "schemas": {
+    "answer": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 0,
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "additionalProperties": false
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "chunks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "minItems": 1,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "chunks"
+      ],
+      "additionalProperties": false
+    },
+    "parse": {
+      "type": "object",
+      "properties": {
+        "ops": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "op": {
+                "type": "string",
+                "enum": [
+                  "reverse",
+                  "sort_asc",
+                  "sort_desc",
+                  "remove_first",
+                  "keep_first",
+                  "remove_all",
+                  "add",
+                  "multiply",
+                  "keep_even",
+                  "keep_odd",
+                  "rotate_left",
+                  "swap_ends",
+                  "append",
+                  "unique"
+                ]
+              },
+              "arg": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 99
+              }
+            },
+            "required": [
+              "op",
+              "arg"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "ops"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "decoding": {
+    "options": {
+      "temperature": 0,
+      "seed": 437,
+      "num_ctx": 4096,
+      "num_predict": 512
+    },
+    "thinking_num_predict": 2048,
+    "thinking_strategies": [
+      "S2"
+    ],
+    "logprobs": true,
+    "stream": false,
+    "keep_alive": "15m"
+  },
+  "code_sha256": {
+    "v2/harness.py": "5250c6edde643fa9f52e3cad7a2812f6b663dddead782b097549437e3a6e790f",
+    "v2/domains/scan.py": "e634cac7f31111fef8c9e0ba97ae69e6e5819a35a048045907a76eea7bebcba6",
+    "v2/domains/chainops.py": "a61de0db04ce7b834f879715a8037f7f611b05ff35b3113922cfe077627532bf",
+    "experiment.py": "e4f28a2549b8e5b28005fc5227d18b113a108b05b2a1fa3b0eb406f23b9b81a6",
+    "v2/build_data.py": "eae9133e132521be64d58e490b1e33b56c954a906eab4336ea88151086a762c7",
+    "v2/gpulock.py": "22ba36bbab13cdd09231a00613905aea093925f4c887e8815b85e04e94acd3e0"
+  },
+  "items_sha256": "1380d7e5195cb66a17583645078c31d258cdea1357870f9a2731e0197d422550",
+  "item_ids": [
+    "269fdefc54e27c1a",
+    "1fe2deef0d654396",
+    "05277443b66ef6e4",
+    "7320e1ba0dbb5d96",
+    "08f8268bb63f8396",
+    "3425a3914d895c0f",
+    "b7a0e02f2a147ac9",
+    "4f78ff6b35405a7f",
+    "84067c4e6a7ab93a",
+    "930e2ca638bc1f0a",
+    "f412934fbdfb3ad0",
+    "9284dbcc837dafa6",
+    "a666309b880f435a",
+    "c5443669920739d1",
+    "5343377bd7a63f1d",
+    "1099662a57957f58",
+    "a1da25eaf66e5574",
+    "bd8e017fb5c7c59d",
+    "f63481800a66c85b",
+    "37233fb2bfe417de",
+    "0ca6f1621e74100a",
+    "3477f23254a874e8",
+    "eae7baa750e0ada1",
+    "7361b8f5c46ea702",
+    "6b43a4258aeee68c",
+    "83e058ba6337d089",
+    "3ed825abe15227ac",
+    "3cbb6a346e8c603d",
+    "be4be335bfe23570",
+    "96c1ee2743308f46",
+    "0ca31fb90b15c407",
+    "1c2beded2631abe8",
+    "9c762e51b61d64f9",
+    "da4aa62f3116efaa",
+    "cac581c8708091d1",
+    "9d1d37b2efe2c161",
+    "eaae08668ca1e05c",
+    "537dd56602e1c1ed",
+    "3ba3f223405571c4",
+    "f3edb741280dfb27",
+    "25af2a3e597b0ea0",
+    "5efed38bbbf81ebd",
+    "337a912758e4d96f",
+    "39d52a44b5d4bfe5",
+    "074e17e163e799a2",
+    "97bfc193a48972ef",
+    "c0f82c34b07383a2",
+    "7f41634041cb723f",
+    "932bab75ad377cd6",
+    "ff2cf060e5710ca1",
+    "b4dee05ec10e9cff",
+    "31c4fa4fea26a529",
+    "4a64f92c7d9d9f8a",
+    "8e84d1d15b94c414",
+    "08d9366853e7d0d5",
+    "b0a34e89655e44c1",
+    "9528971bd3ecf1d7",
+    "b7377be628fd9539",
+    "4f6b14fb01ecff4d",
+    "e10167423fd82213"
+  ],
+  "token_accounting": {
+    "endpoint": "http://127.0.0.1:11434/api/generate",
+    "method": "logprob <think>..</think> inclusive; remaining content only",
+    "unreported_special_tokens": "included in eval_count, excluded from thinking and content stats",
+    "verified_ollama": "0.40.13",
+    "check_file": "workspace_logs/ws1-endpoint-check.json",
+    "generate_thinking_check": {
+      "eval_count": 326,
+      "logprob_entries": 325,
+      "thinking_phase": 286,
+      "content": 39,
+      "unreported": 1
+    },
+    "generate_nonthinking_check": {
+      "eval_count": 23,
+      "logprob_entries": 22
+    }
+  },
+  "endpoint": "http://127.0.0.1:11434/api/generate",
+  "final_eval": false,
+  "collect_holdout": false
+}

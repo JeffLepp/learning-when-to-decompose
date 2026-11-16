@@ -1,0 +1,1689 @@
+{
+  "selections": {
+    "layer/F3-own": {
+      "choice": "L36_mean",
+      "validation_score": 0.8518328445747801
+    },
+    "layer/F3-small": {
+      "choice": "L16_last",
+      "validation_score": 0.8818181818181818
+    },
+    "calibration/F1/logreg/per_arm": {
+      "choice": "none",
+      "validation_score": -0.11757438407287432
+    },
+    "calibration/F1/logreg/shared": {
+      "choice": "none",
+      "validation_score": -0.1174333008465262
+    },
+    "calibration/F1/hgb/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.137366022341312
+    },
+    "calibration/F1/hgb/shared": {
+      "choice": "platt",
+      "validation_score": -0.14144482092663102
+    },
+    "calibration/F1/mlp/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.13174292672690285
+    },
+    "calibration/F1/mlp/shared": {
+      "choice": "platt",
+      "validation_score": -0.1512926900384844
+    },
+    "calibration/F2/logreg/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.12465349111564318
+    },
+    "calibration/F2/logreg/shared": {
+      "choice": "platt",
+      "validation_score": -0.12922084274278378
+    },
+    "calibration/F2/hgb/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.1530646914231405
+    },
+    "calibration/F2/hgb/shared": {
+      "choice": "platt",
+      "validation_score": -0.14738424330613165
+    },
+    "calibration/F2/mlp/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.10680074594916396
+    },
+    "calibration/F2/mlp/shared": {
+      "choice": "platt",
+      "validation_score": -0.1185963998394532
+    },
+    "calibration/F3-own/logreg/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.12159333067071652
+    },
+    "calibration/F3-own/logreg/shared": {
+      "choice": "platt",
+      "validation_score": -0.12602504789872143
+    },
+    "calibration/F3-own/hgb/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.14988882079642507
+    },
+    "calibration/F3-own/hgb/shared": {
+      "choice": "isotonic",
+      "validation_score": -0.12446773637386274
+    },
+    "calibration/F3-own/mlp/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.12897278894818795
+    },
+    "calibration/F3-own/mlp/shared": {
+      "choice": "platt",
+      "validation_score": -0.138869745606653
+    },
+    "calibration/F3-small/logreg/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.117751445499977
+    },
+    "calibration/F3-small/logreg/shared": {
+      "choice": "platt",
+      "validation_score": -0.14263649421817956
+    },
+    "calibration/F3-small/hgb/per_arm": {
+      "choice": "isotonic",
+      "validation_score": -0.09383785291932378
+    },
+    "calibration/F3-small/hgb/shared": {
+      "choice": "none",
+      "validation_score": -0.08082443382391287
+    },
+    "calibration/F3-small/mlp/per_arm": {
+      "choice": "platt",
+      "validation_score": -0.1125070397156809
+    },
+    "calibration/F3-small/mlp/shared": {
+      "choice": "platt",
+      "validation_score": -0.14365605296457815
+    },
+    "fixed/qwen3:8b|S0": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.03125,
+        "mean_cost": 241.8125,
+        "correct": 1.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "fixed/qwen3:8b|S3": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "target/best-0.00": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "target/best-0.02": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "target/best-0.05": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "heuristic": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/logreg/per_arm": {
+      "choice": 15,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 601.625,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/logreg/shared": {
+      "choice": 13,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 674.4375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/hgb/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 673.28125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/hgb/shared": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 673.28125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/mlp/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 629.9375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F1/mlp/shared": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 673.28125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/logreg/per_arm": {
+      "choice": 15,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 645.6875,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/logreg/shared": {
+      "choice": 15,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 660.125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/hgb/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 673.28125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/hgb/shared": {
+      "choice": 13,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 660.125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/mlp/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 673.59375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F2/mlp/shared": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/logreg/per_arm": {
+      "choice": 16,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.25,
+        "mean_cost": 743.0625,
+        "correct": 8.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/logreg/shared": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 873.53125,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/hgb/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 858.78125,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/hgb/shared": {
+      "choice": 17,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 788.0625,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/mlp/per_arm": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 829.625,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-own/mlp/shared": {
+      "choice": 16,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 843.5625,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/logreg/per_arm": {
+      "choice": 15,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 817.4375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/logreg/shared": {
+      "choice": 18,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 803.9375,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/hgb/per_arm": {
+      "choice": 20,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 602.4375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/hgb/shared": {
+      "choice": 19,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 602.5625,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/mlp/per_arm": {
+      "choice": 18,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 742.96875,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "route/F3-small/mlp/shared": {
+      "choice": 16,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.28125,
+        "mean_cost": 816.875,
+        "correct": 9.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "threshold/0.5": {
+      "choice": 0,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 629.9375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "threshold/sweep": {
+      "choice": 2,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 629.9375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "cascade/fixed_frontier/agreement": {
+      "choice": 3,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 929.84375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "cascade/qwen3:8b/agreement": {
+      "choice": 3,
+      "rule": "D1.7",
+      "validation_point": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 929.84375,
+        "correct": 10.0
+      },
+      "best_single_val_accuracy": 0.3125
+    },
+    "selected/F1": {
+      "choice": "route/F1/logreg/per_arm",
+      "validation_score": 0.22863230093143777
+    },
+    "selected/F2": {
+      "choice": "route/F2/mlp/per_arm",
+      "validation_score": 0.22205139540584073
+    },
+    "selected/F3-own": {
+      "choice": "route/F3-own/mlp/per_arm",
+      "validation_score": 0.12110028557344604
+    },
+    "selected/F3-small": {
+      "choice": "route/F3-small/hgb/shared",
+      "validation_score": 0.14138770222004343
+    },
+    "selected/overall": {
+      "choice": "route/F1/logreg/per_arm",
+      "validation_score": 0.22863230093143777
+    },
+    "selected/cascade": {
+      "choice": "cascade/fixed_frontier/agreement",
+      "validation_score": 0.12245154312576645
+    }
+  },
+  "selection_only": [
+    "calibration/F1/hgb/per_arm",
+    "calibration/F1/hgb/shared",
+    "calibration/F1/logreg/per_arm",
+    "calibration/F1/logreg/shared",
+    "calibration/F1/mlp/per_arm",
+    "calibration/F1/mlp/shared",
+    "calibration/F2/hgb/per_arm",
+    "calibration/F2/hgb/shared",
+    "calibration/F2/logreg/per_arm",
+    "calibration/F2/logreg/shared",
+    "calibration/F2/mlp/per_arm",
+    "calibration/F2/mlp/shared",
+    "calibration/F3-own/hgb/per_arm",
+    "calibration/F3-own/hgb/shared",
+    "calibration/F3-own/logreg/per_arm",
+    "calibration/F3-own/logreg/shared",
+    "calibration/F3-own/mlp/per_arm",
+    "calibration/F3-own/mlp/shared",
+    "calibration/F3-small/hgb/per_arm",
+    "calibration/F3-small/hgb/shared",
+    "calibration/F3-small/logreg/per_arm",
+    "calibration/F3-small/logreg/shared",
+    "calibration/F3-small/mlp/per_arm",
+    "calibration/F3-small/mlp/shared",
+    "layer/F3-own",
+    "layer/F3-small"
+  ],
+  "recipes": {
+    "fixed/qwen3:8b|S0": {
+      "kind": "fixed",
+      "arm": "qwen3:8b|S0",
+      "chosen": 0
+    },
+    "fixed/qwen3:8b|S3": {
+      "kind": "fixed",
+      "arm": "qwen3:8b|S3",
+      "chosen": 0
+    },
+    "target/best-0.00": {
+      "kind": "fixed",
+      "arm": "qwen3:8b|S3",
+      "chosen": 0
+    },
+    "target/best-0.02": {
+      "kind": "fixed",
+      "arm": "qwen3:8b|S3",
+      "chosen": 0
+    },
+    "target/best-0.05": {
+      "kind": "fixed",
+      "arm": "qwen3:8b|S3",
+      "chosen": 0
+    },
+    "heuristic": {
+      "kind": "heuristic",
+      "grid": [
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 0,
+          "length_threshold": 4,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 0,
+          "length_threshold": 8,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 0,
+          "length_threshold": 12,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 0,
+          "length_threshold": 16,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 0,
+          "length_threshold": 24,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 1,
+          "length_threshold": 4,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 1,
+          "length_threshold": 8,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 1,
+          "length_threshold": 12,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 1,
+          "length_threshold": 16,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 1,
+          "length_threshold": 24,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 2,
+          "length_threshold": 4,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 2,
+          "length_threshold": 8,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 2,
+          "length_threshold": 12,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 2,
+          "length_threshold": 16,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 2,
+          "length_threshold": 24,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 3,
+          "length_threshold": 4,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 3,
+          "length_threshold": 8,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 3,
+          "length_threshold": 12,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 3,
+          "length_threshold": 16,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 3,
+          "length_threshold": 24,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 4,
+          "length_threshold": 4,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 4,
+          "length_threshold": 8,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 4,
+          "length_threshold": 12,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 4,
+          "length_threshold": 16,
+          "strategy": "S3"
+        },
+        {
+          "small": "qwen3:8b",
+          "large": "qwen3:8b",
+          "k": 4,
+          "length_threshold": 24,
+          "strategy": "S3"
+        }
+      ],
+      "chosen": 0
+    },
+    "route/F1/logreg/per_arm": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/logreg/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 15
+    },
+    "route/F1/logreg/shared": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/logreg/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 13
+    },
+    "route/F1/hgb/per_arm": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/hgb/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F1/hgb/shared": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/hgb/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F1/mlp/per_arm": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/mlp/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F1/mlp/shared": {
+      "kind": "lambda",
+      "family": "F1",
+      "predictor": "F1/mlp/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F2/logreg/per_arm": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/logreg/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 15
+    },
+    "route/F2/logreg/shared": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/logreg/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 15
+    },
+    "route/F2/hgb/per_arm": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/hgb/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F2/hgb/shared": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/hgb/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 13
+    },
+    "route/F2/mlp/per_arm": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/mlp/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F2/mlp/shared": {
+      "kind": "lambda",
+      "family": "F2",
+      "predictor": "F2/mlp/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F3-own/logreg/per_arm": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/logreg/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 16
+    },
+    "route/F3-own/logreg/shared": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/logreg/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F3-own/hgb/per_arm": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/hgb/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F3-own/hgb/shared": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/hgb/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 17
+    },
+    "route/F3-own/mlp/per_arm": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/mlp/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 0
+    },
+    "route/F3-own/mlp/shared": {
+      "kind": "lambda",
+      "family": "F3-own",
+      "predictor": "F3-own/mlp/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 16
+    },
+    "route/F3-small/logreg/per_arm": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/logreg/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 15
+    },
+    "route/F3-small/logreg/shared": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/logreg/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 18
+    },
+    "route/F3-small/hgb/per_arm": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/hgb/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 20
+    },
+    "route/F3-small/hgb/shared": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/hgb/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 19
+    },
+    "route/F3-small/mlp/per_arm": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/mlp/per_arm",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 18
+    },
+    "route/F3-small/mlp/shared": {
+      "kind": "lambda",
+      "family": "F3-small",
+      "predictor": "F3-small/mlp/shared",
+      "grid": [
+        0.0,
+        2.3043686989918385e-07,
+        3.5444860511784274e-07,
+        5.451984039053694e-07,
+        8.38601973118611e-07,
+        1.289903389813467e-06,
+        1.984076842634544e-06,
+        3.0518261666464246e-06,
+        4.694194675978753e-06,
+        7.220419005778919e-06,
+        1.1106154349711382e-05,
+        1.708303414814176e-05,
+        2.627642715177656e-05,
+        4.0417329724633653e-05,
+        6.216828995182867e-05,
+        9.562473082379488e-05,
+        0.00014708606513398598,
+        0.00022624179299876048,
+        0.00034799590874001155,
+        0.0005352731292244044,
+        0.0008233353199670619,
+        0.0012664208459100023,
+        0.0019479569502976843,
+        0.0029962680198038338,
+        0.004608737397983677
+      ],
+      "chosen": 16
+    },
+    "threshold/0.5": {
+      "kind": "threshold",
+      "family": "F1",
+      "predictor": "F1/logreg/per_arm",
+      "grid": [
+        0.5
+      ],
+      "chosen": 0
+    },
+    "threshold/sweep": {
+      "kind": "threshold",
+      "family": "F1",
+      "predictor": "F1/logreg/per_arm",
+      "grid": [
+        0,
+        0.25,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "chosen": 2
+    },
+    "cascade/fixed_frontier/agreement": {
+      "kind": "cascade",
+      "ladder": [
+        "qwen3:8b|S0",
+        "qwen3:8b|S3"
+      ],
+      "confidence": "agreement",
+      "grid": [
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ]
+      ],
+      "chosen": 3
+    },
+    "cascade/qwen3:8b/agreement": {
+      "kind": "cascade",
+      "ladder": [
+        "qwen3:8b|S0",
+        "qwen3:8b|S3"
+      ],
+      "confidence": "agreement",
+      "grid": [
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ],
+        [
+          null
+        ]
+      ],
+      "chosen": 3
+    },
+    "selected/F1": {
+      "kind": "alias",
+      "source": "route/F1/logreg/per_arm"
+    },
+    "selected/F2": {
+      "kind": "alias",
+      "source": "route/F2/mlp/per_arm"
+    },
+    "selected/F3-own": {
+      "kind": "alias",
+      "source": "route/F3-own/mlp/per_arm"
+    },
+    "selected/F3-small": {
+      "kind": "alias",
+      "source": "route/F3-small/hgb/shared"
+    },
+    "selected/overall": {
+      "kind": "alias",
+      "source": "route/F1/logreg/per_arm"
+    },
+    "selected/cascade": {
+      "kind": "alias",
+      "source": "cascade/fixed_frontier/agreement"
+    }
+  },
+  "layer_selection": {
+    "F3-own": {
+      "scores": {
+        "L04_last": 0.806158357771261,
+        "L04_mean": 0.8359237536656892,
+        "L08_last": 0.7904692082111437,
+        "L08_mean": 0.8425219941348974,
+        "L12_last": 0.8127565982404692,
+        "L12_mean": 0.7786656891495601,
+        "L16_last": 0.7532258064516129,
+        "L16_mean": 0.7716275659824048,
+        "L20_last": 0.7602639296187683,
+        "L20_mean": 0.7943548387096775,
+        "L24_last": 0.7784457478005865,
+        "L24_mean": 0.8013929618768328,
+        "L28_last": 0.7943548387096775,
+        "L28_mean": 0.8127565982404692,
+        "L32_last": 0.8243401759530792,
+        "L32_mean": 0.819574780058651,
+        "L36_last": 0.771407624633431,
+        "L36_mean": 0.8518328445747801
+      },
+      "selected": "L36_mean",
+      "rule": "Mean per-arm validation AUROC; train-only logreg, first key wins ties"
+    },
+    "F3-small": {
+      "scores": {
+        "L04_last": 0.8338709677419355,
+        "L04_mean": 0.8809384164222873,
+        "L08_last": 0.8727272727272728,
+        "L08_mean": 0.8586510263929619,
+        "L12_last": 0.8475073313782991,
+        "L12_mean": 0.8404692082111438,
+        "L16_last": 0.8818181818181818,
+        "L16_mean": 0.797067448680352,
+        "L20_last": 0.8770527859237537,
+        "L20_mean": 0.8286656891495601,
+        "L24_last": 0.8268328445747801,
+        "L24_mean": 0.7943548387096775,
+        "L28_last": 0.8177419354838711,
+        "L28_mean": 0.8586510263929619
+      },
+      "selected": "L16_last",
+      "rule": "Mean per-arm validation AUROC; train-only logreg, first key wins ties"
+    }
+  },
+  "s2_selections": null
+}

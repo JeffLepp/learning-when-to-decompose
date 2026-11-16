@@ -1,0 +1,29 @@
+{
+  "lossless_payloads_verified": true,
+  "changes": [
+    {
+      "name": "v1",
+      "before_bytes": 18755368,
+      "after_bytes": 14794568,
+      "original_container_sha256": "d8198b08575ad42e936f687e1ec0b7e74e7bdba2bf3cf507016f445a180f01b0",
+      "packed_container_sha256": "42a69b1f2bdc365b8e00cfbc4d407db415b95ccef92c73887fd9c4e33e46ee48",
+      "identical_serialized_payload_sha256": "3f7a5d1a0d35744dade11144e0962a78fab1e0263d5f0fe191f747202df5dbca",
+      "original_p4_report_sha256": "c57c225cb6421bf8572549c19d30544078d360bc923fd623c0d33e812180c103",
+      "original_report_archive": "results\\v2\\router\\task_e\\v1_p4_report_before_packaging.json.xz",
+      "reversible": "Original container = zlib.compress(lzma.decompress(objects.joblib), level=3)"
+    },
+    {
+      "name": "synthetic",
+      "before_bytes": 13066371,
+      "after_bytes": 8519492,
+      "original_container_sha256": "004d3d625e4f0fb25143080cb0895db90e756971cbcc39a29de0aeaa67db23ed",
+      "packed_container_sha256": "af4fcff2728c0579679335da9b5410e7be40a11991fa2111beb0ca12c7909219",
+      "identical_serialized_payload_sha256": "aab847e003dc3bd1d098bd21fc8c6692df1bce1e15b6e18a65605d609c28cfcc",
+      "original_p4_report_sha256": "affaa0f4b6e73a1fdebb536f4fb95fefa6cede324874c484d4a82a3c463c3130",
+      "original_report_archive": "results\\v2\\router\\task_e\\synthetic_p4_report_before_packaging.json.xz",
+      "reversible": "Original container = zlib.compress(lzma.decompress(objects.joblib), level=3)"
+    }
+  ],
+  "presentation": "Escaped Markdown arm separators; rerendered crowded synthetic cost, reliability and AUROC figures from recorded metrics.",
+  "script_sha256": "b26ae126dae588ea7778957a6f2416638d57d233821350bf431af80f1f5c5be4"
+}

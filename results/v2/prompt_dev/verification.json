@@ -1,0 +1,23 @@
+{
+  "domains": {
+    "scan": {
+      "rounds": 3,
+      "records": 1440,
+      "scored_physical_calls": 2941,
+      "scored_total_tokens": 1318845,
+      "excluded_warmup_tokens": 2165,
+      "stopped_after_no_improvement": true,
+      "final_sha256": "d587e10e7af83de388e274014d460cc75faedb245e109322137deb9ee13cb5d8"
+    },
+    "chainops": {
+      "rounds": 2,
+      "records": 960,
+      "scored_physical_calls": 1813,
+      "scored_total_tokens": 1384067,
+      "excluded_warmup_tokens": 1858,
+      "stopped_after_no_improvement": true,
+      "final_sha256": "2eaaa69b1d8d110bdf2f4f2c054614d8ec30e379c37b152e14d1d252efdc8b34"
+    }
+  },
+  "readback": "independent recomputation from records; no final prompt inference"
+}

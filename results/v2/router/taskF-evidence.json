@@ -1,0 +1,452 @@
+{
+  "platt": {
+    "old_negative_candidate_fold_arm_fits": 376,
+    "candidate_fold_arm_fits": 1920,
+    "new_candidate_fold_arm_fallbacks": 376,
+    "new_selected_full_val_fallbacks": 70,
+    "predictors": {
+      "F1/logreg/per_arm": {
+        "raw_auroc": 0.6274630945819808,
+        "crossfit_auroc": 0.6274630945819808,
+        "old_crossfit_auroc": 0.6274630945819808,
+        "selected_calibration": "none",
+        "fold_fallbacks": 13,
+        "full_val_fallbacks": 0
+      },
+      "F1/logreg/shared": {
+        "raw_auroc": 0.590562714553249,
+        "crossfit_auroc": 0.532086845796711,
+        "old_crossfit_auroc": 0.5640395480054013,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 30,
+        "full_val_fallbacks": 5
+      },
+      "F1/hgb/per_arm": {
+        "raw_auroc": 0.5787885770556964,
+        "crossfit_auroc": 0.4939041678790369,
+        "old_crossfit_auroc": 0.4960153325825837,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 20,
+        "full_val_fallbacks": 4
+      },
+      "F1/hgb/shared": {
+        "raw_auroc": 0.6175578443333731,
+        "crossfit_auroc": 0.5385880260085331,
+        "old_crossfit_auroc": 0.5440855419650669,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 15,
+        "full_val_fallbacks": 3
+      },
+      "F1/mlp/per_arm": {
+        "raw_auroc": 0.6007467612211782,
+        "crossfit_auroc": 0.526439547336028,
+        "old_crossfit_auroc": 0.5305159603317151,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 9,
+        "full_val_fallbacks": 1
+      },
+      "F1/mlp/shared": {
+        "raw_auroc": 0.6286285394980625,
+        "crossfit_auroc": 0.5573010573808361,
+        "old_crossfit_auroc": 0.563229184655089,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 12,
+        "full_val_fallbacks": 3
+      },
+      "F2/logreg/per_arm": {
+        "raw_auroc": 0.5647306913463526,
+        "crossfit_auroc": 0.48790568353824065,
+        "old_crossfit_auroc": 0.4953784825536155,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 16,
+        "full_val_fallbacks": 3
+      },
+      "F2/logreg/shared": {
+        "raw_auroc": 0.5527815882640328,
+        "crossfit_auroc": 0.5053511732861614,
+        "old_crossfit_auroc": 0.5452306124282932,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 27,
+        "full_val_fallbacks": 6
+      },
+      "F2/hgb/per_arm": {
+        "raw_auroc": 0.5696709769420798,
+        "crossfit_auroc": 0.4815492393275334,
+        "old_crossfit_auroc": 0.48085220524024913,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 19,
+        "full_val_fallbacks": 4
+      },
+      "F2/hgb/shared": {
+        "raw_auroc": 0.5621199462883842,
+        "crossfit_auroc": 0.4938289688612256,
+        "old_crossfit_auroc": 0.5057453094310729,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 29,
+        "full_val_fallbacks": 7
+      },
+      "F2/mlp/per_arm": {
+        "raw_auroc": 0.5446607256012769,
+        "crossfit_auroc": 0.461850228430384,
+        "old_crossfit_auroc": 0.4779324136329649,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 13,
+        "full_val_fallbacks": 2
+      },
+      "F2/mlp/shared": {
+        "raw_auroc": 0.5065725557376379,
+        "crossfit_auroc": 0.4212863797401513,
+        "old_crossfit_auroc": 0.446298923314973,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 33,
+        "full_val_fallbacks": 5
+      },
+      "F3-own/logreg/per_arm": {
+        "raw_auroc": 0.6579894568018717,
+        "crossfit_auroc": 0.5819741242327212,
+        "old_crossfit_auroc": 0.5741972184218583,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 6,
+        "full_val_fallbacks": 2
+      },
+      "F3-own/logreg/shared": {
+        "raw_auroc": 0.6400869419788332,
+        "crossfit_auroc": 0.5799357311255149,
+        "old_crossfit_auroc": 0.5938749906340909,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 11,
+        "full_val_fallbacks": 2
+      },
+      "F3-own/hgb/per_arm": {
+        "raw_auroc": 0.6028881955051126,
+        "crossfit_auroc": 0.5178660931790053,
+        "old_crossfit_auroc": 0.5169381890213051,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 18,
+        "full_val_fallbacks": 3
+      },
+      "F3-own/hgb/shared": {
+        "raw_auroc": 0.6451774364655035,
+        "crossfit_auroc": 0.574461639292288,
+        "old_crossfit_auroc": 0.6451774364655036,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 10,
+        "full_val_fallbacks": 2
+      },
+      "F3-own/mlp/per_arm": {
+        "raw_auroc": 0.5889999243613963,
+        "crossfit_auroc": 0.5197601654588736,
+        "old_crossfit_auroc": 0.5370576323372931,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 9,
+        "full_val_fallbacks": 2
+      },
+      "F3-own/mlp/shared": {
+        "raw_auroc": 0.582640996441131,
+        "crossfit_auroc": 0.4930391500448293,
+        "old_crossfit_auroc": 0.4826952107321584,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 13,
+        "full_val_fallbacks": 2
+      },
+      "F3-small/logreg/per_arm": {
+        "raw_auroc": 0.634873304860471,
+        "crossfit_auroc": 0.56593263692915,
+        "old_crossfit_auroc": 0.5721796599323821,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 9,
+        "full_val_fallbacks": 1
+      },
+      "F3-small/logreg/shared": {
+        "raw_auroc": 0.627069744551093,
+        "crossfit_auroc": 0.5625586323742757,
+        "old_crossfit_auroc": 0.5713761234320993,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 13,
+        "full_val_fallbacks": 3
+      },
+      "F3-small/hgb/per_arm": {
+        "raw_auroc": 0.6058855223230505,
+        "crossfit_auroc": 0.5303857907464091,
+        "old_crossfit_auroc": 0.5400104928030316,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 17,
+        "full_val_fallbacks": 3
+      },
+      "F3-small/hgb/shared": {
+        "raw_auroc": 0.6453573381569382,
+        "crossfit_auroc": 0.5629483528303216,
+        "old_crossfit_auroc": 0.6453573381569382,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 11,
+        "full_val_fallbacks": 3
+      },
+      "F3-small/mlp/per_arm": {
+        "raw_auroc": 0.5888265236204979,
+        "crossfit_auroc": 0.4969021506915608,
+        "old_crossfit_auroc": 0.49509423216242854,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 11,
+        "full_val_fallbacks": 3
+      },
+      "F3-small/mlp/shared": {
+        "raw_auroc": 0.5865154588382488,
+        "crossfit_auroc": 0.4954386200405102,
+        "old_crossfit_auroc": 0.48533473359612417,
+        "selected_calibration": "platt",
+        "fold_fallbacks": 12,
+        "full_val_fallbacks": 1
+      }
+    },
+    "note": "Positive slopes only; fallback uses fitting-fold prior. Cross-fit pooled ranking can still change across fold mappings. No generalization claim from synthetic fixtures."
+  },
+  "synthetic": {
+    "holdout": {
+      "h3_logreg_per_arm": {
+        "F3-own/logreg/per_arm - F2/logreg/per_arm": {
+          "value": 0.07639785092222373,
+          "ci95": [
+            0.0401253509150254,
+            0.11200678657743297
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-own/logreg/per_arm - F1/logreg/per_arm": {
+          "value": 0.0013299115093546865,
+          "ci95": [
+            -0.024810847589876395,
+            0.0280054889084055
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F2/logreg/per_arm - F1/logreg/per_arm": {
+          "value": -0.07506793941286904,
+          "ci95": [
+            -0.10321470711659211,
+            -0.046435625685077975
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-own/logreg/per_arm - F3-small/logreg/per_arm": {
+          "value": -0.0025938755317058693,
+          "ci95": [
+            -0.029523469488944253,
+            0.025276724275439165
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-small/logreg/per_arm - F2/logreg/per_arm": {
+          "value": 0.0789917264539296,
+          "ci95": [
+            0.044102347572063154,
+            0.1138057278701002
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        }
+      },
+      "h5": {
+        "normalized_auc": {
+          "value": 0.04778128600851039,
+          "ci95": [
+            0.02803784751511023,
+            0.06480568328563402
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "accuracy": {
+          "value": 0.03500000000000003,
+          "ci95": [
+            0.007500000000000062,
+            0.06250000000000011
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "cost": {
+          "value": -152.46999999999997,
+          "ci95": [
+            -167.4013125,
+            -136.95468749999995
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "mcnemar": {
+          "b": 23,
+          "c": 9,
+          "p_exact": 0.020061607006937265
+        }
+      },
+      "n_predictors": 24,
+      "n_h3_contrasts": 30,
+      "single_class_arm_replicates": {
+        "single_class_arm_replicates": 0,
+        "single_class_by_arm": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "all_arms_undefined_replicates": 0
+      },
+      "summary_lines": 123
+    },
+    "ood_length": {
+      "h3_logreg_per_arm": {
+        "F3-own/logreg/per_arm - F2/logreg/per_arm": {
+          "value": 0.10204390900254046,
+          "ci95": [
+            0.034986152445612435,
+            0.16838883891284262
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-own/logreg/per_arm - F1/logreg/per_arm": {
+          "value": 0.023308970799436057,
+          "ci95": [
+            -0.021588112172773483,
+            0.06753347961213262
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F2/logreg/per_arm - F1/logreg/per_arm": {
+          "value": -0.0787349382031044,
+          "ci95": [
+            -0.12361521976255922,
+            -0.03178864946950568
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-own/logreg/per_arm - F3-small/logreg/per_arm": {
+          "value": -0.017257736462204742,
+          "ci95": [
+            -0.06604576375966341,
+            0.03505929303161459
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "F3-small/logreg/per_arm - F2/logreg/per_arm": {
+          "value": 0.1193016454647452,
+          "ci95": [
+            0.06542794631109006,
+            0.1675711789805738
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        }
+      },
+      "h5": {
+        "normalized_auc": {
+          "value": -0.25757920876394014,
+          "ci95": [
+            -0.30428511506654027,
+            -0.2093251233984344
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "accuracy": {
+          "value": -0.11999999999999977,
+          "ci95": [
+            -0.16333333333333333,
+            -0.07666666666666666
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "cost": {
+          "value": 264.80999999999983,
+          "ci95": [
+            179.8479999999999,
+            352.7585833333332
+          ],
+          "n_defined": 10000,
+          "n_boot": 10000
+        },
+        "mcnemar": {
+          "b": 6,
+          "c": 42,
+          "p_exact": 1.0087482138487759e-07
+        }
+      },
+      "n_predictors": 24,
+      "n_h3_contrasts": 30,
+      "single_class_arm_replicates": {
+        "single_class_arm_replicates": 1327,
+        "single_class_by_arm": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          18,
+          0,
+          0,
+          0,
+          1307
+        ],
+        "all_arms_undefined_replicates": 0
+      },
+      "summary_lines": 123
+    }
+  },
+  "wall_seconds": {
+    "v1_p4": 54.11358409999957,
+    "synthetic_p4": 289.7848061000004,
+    "holdout": 60.71899050000138,
+    "ood_length": 46.982000699998025
+  },
+  "one_shot_refusal": true,
+  "readback": {
+    "p4-v1adapter-f": true,
+    "synthetic16-f/p4": true
+  },
+  "cleanup": {
+    "deleted": [],
+    "retained_old_runs": [
+      "synthetic16",
+      "p4-v1adapter"
+    ],
+    "restriction": "Automatic approval review rejected recursive and explicit-file/empty-directory cleanup: blocked by policy."
+  },
+  "tests": {
+    "count": 59,
+    "skipped": 0,
+    "passed": true,
+    "exit_code": 0,
+    "suite_wall_seconds": 361.289,
+    "wrapper_wall_seconds": 364.21,
+    "log": "results\\v2\\router\\taskF-tests-verified.log"
+  },
+  "v1_repro_match": true,
+  "git_status_file": "results\\v2\\router\\taskF-git-status.txt",
+  "router_directory_bytes": 107110185
+}

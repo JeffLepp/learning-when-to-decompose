@@ -1,0 +1,9 @@
+{
+  "v2/harness.py": "5250c6edde643fa9f52e3cad7a2812f6b663dddead782b097549437e3a6e790f",
+  "v2/domains/scan.py": "e634cac7f31111fef8c9e0ba97ae69e6e5819a35a048045907a76eea7bebcba6",
+  "v2/domains/chainops.py": "a61de0db04ce7b834f879715a8037f7f611b05ff35b3113922cfe077627532bf",
+  "v2/domains/prompts/scan_v0.json": "82ad80f889491589bf6b317905dcc31a5ec6e7f3d8f767847d41b8f3842aa846",
+  "v2/domains/prompts/chainops_v0.json": "bef0b6dbdc3de73072e64042be03f046005773574827d7963254da85d0695f2a",
+  "data/v2/scan/dev.jsonl": "fa5fb10117dcd48f5a4aa6f479dcfd88efa3f52166d02797bbfb8609189d06db",
+  "data/v2/chainops/dev.jsonl": "1380d7e5195cb66a17583645078c31d258cdea1357870f9a2731e0197d422550"
+}

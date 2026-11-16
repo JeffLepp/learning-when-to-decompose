@@ -1,0 +1,318 @@
+{
+  "complete": true,
+  "tests": {
+    "returncode": 0,
+    "wall_seconds": 334.5206297000004,
+    "n_tests": 57,
+    "skipped": 0,
+    "log_sha256": "84630247fce4f4174c2a0affb9c608aaa60340aa8397d6a0f1a592da8d2f7e38"
+  },
+  "v1_repro_match": true,
+  "readbacks": {
+    "v1": {
+      "all_passed": true,
+      "checks": [
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\p4-v1adapter",
+          "split": "router_val",
+          "s2": false,
+          "policies": 41,
+          "items": 32,
+          "passed": true,
+          "report_sha256": "aa812ed01807613f901f496746841e466fb698acaf8a25a09d27c16415dbc37f"
+        }
+      ],
+      "limits": "Selected decisions/costs and aggregate AUC replayed. Bootstrap CIs and model fitting not independently rerun."
+    },
+    "synthetic": {
+      "all_passed": true,
+      "checks": [
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4",
+          "split": "router_val",
+          "s2": false,
+          "policies": 77,
+          "items": 200,
+          "passed": true,
+          "report_sha256": "026f9a39dbc630564a7141fd5630544fa4c99dc5363e4cec3bba661a8b3cea08"
+        },
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4\\s2",
+          "split": "router_val",
+          "s2": true,
+          "policies": 23,
+          "items": 100,
+          "passed": true,
+          "report_sha256": "f2b6ab1eacc783a3d444f37cb166571e3f3c0a7eedcaa71e203c0a85c3531065"
+        },
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4\\final_holdout",
+          "split": "holdout",
+          "s2": false,
+          "policies": 77,
+          "items": 400,
+          "passed": true,
+          "report_sha256": "c2a68b51e7aaf471e5db39fff85b1a461df1f5433bdda9b395406e93e3cf58c0"
+        },
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4\\final_holdout\\s2",
+          "split": "holdout",
+          "s2": true,
+          "policies": 23,
+          "items": 150,
+          "passed": true,
+          "report_sha256": "ab3eb8cbfea24aa4669201fa0ffc18bf064006c53e0c886fb51bbeb4a8584be2"
+        },
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4\\final_ood_length",
+          "split": "ood_length",
+          "s2": false,
+          "policies": 77,
+          "items": 300,
+          "passed": true,
+          "report_sha256": "f384d6566a63a06de71c7565209b9a60946482005a060c68815e53aefd2c4650"
+        },
+        {
+          "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4\\final_ood_length\\s2",
+          "split": "ood_length",
+          "s2": true,
+          "policies": 23,
+          "items": 100,
+          "passed": true,
+          "report_sha256": "481182cd0c5a90316df3ab713a8a13aaf434750c1e7c7946f3b0852683a3c052"
+        }
+      ],
+      "limits": "Selected decisions/costs and aggregate AUC replayed. Bootstrap CIs and model fitting not independently rerun."
+    }
+  },
+  "code_and_input_and_frozen_hashes_verified": true,
+  "identical_payloads_verified": true,
+  "final_repeats_refused": [
+    "holdout",
+    "ood_length"
+  ],
+  "results": {
+    "v1": {
+      "report": "results\\v2\\router\\p4-v1adapter\\report.json",
+      "selected_router": "route/F1/logreg/per_arm",
+      "accuracy": 0.3125,
+      "mean_cost": 601.625,
+      "mean_overhead": 0.0,
+      "auc": {
+        "value": 0.22863230093143777,
+        "ci95": [
+          0.1172817296777387,
+          0.34430888028683754
+        ],
+        "n_defined": 10000,
+        "n_boot": 10000
+      },
+      "best_single": {
+        "n": 32,
+        "accuracy": 0.3125,
+        "mean_cost": 688.03125,
+        "correct": 10.0
+      },
+      "paired": {
+        "mcnemar": {
+          "b": 1,
+          "c": 1,
+          "p_exact": 1.0
+        },
+        "correctness": {
+          "diff": 0.0,
+          "ci95": [
+            -0.09375,
+            0.09375
+          ],
+          "p_two_sided": 1.0
+        },
+        "cost": {
+          "diff": 86.40625,
+          "ci95": [
+            28.90625,
+            155.09609374999997
+          ],
+          "p_two_sided": 0.0081991800819918
+        }
+      },
+      "fixed_frontier_auc": 0.171875,
+      "wall_seconds": 38.35045060000266
+    },
+    "synthetic": {
+      "report": "results\\v2\\router\\synthetic16\\p4\\report.json",
+      "selected_router": "route/F1/logreg/per_arm",
+      "accuracy": 0.975,
+      "mean_cost": 342.905,
+      "mean_overhead": 0.0,
+      "auc": {
+        "value": 0.9300923365875988,
+        "ci95": [
+          0.9104400899097325,
+          0.9524967238902526
+        ],
+        "n_defined": 10000,
+        "n_boot": 10000
+      },
+      "best_single": {
+        "n": 200,
+        "accuracy": 0.97,
+        "mean_cost": 379.085,
+        "correct": 194.0
+      },
+      "paired": {
+        "mcnemar": {
+          "b": 5,
+          "c": 6,
+          "p_exact": 1.0
+        },
+        "correctness": {
+          "diff": -0.0050000000000001155,
+          "ci95": [
+            -0.039999999999999925,
+            0.025000000000000133
+          ],
+          "p_two_sided": 0.7477252274772522
+        },
+        "cost": {
+          "diff": 36.17999999999995,
+          "ci95": [
+            28.154999999999973,
+            44.59037500000002
+          ],
+          "p_two_sided": 9.999000099990002e-05
+        }
+      },
+      "fixed_frontier_auc": 0.9084209823812067,
+      "wall_seconds": 231.16729169999962
+    },
+    "synthetic_holdout": {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_holdout\\report.json",
+      "selected_router": "route/F1/logreg/per_arm",
+      "accuracy": 0.94,
+      "mean_cost": 361.405,
+      "mean_overhead": 0.0,
+      "auc": {
+        "value": 0.915492845931209,
+        "ci95": [
+          0.898263847725412,
+          0.9338856718198293
+        ],
+        "n_defined": 10000,
+        "n_boot": 10000
+      },
+      "best_single": {
+        "n": 400,
+        "accuracy": 0.9475,
+        "mean_cost": 394.6875,
+        "correct": 379.0
+      },
+      "paired": {
+        "mcnemar": {
+          "b": 19,
+          "c": 16,
+          "p_exact": 0.735878800856881
+        },
+        "correctness": {
+          "diff": 0.007500000000000062,
+          "ci95": [
+            -0.022499999999999964,
+            0.03749999999999987
+          ],
+          "p_two_sided": 0.6121387861213878
+        },
+        "cost": {
+          "diff": 33.28250000000003,
+          "ci95": [
+            27.09724999999997,
+            39.69749999999999
+          ],
+          "p_two_sided": 9.999000099990002e-05
+        }
+      },
+      "fixed_frontier_auc": 0.9057321125597685,
+      "wall_seconds": 7.628453199999058
+    },
+    "synthetic_ood": {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_ood_length\\report.json",
+      "selected_router": "route/F1/logreg/per_arm",
+      "accuracy": 0.98,
+      "mean_cost": 853.3333333333334,
+      "mean_overhead": 0.0,
+      "auc": {
+        "value": 0.6271256910007318,
+        "ci95": [
+          0.5996323174573877,
+          0.6554559511755044
+        ],
+        "n_defined": 10000,
+        "n_boot": 10000
+      },
+      "best_single": {
+        "n": 300,
+        "accuracy": 0.9766666666666667,
+        "mean_cost": 863.32,
+        "correct": 293.0
+      },
+      "paired": {
+        "mcnemar": {
+          "b": 3,
+          "c": 4,
+          "p_exact": 1.0
+        },
+        "correctness": {
+          "diff": -0.0033333333333334103,
+          "ci95": [
+            -0.020000000000000018,
+            0.01333333333333342
+          ],
+          "p_two_sided": 0.6961303869613039
+        },
+        "cost": {
+          "diff": 9.986666666666679,
+          "ci95": [
+            8.16325000000008,
+            11.870083333333445
+          ],
+          "p_two_sided": 9.999000099990002e-05
+        }
+      },
+      "fixed_frontier_auc": 0.6516454963011138,
+      "wall_seconds": 6.594594500002131
+    }
+  },
+  "full_run_wall_seconds": {
+    "full_v1": 40.82981899999868,
+    "full_synthetic": 233.79070449999926,
+    "full_synthetic_final": 19.366733800001384
+  },
+  "statistics_correction_seconds": 33.88495789999797,
+  "unchanged_selected_decision_rows": 76098,
+  "unchanged_aggregate_curve_points": 6447,
+  "corrected_missing_auc_values": 3,
+  "corrected_mode_a_timings": {
+    "corrected_mode_a_scan_generate": {
+      "wall_seconds": 3.39896950000184,
+      "returncode": 0
+    },
+    "corrected_mode_a_scan_p4": {
+      "wall_seconds": 137.81364739999844,
+      "returncode": 0
+    },
+    "corrected_mode_a_chainops_generate": {
+      "wall_seconds": 4.003088699999353,
+      "returncode": 0
+    },
+    "corrected_mode_a_chainops_p4": {
+      "wall_seconds": 382.4029526999984,
+      "returncode": 0
+    }
+  },
+  "llm_calls": 0,
+  "gpu_used": false,
+  "real_final_items_opened": false,
+  "git_mutations": false,
+  "git_status": " M v2/router/README.md\n M v2/router/data.py\n M v2/router/evaluate.py\n M v2/router/plots.py\n M v2/tests/test_router_plots.py\n?? data/v2/\n?? results/v2/prompt_dev/\n?? results/v2/router/mode_a_chainops/\n?? results/v2/router/mode_a_scan/\n?? results/v2/router/p4-v1adapter/\n?? results/v2/router/sim_check/figures/\n?? results/v2/router/synthetic16/\n?? results/v2/router/task_d/\n?? results/v2/router/task_e/\n?? results/v2/router/v1_adapter/figures/\n?? results/v2/runs/\n?? v2/__init__.py\n?? v2/build_data.py\n?? v2/build_labels.py\n?? v2/domains/\n?? v2/harness.py\n?? v2/harness_promptdev.py\n?? v2/router/bootstrap.py\n?? v2/router/readback_p4.py\n?? v2/router/run_final.py\n?? v2/router/run_p4.py\n?? v2/router/synth_labels.py\n?? v2/router/workflow.py\n?? v2/tests/test_foundations.py\n?? v2/tests/test_promptdev.py\n?? v2/tests/test_router_d1.py\n?? v2/tests/test_router_p4.py\n",
+  "historical_attempt_log": "timings.json",
+  "router_bytes": 48657875
+}

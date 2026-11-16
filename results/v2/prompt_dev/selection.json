@@ -1,0 +1,70 @@
+{
+  "scan": {
+    "strategies": {
+      "S0": {
+        "round": 0,
+        "acc_1.7b": 0.016666666666666666,
+        "acc_8b": 0.06666666666666667,
+        "mean_acc": 0.041666666666666664,
+        "block_sha256": "12219fe6efba56802c71fc3c2db75189d2a8f8109cbabca6db1f8f75d20a6ae4"
+      },
+      "S1": {
+        "round": 1,
+        "acc_1.7b": 0.1,
+        "acc_8b": 0.35,
+        "mean_acc": 0.22499999999999998,
+        "block_sha256": "babe3431ce829a87c58a3f03195e07391c3e2d65e9e46c8d3d34120eb26bdf98"
+      },
+      "S3": {
+        "round": 1,
+        "acc_1.7b": 0.36666666666666664,
+        "acc_8b": 0.95,
+        "mean_acc": 0.6583333333333333,
+        "block_sha256": "5ed3b2dbec523168210b4b54651bdc9acaa5d31d19a2ef57f7eb15e1c35a7891"
+      },
+      "S4": {
+        "round": 0,
+        "acc_1.7b": 0.25,
+        "acc_8b": 0.95,
+        "mean_acc": 0.6,
+        "block_sha256": "6579937d47d7b29db6bd42cb485833f6eb0c0d29ba08ca66d54a03576ec61db0"
+      }
+    },
+    "final_file": "v2/domains/prompts/scan_final.json",
+    "final_sha256": "d587e10e7af83de388e274014d460cc75faedb245e109322137deb9ee13cb5d8"
+  },
+  "chainops": {
+    "strategies": {
+      "S0": {
+        "round": 0,
+        "acc_1.7b": 0.18333333333333332,
+        "acc_8b": 0.3333333333333333,
+        "mean_acc": 0.2583333333333333,
+        "block_sha256": "704117e37300dd4e8815997efe742f67e6ebc4549da247ff6845ea6b85706c08"
+      },
+      "S1": {
+        "round": 0,
+        "acc_1.7b": 0.16666666666666666,
+        "acc_8b": 0.4,
+        "mean_acc": 0.2833333333333333,
+        "block_sha256": "17edabc36cbbb8b9c974e8f5a5dd81c280e75c9012129da01ccecdc34a3d1c9d"
+      },
+      "S3": {
+        "round": 0,
+        "acc_1.7b": 0.25,
+        "acc_8b": 0.45,
+        "mean_acc": 0.35,
+        "block_sha256": "0001f3cec517221622993a31f82553a38381de994f2b49cc6182e65c86c9be70"
+      },
+      "S4": {
+        "round": 0,
+        "acc_1.7b": 0.5333333333333333,
+        "acc_8b": 0.9,
+        "mean_acc": 0.7166666666666667,
+        "block_sha256": "6cd52fd180b38b9e450d291f33d5307283eb536ad402e8cd9038dd8eb505b982"
+      }
+    },
+    "final_file": "v2/domains/prompts/chainops_final.json",
+    "final_sha256": "2eaaa69b1d8d110bdf2f4f2c054614d8ec30e379c37b152e14d1d252efdc8b34"
+  }
+}

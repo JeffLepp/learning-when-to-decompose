@@ -1,0 +1,9 @@
+{
+  "command": ".venv/Scripts/python.exe -m unittest discover -s v2/tests -t .",
+  "observed_result": "Ran 36 tests in 24.744s; OK",
+  "scope": "Shared v2 suite at execution time, including WS1 foundations and concurrent router tests",
+  "official_scan_lines_verified": 20910,
+  "generated_items_verified": 3256,
+  "perfect_mock_item_arm_checks": 1792,
+  "warnings": "Router MLP convergence warnings; no failures"
+}

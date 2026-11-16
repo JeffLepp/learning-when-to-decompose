@@ -1,0 +1,12 @@
+{
+  "domain": "chainops",
+  "last_round": 1,
+  "reason": "No strategy strictly improved its two-model mean over round 0; S1 ties exactly. Stop per protocol.",
+  "selected_rounds": {
+    "S0": 0,
+    "S1": 0,
+    "S3": 0,
+    "S4": 0
+  },
+  "unrun_candidate": "workspace_logs/pd_chainops_v2.py is an unexecuted draft, guarded against creation after a no-improvement round; no chainops_v2 prompt or run exists."
+}

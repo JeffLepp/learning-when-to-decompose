@@ -43,8 +43,24 @@ def holder():
         return None
 
 
+def unload_ollama_models():
+    """Best effort: evict every resident Ollama model (frees VRAM and the
+    llama-server RAM that caused memory pressure on 2026-11-15)."""
+    import urllib.request
+    api = 'http://127.0.0.1:11434/api/'
+    try:
+        with urllib.request.urlopen(api + 'ps', timeout=10) as r:
+            names = [m['name'] for m in json.loads(r.read()).get('models', [])]
+        for name in names:
+            req = urllib.request.Request(api + 'generate', data=json.dumps({'model': name, 'keep_alive': 0}).encode(),
+                                         headers={'Content-Type': 'application/json'})
+            urllib.request.urlopen(req, timeout=60).read()
+    except Exception as exc:  # never mask the caller's own result
+        print(f'[gpulock] ollama unload skipped: {exc}', flush=True)
+
+
 @contextmanager
-def gpu_lock(purpose, poll=5.0):
+def gpu_lock(purpose, poll=5.0, unload_on_release=True):
     info = {'pid': os.getpid(), 'purpose': purpose, 'since': time.strftime('%Y-%m-%dT%H:%M:%S')}
     last_log = 0.0
     while True:
@@ -68,6 +84,8 @@ def gpu_lock(purpose, poll=5.0):
     try:
         yield
     finally:
+        if unload_on_release:
+            unload_ollama_models()
         current = holder()
         if current and current.get('pid') == os.getpid():
             LOCK.unlink(missing_ok=True)

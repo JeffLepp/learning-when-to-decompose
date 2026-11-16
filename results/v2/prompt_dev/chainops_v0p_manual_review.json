@@ -1,0 +1,7 @@
+{
+  "id": "3cbb6a346e8c603d",
+  "model": "qwen3:8b",
+  "strategy": "S3",
+  "classification": "execution_with_semantically_correct_noncanonical_plan",
+  "note": "Remove only even numbers is semantically equivalent to remove every even number (keep_odd). The automatic analysis parser conservatively leaves this in manual-review category. No metric or prompt-selection change."
+}

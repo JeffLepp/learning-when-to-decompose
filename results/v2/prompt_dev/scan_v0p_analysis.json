@@ -1,0 +1,2340 @@
+{
+  "qwen3:1.7b/S0": {
+    "categories": {
+      "wrong_values_or_counts": 57,
+      "truncated": 1,
+      "wrong_order": 1
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: turn opposite left and walk opposite left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_TURN_LEFT\", \"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: look twice after walk opposite left thrice",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_TURN_LEFT\", \"I_TURN_LEFT\", \"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: jump left and look left",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_JUMP",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: jump right thrice and look twice",
+            "response": "{\"actions\": [\"I_JUMP\", \"I_JUMP\", \"I_JUMP\", \"I_LOOK\", \"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S1": {
+    "categories": {
+      "wrong_values_or_counts": 43,
+      "truncated": 13,
+      "wrong_order": 1
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: turn opposite left and walk opposite left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: look twice after walk opposite left thrice",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: jump left and look left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_JUMP",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: jump right thrice and look twice",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_JUMP\",\"I_JUMP\",\"I_LOOK\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S3": {
+    "categories": {
+      "execution_with_correct_plan": 41,
+      "plan_mismatch": 17,
+      "invalid_plan": 1
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_WALK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "turn opposite left",
+              "repeat": 1
+            },
+            {
+              "command": "walk opposite left",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: turn opposite left and walk opposite left",
+            "response": "{\"steps\":[{\"command\":\"turn opposite left\",\"repeat\":1},{\"command\":\"walk opposite left\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: turn opposite left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: walk opposite left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_JUMP\", \"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "walk opposite left",
+              "repeat": 3
+            },
+            {
+              "command": "look",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: look twice after walk opposite left thrice",
+            "response": "{\"steps\":[{\"command\":\"walk opposite left\",\"repeat\":3},{\"command\":\"look\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: walk opposite left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_JUMP\", \"I_WALK\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look",
+            "response": "{\"actions\": [\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "jump left",
+              "repeat": 1
+            },
+            {
+              "command": "look left",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: jump left and look left",
+            "response": "{\"steps\":[{\"command\":\"jump left\",\"repeat\":1},{\"command\":\"look left\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: jump left",
+            "response": "{\"actions\": [\"I_JUMP\", \"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look left",
+            "response": "{\"actions\": [\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_JUMP",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "jump right",
+              "repeat": 3
+            },
+            {
+              "command": "look",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: jump right thrice and look twice",
+            "response": "{\"steps\":[{\"command\":\"jump right\",\"repeat\":3},{\"command\":\"look\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: jump right",
+            "response": "{\"actions\": [\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look",
+            "response": "{\"actions\": [\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S4": {
+    "categories": {
+      "plan_mismatch": 23,
+      "execution_with_correct_plan": 22
+    },
+    "examples": [
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "walk",
+              "command": "walk",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: look twice after walk opposite left thrice",
+            "response": "{\"steps\":[{\"command\":\"look\",\"action\":\"look\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":2},{\"command\":\"walk\",\"action\":\"walk\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":3}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: look",
+            "response": "{\"actions\": [\"I_LOOK\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: turn left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: walk left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: jump right thrice and look twice",
+            "response": "{\"steps\":[{\"command\":\"jump right\",\"action\":\"jump\",\"direction\":\"right\",\"modifier\":\"none\",\"repeat\":3},{\"command\":\"look\",\"action\":\"look\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: jump right",
+            "response": "{\"actions\": [\"I_JUMP\", \"I_TURN_RIGHT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: look",
+            "response": "{\"actions\": [\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: look right twice and look around right twice",
+            "response": "{\"steps\":[{\"command\":\"look right\",\"action\":\"look\",\"direction\":\"right\",\"modifier\":\"none\",\"repeat\":2},{\"command\":\"look around right\",\"action\":\"look\",\"direction\":\"right\",\"modifier\":\"around\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: look right",
+            "response": "{\"actions\": [\"I_TURN_LEFT\", \"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "ec5e83b39125fc25",
+        "input": "run left twice and turn left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "prediction": [
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "turn",
+              "command": "turn left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "turn",
+              "command": "turn left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: run left twice and turn left thrice",
+            "response": "{\"steps\":[{\"command\":\"run left\",\"action\":\"run\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":2},{\"command\":\"turn left\",\"action\":\"turn\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":3}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: run left",
+            "response": "{\"actions\": [\"I_RUN\", \"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: turn left",
+            "response": "{\"actions\": [\"I_TURN_LEFT\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S0": {
+    "categories": {
+      "wrong_order": 3,
+      "wrong_values_or_counts": 50,
+      "truncated": 3
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: turn opposite left and walk opposite left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "input": "look twice after walk opposite left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: look twice after walk opposite left thrice",
+            "response": "{\"actions\":[\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: jump left and look left",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "input": "jump right thrice and look twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Command: jump right thrice and look twice",
+            "response": "{\"actions\":[\"I_JUMP\",\"I_TURN_RIGHT\",\"I_JUMP\",\"I_TURN_RIGHT\",\"I_JUMP\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S1": {
+    "categories": {
+      "wrong_values_or_counts": 41,
+      "truncated": 1,
+      "wrong_order": 4
+    },
+    "examples": [
+      {
+        "id": "219dd659a5092a77",
+        "input": "turn opposite left and walk opposite left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_WALK"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "walk",
+              "command": "walk opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: turn opposite left and walk opposite left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_WALK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: look right twice and look around right twice",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\",\"I_LOOK\",\"I_TURN_RIGHT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "ec5e83b39125fc25",
+        "input": "run left twice and turn left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "turn",
+              "command": "turn left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: run left twice and turn left thrice",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_RUN\",\"I_TURN_LEFT\",\"I_RUN\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "a11a3b620e624ebd",
+        "input": "jump right thrice after jump around left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_JUMP"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP"
+        ],
+        "plan": null,
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump around left",
+              "direction": "left",
+              "modifier": "around",
+              "repeat": 1
+            },
+            {
+              "action": "jump",
+              "command": "jump right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 3
+            }
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Command: jump right thrice after jump around left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_JUMP\",\"I_TURN_LEFT\",\"I_JUMP\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S3": {
+    "categories": {
+      "execution_with_correct_plan": 16,
+      "plan_mismatch": 2
+    },
+    "examples": [
+      {
+        "id": "8e9f225104de71a6",
+        "input": "jump left and look left",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_LOOK",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "jump left",
+              "repeat": 1
+            },
+            {
+              "command": "look left",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: jump left and look left",
+            "response": "{\"steps\":[{\"command\":\"jump left\",\"repeat\":1},{\"command\":\"look left\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: jump left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look left",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "input": "look right twice and look around right twice",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK",
+          "I_TURN_RIGHT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "look right",
+              "repeat": 2
+            },
+            {
+              "command": "look around right",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look right",
+              "direction": "right",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "look",
+              "command": "look around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 2
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: look right twice and look around right twice",
+            "response": "{\"steps\":[{\"command\":\"look right\",\"repeat\":2},{\"command\":\"look around right\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look right",
+            "response": "{\"actions\":[\"I_LOOK\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look around right",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_LOOK\"]}"
+          }
+        ]
+      },
+      {
+        "id": "8da12e78d8347c30",
+        "input": "turn around left thrice after look left twice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "prediction": [
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "look left",
+              "repeat": 2
+            },
+            {
+              "command": "turn around left",
+              "repeat": 3
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "look",
+              "command": "look left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 2
+            },
+            {
+              "action": "turn",
+              "command": "turn around left",
+              "direction": "left",
+              "modifier": "around",
+              "repeat": 3
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: turn around left thrice after look left twice",
+            "response": "{\"steps\":[{\"command\":\"look left\",\"repeat\":2},{\"command\":\"turn around left\",\"repeat\":3}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look left",
+            "response": "{\"actions\":[\"I_LOOK\",\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: turn around left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\",\"I_TURN_LEFT\"]}"
+          }
+        ]
+      },
+      {
+        "id": "30402a46c51ddf9a",
+        "input": "turn around right thrice and look around left",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "prediction": [
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_WALK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK",
+          "I_TURN_LEFT",
+          "I_LOOK"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "command": "turn around right",
+              "repeat": 3
+            },
+            {
+              "command": "look around left",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "turn",
+              "command": "turn around right",
+              "direction": "right",
+              "modifier": "around",
+              "repeat": 3
+            },
+            {
+              "action": "look",
+              "command": "look around left",
+              "direction": "left",
+              "modifier": "around",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Command: turn around right thrice and look around left",
+            "response": "{\"steps\":[{\"command\":\"turn around right\",\"repeat\":3},{\"command\":\"look around left\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: turn around right",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_WALK\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_WALK\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_WALK\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_TURN_RIGHT\",\"I_WALK\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Command: look around left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\",\"I_TURN_LEFT\",\"I_LOOK\"]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S4": {
+    "categories": {
+      "plan_mismatch": 3
+    },
+    "examples": [
+      {
+        "id": "657a294e7c95c1e7",
+        "input": "jump after jump opposite right",
+        "target": [
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_JUMP",
+          "I_JUMP"
+        ],
+        "prediction": [
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_JUMP"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "jump",
+              "command": "jump opposite right",
+              "direction": "right",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump opposite right",
+              "direction": "right",
+              "modifier": "opposite",
+              "repeat": 1
+            },
+            {
+              "action": "jump",
+              "command": "jump",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: jump after jump opposite right",
+            "response": "{\"steps\":[{\"command\":\"jump\",\"action\":\"jump\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":1},{\"command\":\"jump opposite right\",\"action\":\"jump\",\"direction\":\"right\",\"modifier\":\"opposite\",\"repeat\":1}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: jump",
+            "response": "{\"actions\":[\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: turn right",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: jump right",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\",\"I_JUMP\"]}"
+          }
+        ]
+      },
+      {
+        "id": "0cb707e0aa89001a",
+        "input": "run after run opposite left twice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_RUN"
+        ],
+        "prediction": [
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_RUN",
+          "I_TURN_LEFT",
+          "I_TURN_LEFT",
+          "I_RUN"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 1
+            },
+            {
+              "action": "run",
+              "command": "run opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "run",
+              "command": "run opposite left",
+              "direction": "left",
+              "modifier": "opposite",
+              "repeat": 2
+            },
+            {
+              "action": "run",
+              "command": "run",
+              "direction": "none",
+              "modifier": "none",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: run after run opposite left twice",
+            "response": "{\"steps\":[{\"command\":\"run\",\"action\":\"run\",\"direction\":\"none\",\"modifier\":\"none\",\"repeat\":1},{\"command\":\"run opposite left\",\"action\":\"run\",\"direction\":\"left\",\"modifier\":\"opposite\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: run",
+            "response": "{\"actions\":[\"I_RUN\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: turn left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: run left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_RUN\"]}"
+          }
+        ]
+      },
+      {
+        "id": "e9cfe84886471c38",
+        "input": "turn opposite right after jump left thrice",
+        "target": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT"
+        ],
+        "prediction": [
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_LEFT",
+          "I_JUMP",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT",
+          "I_TURN_RIGHT"
+        ],
+        "plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "turn",
+              "command": "turn opposite right",
+              "direction": "right",
+              "modifier": "opposite",
+              "repeat": 2
+            }
+          ]
+        },
+        "gold_plan": {
+          "steps": [
+            {
+              "action": "jump",
+              "command": "jump left",
+              "direction": "left",
+              "modifier": "none",
+              "repeat": 3
+            },
+            {
+              "action": "turn",
+              "command": "turn opposite right",
+              "direction": "right",
+              "modifier": "opposite",
+              "repeat": 1
+            }
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Command: turn opposite right after jump left thrice",
+            "response": "{\"steps\":[{\"command\":\"jump left\",\"action\":\"jump\",\"direction\":\"left\",\"modifier\":\"none\",\"repeat\":3},{\"command\":\"turn opposite right\",\"action\":\"turn\",\"direction\":\"right\",\"modifier\":\"opposite\",\"repeat\":2}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: jump left",
+            "response": "{\"actions\":[\"I_TURN_LEFT\",\"I_JUMP\"]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Command: turn right",
+            "response": "{\"actions\":[\"I_TURN_RIGHT\"]}"
+          }
+        ]
+      }
+    ]
+  }
+}

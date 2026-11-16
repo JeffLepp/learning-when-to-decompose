@@ -1,0 +1,67 @@
+{
+  "seed": 437,
+  "generator_code_sha256": {
+    "v2/build_data.py": "eae9133e132521be64d58e490b1e33b56c954a906eab4336ea88151086a762c7",
+    "v2/domains/scan.py": "e634cac7f31111fef8c9e0ba97ae69e6e5819a35a048045907a76eea7bebcba6",
+    "v2/domains/chainops.py": "a61de0db04ce7b834f879715a8037f7f611b05ff35b3113922cfe077627532bf"
+  },
+  "source_partition_hashes": {
+    "development": "3f9282ebeb83cce1f0cde87b1fa705be4417c60f5814cf7853160524c8050d6c",
+    "controller_train": "5d45227a66e88fed8ec991fadef91595e9e00d8e88eee703d5e1608c1e6a0cab",
+    "validation": "78fc84f55233940d00d1ca7f5ae2fd0278523196d0fef2939c36b0b02f16a62b",
+    "audit": "c72cb871c483fa2d6db00a52f32616fc4072d738c1ea42f060f209b3715d9bda"
+  },
+  "source_manifest_sha256": "4f62e5489643a46292a79836b83e480d215a618b921374a20ce130d72cd40977",
+  "files": {
+    "scan/dev.jsonl": {
+      "count": 128,
+      "sha256": "fa5fb10117dcd48f5a4aa6f479dcfd88efa3f52166d02797bbfb8609189d06db",
+      "locked": false
+    },
+    "scan/router_train.jsonl": {
+      "count": 600,
+      "sha256": "1c89c3029998e343965c81d77035fbcc409fdd43b07b8abda260a450d19665e5",
+      "locked": false
+    },
+    "scan/router_val.jsonl": {
+      "count": 200,
+      "sha256": "eb0298b8d8f5ca87c5473f968bad74879520f7e1b91cd9ead38fd72b777db62b",
+      "locked": false
+    },
+    "scan/holdout.jsonl": {
+      "count": 400,
+      "sha256": "350a953680dc27825b0911948a50d377b17bc0a6e0bdacc53ec2f07a78b9d15c",
+      "locked": false
+    },
+    "scan/ood_length.jsonl": {
+      "count": 300,
+      "sha256": "a6f40c4ce751d4f121f5cdb8f12fccd69b2c129a831f4b43d23fc85c1ddd9ed2",
+      "locked": true
+    },
+    "chainops/dev.jsonl": {
+      "count": 128,
+      "sha256": "1380d7e5195cb66a17583645078c31d258cdea1357870f9a2731e0197d422550",
+      "locked": false
+    },
+    "chainops/router_train.jsonl": {
+      "count": 600,
+      "sha256": "92b2041d9986a9a7b65213098ba6531c3829a9a2a9d531c75f9b9cfe97b4c636",
+      "locked": false
+    },
+    "chainops/router_val.jsonl": {
+      "count": 200,
+      "sha256": "44b93bb8d4e8f1b46e74d3b363c750495c4a45e0e179d4e6d6ebfd3171c087cf",
+      "locked": false
+    },
+    "chainops/holdout.jsonl": {
+      "count": 400,
+      "sha256": "6fae5ea9f4b4b562f139df4bde185558a58b23535a88acb01272e6a856876eeb",
+      "locked": false
+    },
+    "chainops/ood_depth.jsonl": {
+      "count": 300,
+      "sha256": "be6bbafe440e76dd162fad8653297ecd032bb63334286c7143e2f778450d576b",
+      "locked": true
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "qwen3:1.7b/S0": {
+    "n": 60,
+    "accuracy": 0.18333333333333332,
+    "mean_seconds": 0.20366161666676513,
+    "median_seconds": 0.2072642500006623,
+    "mean_tokens": 372.8,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S1": {
+    "n": 60,
+    "accuracy": 0.16666666666666666,
+    "mean_seconds": 0.18529482333354583,
+    "median_seconds": 0.17927235000024666,
+    "mean_tokens": 736.6333333333333,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S3": {
+    "n": 60,
+    "accuracy": 0.25,
+    "mean_seconds": 0.4087108183335052,
+    "median_seconds": 0.38992024999970454,
+    "mean_tokens": 1105.6166666666666,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.5
+  },
+  "qwen3:1.7b/S4": {
+    "n": 60,
+    "accuracy": 0.5333333333333333,
+    "mean_seconds": 0.749867281666775,
+    "median_seconds": 0.7431196000006821,
+    "mean_tokens": 1806.35,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S0": {
+    "n": 60,
+    "accuracy": 0.3333333333333333,
+    "mean_seconds": 0.38536887166659045,
+    "median_seconds": 0.30401564999920083,
+    "mean_tokens": 370.81666666666666,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S1": {
+    "n": 60,
+    "accuracy": 0.4,
+    "mean_seconds": 0.4830282166665408,
+    "median_seconds": 0.3953844500001651,
+    "mean_tokens": 740.65,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S3": {
+    "n": 60,
+    "accuracy": 0.45,
+    "mean_seconds": 1.1109407433332914,
+    "median_seconds": 1.0326076499995906,
+    "mean_tokens": 1444.5166666666667,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.03333333333333333
+  },
+  "qwen3:8b/S4": {
+    "n": 60,
+    "accuracy": 0.9,
+    "mean_seconds": 1.4932281666666616,
+    "median_seconds": 1.4583483999995224,
+    "mean_tokens": 1789.1333333333334,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  }
+}

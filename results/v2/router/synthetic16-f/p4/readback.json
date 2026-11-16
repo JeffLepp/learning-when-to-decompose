@@ -1,0 +1,60 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4",
+      "split": "router_val",
+      "s2": false,
+      "policies": 78,
+      "items": 200,
+      "passed": true,
+      "report_sha256": "0131652855e790a3353317e6a0365605abbdc278f386dd0a7012ae69e8552968"
+    },
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4\\s2",
+      "split": "router_val",
+      "s2": true,
+      "policies": 23,
+      "items": 100,
+      "passed": true,
+      "report_sha256": "5f49d268f1c414444551f80701bcc462d4d80e4cee98f5bcc6b85b5de7e51308"
+    },
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4\\final_holdout",
+      "split": "holdout",
+      "s2": false,
+      "policies": 78,
+      "items": 400,
+      "passed": true,
+      "report_sha256": "4da9b4d1504fac2e7716dfa116c117405af62436b270b7f05674d24721a3abf0"
+    },
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4\\final_holdout\\s2",
+      "split": "holdout",
+      "s2": true,
+      "policies": 23,
+      "items": 150,
+      "passed": true,
+      "report_sha256": "8a5fdf438af845e80ada788fbbd841aca8ed0aa1e999c64333ab89b9e52e3f4e"
+    },
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4\\final_ood_length",
+      "split": "ood_length",
+      "s2": false,
+      "policies": 78,
+      "items": 300,
+      "passed": true,
+      "report_sha256": "30312a800507c354f95c05701afc1b396c61eab83a4a523a086d6722e2b82e2a"
+    },
+    {
+      "directory": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\p4\\final_ood_length\\s2",
+      "split": "ood_length",
+      "s2": true,
+      "policies": 23,
+      "items": 100,
+      "passed": true,
+      "report_sha256": "7c0f9be68eeba231f2a2b24e191f93adaabf011687177325e7a7aafde45e7136"
+    }
+  ],
+  "limits": "Selected decisions/costs, aggregate AUC, contrast estimates and frozen predictor metrics replayed. Bootstrap CIs and model fitting not independently rerun."
+}

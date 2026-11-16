@@ -1,0 +1,82 @@
+{
+  "qwen3:1.7b/S0": {
+    "n": 60,
+    "accuracy": 0.03333333333333333,
+    "mean_seconds": 0.5206664333332507,
+    "median_seconds": 0.45071459999962826,
+    "mean_tokens": 450.6666666666667,
+    "truncation_rate": 0.016666666666666666,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S1": {
+    "n": 60,
+    "accuracy": 0.1,
+    "mean_seconds": 0.9713327800000419,
+    "median_seconds": 0.4160796999995,
+    "mean_tokens": 1229.7666666666667,
+    "truncation_rate": 0.06666666666666667,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S3": {
+    "n": 60,
+    "accuracy": 0.36666666666666664,
+    "mean_seconds": 0.6191919283335665,
+    "median_seconds": 0.5988654000002498,
+    "mean_tokens": 1387.4,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.016666666666666666
+  },
+  "qwen3:1.7b/S4": {
+    "n": 60,
+    "accuracy": 0.16666666666666666,
+    "mean_seconds": 0.7690419883332349,
+    "median_seconds": 0.7804309000002831,
+    "mean_tokens": 1215.1166666666666,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.1
+  },
+  "qwen3:8b/S0": {
+    "n": 60,
+    "accuracy": 0.03333333333333333,
+    "mean_seconds": 0.860357223333267,
+    "median_seconds": 0.7249707499995566,
+    "mean_tokens": 434.5,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S1": {
+    "n": 60,
+    "accuracy": 0.35,
+    "mean_seconds": 1.1987398266665574,
+    "median_seconds": 0.7978461000011521,
+    "mean_tokens": 1167.7,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S3": {
+    "n": 60,
+    "accuracy": 0.95,
+    "mean_seconds": 1.130041188333386,
+    "median_seconds": 1.1038980499997706,
+    "mean_tokens": 1402.85,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S4": {
+    "n": 60,
+    "accuracy": 0.9666666666666667,
+    "mean_seconds": 1.4157832199999576,
+    "median_seconds": 1.389153899998746,
+    "mean_tokens": 1281.8833333333334,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  }
+}

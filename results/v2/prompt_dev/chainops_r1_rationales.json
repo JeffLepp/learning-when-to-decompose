@@ -1,0 +1,6 @@
+{
+  "S0": "Baseline skips/reorders steps and mishandles positions: spell out every operation, aliases, state replacement, duplicates and count checks.",
+  "S1": "Baseline intermediate-state/count errors: add worked state-by-state pool examples plus the complete explicit operation rules.",
+  "S3": "Baseline oversized chunks and execution failures: enforce one/two sentence grouping and add pool-derived current-state chunk examples.",
+  "S4": "Baseline reverse/rotate/remove-first execution errors: add one pool-derived atomic example per operation and explicit parser alias mapping."
+}

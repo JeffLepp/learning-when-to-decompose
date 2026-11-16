@@ -1,0 +1,6 @@
+{
+  "S0": "Baseline omissions/order/count errors: replace prose with exact clause patterns, explicit whole-pattern repetition and stopping rule.",
+  "S1": "Baseline overgeneration/truncation: add worked pool derivations, short-to-long ordering, exact token-count/stopping instructions.",
+  "S3": "Baseline correct-plan execution errors: add pool clause examples and exact patterns; clarify after reversal and literal copying in plans.",
+  "S4": "Baseline after/leaf order errors: separate literal parsing from atomic execution; emphasize right-clause-first and add pool atomic examples."
+}

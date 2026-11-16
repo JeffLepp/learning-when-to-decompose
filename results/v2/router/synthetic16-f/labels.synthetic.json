@@ -1,0 +1,17 @@
+{
+  "generator": "v2.router.synth_labels",
+  "mode": "B",
+  "domain": "scan",
+  "seed": 437,
+  "labels_sha256": "38fc0bea3244388938e953f266f23b85906c340bf76d21dc7665558c4de9d8eb",
+  "items_dir": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16-f\\items",
+  "item_sha256": {
+    "router_train.jsonl": "4a3aa75c8963c58d606d8e7845a6286e4acc9eff6d613f218402433b9a7840a2",
+    "router_val.jsonl": "023d709f5ebe4937a1ed935b0e25ae266fbbd14761dd091b7f9166b57403b428",
+    "holdout.jsonl": "b6cf7145e0eee3cad129317068f19bedee392db8706a83ca20865292a6561fe6",
+    "ood_length.jsonl": "84ea01179dafb23d6efa779e9e84d93bba4131e4ecd9f50af4a1f089cf7ea68c"
+  },
+  "n_items": 1500,
+  "n_rows": 27200,
+  "note": "Synthetic labels; no model calls."
+}

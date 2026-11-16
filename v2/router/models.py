@@ -32,6 +32,22 @@ def _logit(p):
     return np.log(p / (1 - p)).reshape(-1, 1)
 
 
+class ConstantCalibration:
+    """Training-fold prior when Platt would reverse score ordering."""
+    def __init__(self, prior):
+        self.prior = float(prior)
+
+    def predict_proba(self, x):
+        p = np.full(len(x), self.prior)
+        return np.column_stack([1 - p, p])
+
+
+def fit_platt(scores, labels, seed=437):
+    model = LogisticRegression(C=1e6, max_iter=1000, random_state=seed).fit(
+        _logit(scores), labels)
+    return ConstantCalibration(np.mean(labels)) if model.coef_[0, 0] <= 0 else model
+
+
 class SuccessPredictor:
     def __init__(self, learner, mode='per_arm', calibration=None, seed=437, **params):
         if learner not in ('logreg', 'hgb', 'mlp'):
@@ -71,6 +87,7 @@ class SuccessPredictor:
             raise ValueError('Y must contain binary labels or NaN')
         self.constants, self.models = [], []
         self.calibrators = [None] * self.n_arms
+        self.platt_nonpositive_count = 0
         masks = [~np.isnan(y[:, a]) for a in range(self.n_arms)]
         for a, mask in enumerate(masks):
             labels = y[mask, a]
@@ -125,15 +142,16 @@ class SuccessPredictor:
         if y.shape != raw.shape or not np.isin(y[~np.isnan(y)], [0, 1]).all():
             raise ValueError('Validation labels must match predictions and be binary/NaN')
         self.calibrators = [None] * self.n_arms
+        self.platt_nonpositive_count = 0
         for a in range(self.n_arms):
             mask = ~np.isnan(y[:, a])
             if len(np.unique(y[mask, a])) < 2:
                 continue
             if method == 'platt':
-                model = LogisticRegression(C=1e6, max_iter=1000, random_state=self.seed)
-                model.fit(_logit(raw[mask, a]), y[mask, a])
+                model = fit_platt(raw[mask, a], y[mask, a], self.seed)
+                self.platt_nonpositive_count += isinstance(model, ConstantCalibration)
             else:
-                model = IsotonicRegression(out_of_bounds='clip').fit(
+                model = IsotonicRegression(increasing=True, out_of_bounds='clip').fit(
                     raw[mask, a], y[mask, a]
                 )
             self.calibrators[a] = (method, model)

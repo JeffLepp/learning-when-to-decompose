@@ -1,0 +1,51 @@
+[
+  {
+    "path": "results\\v2\\router\\p4-v1adapter\\report.json",
+    "original_sha256": "e069cdd6627eab6633abafcc4c16392fbbc8b9416e3c16fec59897d6266d8450",
+    "compact_sha256": "aa812ed01807613f901f496746841e466fb698acaf8a25a09d27c16415dbc37f",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 262593
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\report.json",
+    "original_sha256": "f0754c44d8192ddba5a10e3412de6fc4b1106003175c400c0d704f7ca9e9796a",
+    "compact_sha256": "026f9a39dbc630564a7141fd5630544fa4c99dc5363e4cec3bba661a8b3cea08",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 1362158
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\final_holdout\\report.json",
+    "original_sha256": "e05eddcfcc6189567e25e7f21610d7c3a7cf5c0ad61788f24a32a4f1bfb21a42",
+    "compact_sha256": "c2a68b51e7aaf471e5db39fff85b1a461df1f5433bdda9b395406e93e3cf58c0",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 278889
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\final_holdout\\s2\\report.json",
+    "original_sha256": "db5d06e92bf0e1918f0707b2d457eea8f4200c32fca06fcf3db3cd81bf1954a1",
+    "compact_sha256": "ab3eb8cbfea24aa4669201fa0ffc18bf064006c53e0c886fb51bbeb4a8584be2",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 35521
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\final_ood_length\\report.json",
+    "original_sha256": "8b6f85e5ce372fc85c2df5080760ffb2d6cdb5b3bbbe8514f38b8c00e97c333e",
+    "compact_sha256": "f384d6566a63a06de71c7565209b9a60946482005a060c68815e53aefd2c4650",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 279244
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\final_ood_length\\s2\\report.json",
+    "original_sha256": "4afd8ffb22a9a7cc1e48d7a9a733f757e894e1e2cb5d4494f3284fd14603619c",
+    "compact_sha256": "481182cd0c5a90316df3ab713a8a13aaf434750c1e7c7946f3b0852683a3c052",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 35806
+  },
+  {
+    "path": "results\\v2\\router\\synthetic16\\p4\\s2\\report.json",
+    "original_sha256": "9d590f76a9c6bff60cb56352c66dd6463cf5b63f860d791ce10095db36f3a976",
+    "compact_sha256": "f2b6ab1eacc783a3d444f37cb166571e3f3c0a7eedcaa71e203c0a85c3531065",
+    "original_newline": "'\\r\\n'",
+    "saved_bytes": 85854
+  }
+]

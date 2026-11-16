@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\v2\router\readback_p4.py", line 87, in <module>
+    print(json.dumps(verify(parser.parse_args().p4_dir), indent=2))
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\v2\router\readback_p4.py", line 71, in verify
+    np.testing.assert_allclose(normalized_auc(result['curve'], *report['cost_range']),
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                               result['normalized_auc']['value'], atol=1e-10, rtol=0)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\.venv\Lib\site-packages\numpy\testing\_private\utils.py", line 1780, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         verbose=verbose, header=header, equal_nan=equal_nan,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         strict=strict)
+                         ^^^^^^^^^^^^^^
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\.venv\Lib\site-packages\numpy\testing\_private\utils.py", line 894, in assert_array_compare
+    val = comparison(x, y)
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\.venv\Lib\site-packages\numpy\testing\_private\utils.py", line 1771, in compare
+    return np._core.numeric.isclose(x, y, rtol=rtol, atol=atol,
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   equal_nan=equal_nan)
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jeffe\Desktop\fall26\437\FinalProject\.venv\Lib\site-packages\numpy\_core\numeric.py", line 2443, in isclose
+    result = (less_equal(abs(x - y), atol + rtol * abs(y))
+                             ~~^~~
+TypeError: unsupported operand type(s) for -: 'float' and 'NoneType'

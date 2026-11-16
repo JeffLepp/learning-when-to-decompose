@@ -1,0 +1,1768 @@
+{
+  "qwen3:1.7b/S0": {
+    "categories": {
+      "wrong_order": 8,
+      "wrong_values_or_counts": 41
+    },
+    "examples": [
+      {
+        "id": "269fdefc54e27c1a",
+        "input": "Start with [15, 9, 6]. Put the list in reverse order.",
+        "target": [
+          6,
+          9,
+          15
+        ],
+        "prediction": [
+          9,
+          6,
+          15
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            15,
+            9,
+            6
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [15, 9, 6]. Put the list in reverse order.",
+            "response": "{\"answer\":[9, 6, 15]}"
+          }
+        ]
+      },
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          2,
+          4,
+          13,
+          15,
+          14,
+          10,
+          15,
+          14
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\n  \"answer\": [2, 4, 13, 15, 14, 10, 15, 14]\n}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": [
+          10,
+          4,
+          1
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\n  \"answer\": [10, 4, 1]\n}"
+          }
+        ]
+      },
+      {
+        "id": "7320e1ba0dbb5d96",
+        "input": "Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+        "target": [
+          6,
+          17,
+          11,
+          11,
+          10,
+          12
+        ],
+        "prediction": [
+          12,
+          6,
+          17,
+          11,
+          11,
+          10,
+          12
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "rotate_left"
+            }
+          ],
+          "start": [
+            11,
+            10,
+            12,
+            6,
+            17,
+            11
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\n  \"answer\": [12, 6, 17, 11, 11, 10, 12]\n}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S4": {
+    "categories": {
+      "execution_with_correct_plan": 19,
+      "plan_mismatch": 9
+    },
+    "examples": [
+      {
+        "id": "269fdefc54e27c1a",
+        "input": "Start with [15, 9, 6]. Put the list in reverse order.",
+        "target": [
+          6,
+          9,
+          15
+        ],
+        "prediction": [
+          9,
+          6,
+          15
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            15,
+            9,
+            6
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [15, 9, 6]. Put the list in reverse order.",
+            "response": "{\"ops\":[{\"op\":\"reverse\",\"arg\":null}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [15, 9, 6]\nInstructions: Reverse the list.",
+            "response": "{\"answer\":[9, 6, 15]}"
+          }
+        ]
+      },
+      {
+        "id": "7320e1ba0dbb5d96",
+        "input": "Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+        "target": [
+          6,
+          17,
+          11,
+          11,
+          10,
+          12
+        ],
+        "prediction": [
+          12,
+          6,
+          17,
+          11,
+          10,
+          11
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "rotate_left"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "rotate_left"
+            }
+          ],
+          "start": [
+            11,
+            10,
+            12,
+            6,
+            17,
+            11
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\"ops\":[{\"op\":\"rotate_left\",\"arg\":3}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [11, 10, 12, 6, 17, 11]\nInstructions: Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\"answer\":[12, 6, 17, 11, 10, 11]}"
+          }
+        ]
+      },
+      {
+        "id": "4f78ff6b35405a7f",
+        "input": "Start with [13, 9, 12, 18]. Reverse the list. Then Remove the first 2 elements. Then Remove the first 1 elements. Then Scale every number by a factor of 4.",
+        "target": [
+          52
+        ],
+        "prediction": [],
+        "plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            },
+            {
+              "arg": 1,
+              "op": "remove_first"
+            },
+            {
+              "arg": 4,
+              "op": "multiply"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            },
+            {
+              "arg": 1,
+              "op": "remove_first"
+            },
+            {
+              "arg": 4,
+              "op": "multiply"
+            }
+          ],
+          "start": [
+            13,
+            9,
+            12,
+            18
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [13, 9, 12, 18]. Reverse the list. Then Remove the first 2 elements. Then Remove the first 1 elements. Then Scale every number by a factor of 4.",
+            "response": "{\"ops\":[{\"op\":\"reverse\",\"arg\":null},{\"op\":\"remove_first\",\"arg\":2},{\"op\":\"remove_first\",\"arg\":1},{\"op\":\"multiply\",\"arg\":4}] }"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [13, 9, 12, 18]\nInstructions: Reverse the list.",
+            "response": "{\"answer\": [18, 12, 9, 13]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [18, 12, 9, 13]\nInstructions: Remove the first 2 elements.",
+            "response": "{\"answer\":[13]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [13]\nInstructions: Remove the first 1 elements.",
+            "response": "{\"answer\":[]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: []\nInstructions: Multiply each number by 4.",
+            "response": "{\"answer\":[]}"
+          }
+        ]
+      },
+      {
+        "id": "9284dbcc837dafa6",
+        "input": "Start with [20, 11, 17]. Remove every odd number. Then Place 13 after the last element. Then Sort the numbers from smallest to largest.",
+        "target": [
+          13,
+          20
+        ],
+        "prediction": [
+          13,
+          17,
+          20
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": 11,
+              "op": "remove_all"
+            },
+            {
+              "arg": 13,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "sort_asc"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 13,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "sort_asc"
+            }
+          ],
+          "start": [
+            20,
+            11,
+            17
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [20, 11, 17]. Remove every odd number. Then Place 13 after the last element. Then Sort the numbers from smallest to largest.",
+            "response": "{\"ops\":[{\"op\":\"remove_all\",\"arg\":11},{\"op\":\"append\",\"arg\":13},{\"op\":\"sort_asc\",\"arg\":null}] }"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [20, 11, 17]\nInstructions: Remove all occurrences of 11.",
+            "response": "{\"answer\":[20, 17]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [20, 17]\nInstructions: Append 13 to the end of the list.",
+            "response": "{\"answer\":[20, 17, 13]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [20, 17, 13]\nInstructions: Sort the list in ascending order.",
+            "response": "{\"answer\":[13, 17, 20]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S3": {
+    "categories": {
+      "execution_with_correct_plan": 15,
+      "invalid_plan": 30
+    },
+    "examples": [
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          2,
+          4,
+          13,
+          15,
+          14,
+          10,
+          15,
+          14,
+          13,
+          15,
+          14,
+          2,
+          4
+        ],
+        "plan": {
+          "chunks": [
+            "Place 10 after the last element. Then Reverse the list."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"chunks\":[\"Place 10 after the last element. Then Reverse the list.\"] }"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [2, 4, 13, 15, 14]\nInstructions: Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"answer\": [2, 4, 13, 15, 14, 10, 15, 14, 13, 15, 14, 2, 4]}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": null,
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "invalid_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\"chunks\":[\"Sort the list in descending order. Then Reverse the list. Then Remove every odd number.\"]}"
+          }
+        ]
+      },
+      {
+        "id": "7320e1ba0dbb5d96",
+        "input": "Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+        "target": [
+          6,
+          17,
+          11,
+          11,
+          10,
+          12
+        ],
+        "prediction": [
+          12,
+          6,
+          17,
+          11,
+          10,
+          11
+        ],
+        "plan": {
+          "chunks": [
+            "Rotate left by 3 positions (move the first 3 elements to the end)."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "rotate_left"
+            }
+          ],
+          "start": [
+            11,
+            10,
+            12,
+            6,
+            17,
+            11
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\"chunks\":[\"Rotate left by 3 positions (move the first 3 elements to the end).\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [11, 10, 12, 6, 17, 11]\nInstructions: Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\"answer\":[12, 6, 17, 11, 10, 11]}"
+          }
+        ]
+      },
+      {
+        "id": "3425a3914d895c0f",
+        "input": "Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+        "target": [
+          5
+        ],
+        "prediction": [
+          17,
+          5,
+          11
+        ],
+        "plan": {
+          "chunks": [
+            "Keep only the first 3 elements. Then Remove the first 2 elements."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            }
+          ],
+          "start": [
+            17,
+            17,
+            5,
+            11
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"chunks\":[\"Keep only the first 3 elements. Then Remove the first 2 elements.\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [17, 17, 5, 11]\nInstructions: Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"answer\":[17, 5, 11]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:1.7b/S1": {
+    "categories": {
+      "wrong_values_or_counts": 44,
+      "wrong_order": 6
+    },
+    "examples": [
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          2,
+          4,
+          13,
+          15,
+          14,
+          10,
+          13,
+          15,
+          14
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"answer\":[2,4,13,15,14,10,13,15,14]}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": [
+          1,
+          10,
+          4
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\"answer\":[1,10,4]}"
+          }
+        ]
+      },
+      {
+        "id": "7320e1ba0dbb5d96",
+        "input": "Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+        "target": [
+          6,
+          17,
+          11,
+          11,
+          10,
+          12
+        ],
+        "prediction": [
+          12,
+          6,
+          17,
+          11,
+          10,
+          11
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "rotate_left"
+            }
+          ],
+          "start": [
+            11,
+            10,
+            12,
+            6,
+            17,
+            11
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [11, 10, 12, 6, 17, 11]. Rotate left by 3 positions (move the first 3 elements to the end).",
+            "response": "{\"answer\":[12,6,17,11,10,11]}"
+          }
+        ]
+      },
+      {
+        "id": "08f8268bb63f8396",
+        "input": "Start with [0, 19, 3, 0, 7]. Sort the numbers from largest to smallest.",
+        "target": [
+          19,
+          7,
+          3,
+          0,
+          0
+        ],
+        "prediction": [
+          0,
+          19,
+          3,
+          0,
+          7
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            }
+          ],
+          "start": [
+            0,
+            19,
+            3,
+            0,
+            7
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [0, 19, 3, 0, 7]. Sort the numbers from largest to smallest.",
+            "response": "{\"answer\":[0,19,3,0,7]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S3": {
+    "categories": {
+      "execution_with_correct_plan": 25,
+      "plan_mismatch": 5,
+      "noncanonical_plan_needs_manual_review": 1,
+      "invalid_plan": 2
+    },
+    "examples": [
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          14,
+          15,
+          13,
+          4,
+          2,
+          10
+        ],
+        "plan": {
+          "chunks": [
+            "Append 10 to the end of the list. Then Reverse the list."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"chunks\":[\"Append 10 to the end of the list. Then Reverse the list.\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [2, 4, 13, 15, 14]\nInstructions: Append 10 to the end of the list. Then Reverse the list.",
+            "response": "{\"answer\":[14,15,13,4,2,10]}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": [
+          10,
+          4
+        ],
+        "plan": {
+          "chunks": [
+            "Sort the list in descending order. Then Reverse the list.",
+            "Keep only even numbers."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\"chunks\":[\"Sort the list in descending order. Then Reverse the list.\",\"Keep only even numbers.\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [1, 4, 10]\nInstructions: Sort the list in descending order. Then Reverse the list.",
+            "response": "{\"answer\": [10, 4, 1]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [10, 4, 1]\nInstructions: Keep only even numbers.",
+            "response": "{\"answer\":[10,4]}"
+          }
+        ]
+      },
+      {
+        "id": "3425a3914d895c0f",
+        "input": "Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+        "target": [
+          5
+        ],
+        "prediction": [
+          5,
+          11
+        ],
+        "plan": {
+          "chunks": [
+            "Keep only the first 3 elements. Then Remove the first 2 elements."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            }
+          ],
+          "start": [
+            17,
+            17,
+            5,
+            11
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"chunks\":[\"Keep only the first 3 elements. Then Remove the first 2 elements.\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [17, 17, 5, 11]\nInstructions: Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"answer\": [5, 11]}"
+          }
+        ]
+      },
+      {
+        "id": "4f78ff6b35405a7f",
+        "input": "Start with [13, 9, 12, 18]. Reverse the list. Then Remove the first 2 elements. Then Remove the first 1 elements. Then Scale every number by a factor of 4.",
+        "target": [
+          52
+        ],
+        "prediction": [
+          36
+        ],
+        "plan": {
+          "chunks": [
+            "Reverse the list. Then Remove the first 2 elements.",
+            "Remove the first 1 elements. Then Multiply each number by 4."
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            },
+            {
+              "arg": 1,
+              "op": "remove_first"
+            },
+            {
+              "arg": 4,
+              "op": "multiply"
+            }
+          ],
+          "start": [
+            13,
+            9,
+            12,
+            18
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S3/plan",
+            "prompt": "Task: Start with [13, 9, 12, 18]. Reverse the list. Then Remove the first 2 elements. Then Remove the first 1 elements. Then Scale every number by a factor of 4.",
+            "response": "{\"chunks\":[\"Reverse the list. Then Remove the first 2 elements.\",\"Remove the first 1 elements. Then Multiply each number by 4.\"]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [13, 9, 12, 18]\nInstructions: Reverse the list. Then Remove the first 2 elements.",
+            "response": "{\"answer\":[12, 9]}"
+          },
+          {
+            "purpose": "S3/execute",
+            "prompt": "Current list: [12, 9]\nInstructions: Remove the first 1 elements. Then Multiply each number by 4.",
+            "response": "{\"answer\":[36]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S1": {
+    "categories": {
+      "wrong_order": 5,
+      "wrong_values_or_counts": 31
+    },
+    "examples": [
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          14,
+          15,
+          13,
+          4,
+          2,
+          10
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"answer\":[14,15,13,4,2,10]}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": [
+          10,
+          4
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\"answer\":[10,4]}"
+          }
+        ]
+      },
+      {
+        "id": "3425a3914d895c0f",
+        "input": "Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+        "target": [
+          5
+        ],
+        "prediction": [
+          11
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            }
+          ],
+          "start": [
+            17,
+            17,
+            5,
+            11
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"answer\":[11]}"
+          }
+        ]
+      },
+      {
+        "id": "b7a0e02f2a147ac9",
+        "input": "Start with [5, 11, 12, 16, 19, 5]. Keep only even numbers. Then Retain just the first 1 entries of the list. Then Scale every number by a factor of 2.",
+        "target": [
+          24
+        ],
+        "prediction": [
+          12
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 1,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "multiply"
+            }
+          ],
+          "start": [
+            5,
+            11,
+            12,
+            16,
+            19,
+            5
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S1/direct",
+            "prompt": "Task: Start with [5, 11, 12, 16, 19, 5]. Keep only even numbers. Then Retain just the first 1 entries of the list. Then Scale every number by a factor of 2.",
+            "response": "{\"answer\":[12]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S0": {
+    "categories": {
+      "wrong_order": 5,
+      "wrong_values_or_counts": 35
+    },
+    "examples": [
+      {
+        "id": "1fe2deef0d654396",
+        "input": "Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+        "target": [
+          10,
+          14,
+          15,
+          13,
+          4,
+          2
+        ],
+        "prediction": [
+          15,
+          14,
+          13,
+          4,
+          2,
+          10
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 10,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            2,
+            4,
+            13,
+            15,
+            14
+          ]
+        },
+        "category": "wrong_order",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [2, 4, 13, 15, 14]. Place 10 after the last element. Then Reverse the list.",
+            "response": "{\"answer\":[15,14,13,4,2,10]}"
+          }
+        ]
+      },
+      {
+        "id": "05277443b66ef6e4",
+        "input": "Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+        "target": [
+          4,
+          10
+        ],
+        "prediction": [],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "sort_desc"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            }
+          ],
+          "start": [
+            1,
+            4,
+            10
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [1, 4, 10]. Sort the list in descending order. Then Put the list in reverse order. Then Remove every odd number.",
+            "response": "{\"answer\":[]}"
+          }
+        ]
+      },
+      {
+        "id": "3425a3914d895c0f",
+        "input": "Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+        "target": [
+          5
+        ],
+        "prediction": [
+          11
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 3,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "remove_first"
+            }
+          ],
+          "start": [
+            17,
+            17,
+            5,
+            11
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [17, 17, 5, 11]. Keep only the first 3 elements. Then Remove the first 2 elements.",
+            "response": "{\"answer\":[11]}"
+          }
+        ]
+      },
+      {
+        "id": "b7a0e02f2a147ac9",
+        "input": "Start with [5, 11, 12, 16, 19, 5]. Keep only even numbers. Then Retain just the first 1 entries of the list. Then Scale every number by a factor of 2.",
+        "target": [
+          24
+        ],
+        "prediction": [
+          12
+        ],
+        "plan": null,
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 1,
+              "op": "keep_first"
+            },
+            {
+              "arg": 2,
+              "op": "multiply"
+            }
+          ],
+          "start": [
+            5,
+            11,
+            12,
+            16,
+            19,
+            5
+          ]
+        },
+        "category": "wrong_values_or_counts",
+        "calls": [
+          {
+            "purpose": "S0/direct",
+            "prompt": "Task: Start with [5, 11, 12, 16, 19, 5]. Keep only even numbers. Then Retain just the first 1 entries of the list. Then Scale every number by a factor of 2.",
+            "response": "{\"answer\":[12]}"
+          }
+        ]
+      }
+    ]
+  },
+  "qwen3:8b/S4": {
+    "categories": {
+      "execution_with_correct_plan": 5,
+      "plan_mismatch": 1
+    },
+    "examples": [
+      {
+        "id": "1c2beded2631abe8",
+        "input": "Start with [18, 9, 1, 14, 18]. Keep only even numbers. Then Place 8 after the last element. Then Scale every number by a factor of 3.",
+        "target": [
+          54,
+          42,
+          54,
+          24
+        ],
+        "prediction": [
+          54,
+          42,
+          24
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 8,
+              "op": "append"
+            },
+            {
+              "arg": 3,
+              "op": "multiply"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 8,
+              "op": "append"
+            },
+            {
+              "arg": 3,
+              "op": "multiply"
+            }
+          ],
+          "start": [
+            18,
+            9,
+            1,
+            14,
+            18
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [18, 9, 1, 14, 18]. Keep only even numbers. Then Place 8 after the last element. Then Scale every number by a factor of 3.",
+            "response": "{\"ops\":[{\"op\":\"keep_even\",\"arg\":null},{\"op\":\"append\",\"arg\":8},{\"op\":\"multiply\",\"arg\":3}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [18, 9, 1, 14, 18]\nInstructions: Keep only even numbers.",
+            "response": "{\"answer\":[18, 14]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [18, 14]\nInstructions: Append 8 to the end of the list.",
+            "response": "{\"answer\":[18, 14, 8]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [18, 14, 8]\nInstructions: Multiply each number by 3.",
+            "response": "{\"answer\":[54, 42, 24]}"
+          }
+        ]
+      },
+      {
+        "id": "9d1d37b2efe2c161",
+        "input": "Start with [14, 2, 2, 18, 7]. Remove every even number. Then Add 3 to each number. Then Increase every number by 3.",
+        "target": [
+          13
+        ],
+        "prediction": [
+          20,
+          8,
+          8,
+          24,
+          13
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_odd"
+            },
+            {
+              "arg": 3,
+              "op": "add"
+            },
+            {
+              "arg": 3,
+              "op": "add"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_odd"
+            },
+            {
+              "arg": 3,
+              "op": "add"
+            },
+            {
+              "arg": 3,
+              "op": "add"
+            }
+          ],
+          "start": [
+            14,
+            2,
+            2,
+            18,
+            7
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [14, 2, 2, 18, 7]. Remove every even number. Then Add 3 to each number. Then Increase every number by 3.",
+            "response": "{\"ops\":[{\"op\":\"keep_odd\",\"arg\":null},{\"op\":\"add\",\"arg\":3},{\"op\":\"add\",\"arg\":3}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [14, 2, 2, 18, 7]\nInstructions: Keep only odd numbers.",
+            "response": "{\"answer\":[14, 2, 2, 18, 7]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [14, 2, 2, 18, 7]\nInstructions: Add 3 to each number.",
+            "response": "{\"answer\":[17, 5, 5, 21, 10]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [17, 5, 5, 21, 10]\nInstructions: Add 3 to each number.",
+            "response": "{\"answer\":[20, 8, 8, 24, 13]}"
+          }
+        ]
+      },
+      {
+        "id": "eaae08668ca1e05c",
+        "input": "Start with [3, 8, 16, 13]. Place 4 after the last element. Then Keep only even numbers. Then Scale every number by a factor of 3. Then Swap the first and last elements.",
+        "target": [
+          12,
+          48,
+          24
+        ],
+        "prediction": [
+          12,
+          24,
+          48,
+          9
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": 4,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 3,
+              "op": "multiply"
+            },
+            {
+              "arg": null,
+              "op": "swap_ends"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": 4,
+              "op": "append"
+            },
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": 3,
+              "op": "multiply"
+            },
+            {
+              "arg": null,
+              "op": "swap_ends"
+            }
+          ],
+          "start": [
+            3,
+            8,
+            16,
+            13
+          ]
+        },
+        "category": "execution_with_correct_plan",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [3, 8, 16, 13]. Place 4 after the last element. Then Keep only even numbers. Then Scale every number by a factor of 3. Then Swap the first and last elements.",
+            "response": "{\"ops\":[{\"op\":\"append\",\"arg\":4},{\"op\":\"keep_even\",\"arg\":null},{\"op\":\"multiply\",\"arg\":3},{\"op\":\"swap_ends\",\"arg\":null}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [3, 8, 16, 13]\nInstructions: Append 4 to the end of the list.",
+            "response": "{\"answer\":[3, 8, 16, 13, 4]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [3, 8, 16, 13, 4]\nInstructions: Keep only even numbers.",
+            "response": "{\"answer\":[3, 8, 16, 4]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [3, 8, 16, 4]\nInstructions: Multiply each number by 3.",
+            "response": "{\"answer\":[9, 24, 48, 12]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [9, 24, 48, 12]\nInstructions: Swap the first and last elements.",
+            "response": "{\"answer\":[12, 24, 48, 9]}"
+          }
+        ]
+      },
+      {
+        "id": "25af2a3e597b0ea0",
+        "input": "Start with [8, 6, 9, 3, 1, 18]. Remove every odd number. Then Reverse the list. Then Put the list in reverse order.",
+        "target": [
+          8,
+          6,
+          18
+        ],
+        "prediction": [
+          8,
+          6,
+          9,
+          3,
+          18
+        ],
+        "plan": {
+          "ops": [
+            {
+              "arg": 1,
+              "op": "remove_all"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ]
+        },
+        "gold_plan": {
+          "ops": [
+            {
+              "arg": null,
+              "op": "keep_even"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            },
+            {
+              "arg": null,
+              "op": "reverse"
+            }
+          ],
+          "start": [
+            8,
+            6,
+            9,
+            3,
+            1,
+            18
+          ]
+        },
+        "category": "plan_mismatch",
+        "calls": [
+          {
+            "purpose": "S4/parse",
+            "prompt": "Task: Start with [8, 6, 9, 3, 1, 18]. Remove every odd number. Then Reverse the list. Then Put the list in reverse order.",
+            "response": "{\"ops\":[{\"op\":\"remove_all\",\"arg\":1},{\"op\":\"reverse\",\"arg\":null},{\"op\":\"reverse\",\"arg\":null}]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [8, 6, 9, 3, 1, 18]\nInstructions: Remove all occurrences of 1.",
+            "response": "{\"answer\":[8, 6, 9, 3, 18]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [8, 6, 9, 3, 18]\nInstructions: Reverse the list.",
+            "response": "{\"answer\":[18, 3, 9, 6, 8]}"
+          },
+          {
+            "purpose": "S4/leaf",
+            "prompt": "Current list: [18, 3, 9, 6, 8]\nInstructions: Reverse the list.",
+            "response": "{\"answer\":[8, 6, 9, 3, 18]}"
+          }
+        ]
+      }
+    ]
+  }
+}

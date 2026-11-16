@@ -1,0 +1,179 @@
+{
+  "full_v1": {
+    "wall_seconds": 40.82981899999868,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.run_p4",
+      "--labels",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\v1_adapter\\scan_v1_labels.csv",
+      "--domain",
+      "scan",
+      "--items-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\data\\v2\\scan",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\p4-v1adapter",
+      "--features-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\features\\scan_v1",
+      "--expected-arms",
+      "none"
+    ],
+    "returncode": 0
+  },
+  "generate_mode_b": {
+    "wall_seconds": 3.511592400001973,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.synth_labels",
+      "--domain",
+      "scan",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\labels.csv",
+      "--synthetic-items-out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\items",
+      "--features-out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\features",
+      "--seed",
+      "437"
+    ],
+    "returncode": 0
+  },
+  "full_synthetic": {
+    "wall_seconds": 233.79070449999926,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.run_p4",
+      "--labels",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\labels.csv",
+      "--domain",
+      "scan",
+      "--items-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\items",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4",
+      "--features-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\features"
+    ],
+    "returncode": 0
+  },
+  "full_synthetic_final": {
+    "wall_seconds": 19.366733800001384,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.run_final",
+      "--p4-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4",
+      "--labels",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\labels.csv",
+      "--items-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\items",
+      "--splits",
+      "holdout,ood_length",
+      "--features-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\features",
+      "--synthetic-test"
+    ],
+    "returncode": 0
+  },
+  "generate_mode_a_scan": {
+    "wall_seconds": 2.801415400001133,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.synth_labels",
+      "--domain",
+      "scan",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_scan\\labels.csv",
+      "--seed",
+      "437"
+    ],
+    "returncode": 0
+  },
+  "quick_mode_a_scan": {
+    "wall_seconds": 113.81585669999913,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.run_p4",
+      "--labels",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_scan\\labels.csv",
+      "--domain",
+      "scan",
+      "--items-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\data\\v2\\scan",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_scan\\p4",
+      "--quick"
+    ],
+    "returncode": 0
+  },
+  "generate_mode_a_chainops": {
+    "wall_seconds": 3.175847499998781,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.synth_labels",
+      "--domain",
+      "chainops",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_chainops\\labels.csv",
+      "--seed",
+      "437"
+    ],
+    "returncode": 0
+  },
+  "quick_mode_a_chainops": {
+    "wall_seconds": 346.15435389999766,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.run_p4",
+      "--labels",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_chainops\\labels.csv",
+      "--domain",
+      "chainops",
+      "--items-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\data\\v2\\chainops",
+      "--out",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\mode_a_chainops\\p4",
+      "--quick"
+    ],
+    "returncode": 0
+  },
+  "readback_v1": {
+    "wall_seconds": 4.034719499999483,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.readback_p4",
+      "--p4-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\p4-v1adapter"
+    ],
+    "returncode": 0
+  },
+  "readback_synthetic": {
+    "wall_seconds": 6.223023899998225,
+    "command": [
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "v2.router.readback_p4",
+      "--p4-dir",
+      "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\results\\v2\\router\\synthetic16\\p4"
+    ],
+    "returncode": 1
+  }
+}

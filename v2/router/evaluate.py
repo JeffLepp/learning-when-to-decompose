@@ -46,6 +46,24 @@ def point(decision, table, overhead=None):
     return _point(**item_vectors(decision, table, overhead))
 
 
+def operating_point(val_points, best_single_val_accuracy) -> int:
+    """D1.7: cheapest point reaching best-single validation accuracy (1e-12).
+
+    Ties prefer higher accuracy, then lower index. If no point meets the target,
+    maximize accuracy, then minimize cost, then index. Validation points only.
+    """
+    points = list(val_points)
+    if not points or not np.isfinite(best_single_val_accuracy) or not all(
+        np.isfinite([p['accuracy'], p['mean_cost']]).all() for p in points
+    ):
+        raise ValueError('Need nonempty finite validation points and target')
+    eligible = [i for i, p in enumerate(points)
+                if p['accuracy'] >= best_single_val_accuracy - 1e-12]
+    if eligible:
+        return min(eligible, key=lambda i: (points[i]['mean_cost'], -points[i]['accuracy'], i))
+    return min(range(len(points)), key=lambda i: (-points[i]['accuracy'], points[i]['mean_cost'], i))
+
+
 def pareto_frontier(points):
     """Return nondominated point dictionaries, sorted by mean_cost; collapse ties."""
     ordered = sorted((p for p in points if np.isfinite(p['mean_cost']) and
@@ -276,32 +294,69 @@ class Experiment:
         self.val = val_table.select()
         self.best_arm = self.val.arms[best_single_arm(self.val)]
         self._frozen, self._locked = {}, False
+        self.selection_only = set()
         self.n_boot, self.seed = n_boot, seed
 
     @property
     def frozen(self):
         return copy.deepcopy(self._frozen)
 
-    def select(self, name, candidates, score_fn, *, table=None):
+    def _selection_guard(self, name):
         if self._locked:
             raise RuntimeError('Cannot select after freeze')
-        val = self.val if table is None else table
-        assert val.split == 'router_val', 'selection requires router_val'
         if name in {'best_single', 'oracle'} or '@' in name:
             raise ValueError('Reserved policy name')
-        if not candidates or name in self._frozen:
+        if name in self._frozen:
+            raise ValueError('Need a new policy name')
+
+    def select(self, name, candidates, score_fn, *, table=None, selection_only=False):
+        self._selection_guard(name)
+        val = self.val if table is None else table
+        assert val.split == 'router_val', 'selection requires router_val'
+        if not candidates:
             raise ValueError('Need candidates and a new policy name')
         scores = {key: float(score_fn(candidate, val)) for key, candidate in candidates.items()}
         if not np.isfinite(list(scores.values())).all():
             raise ValueError('Selection scores must be finite')
         key = max(scores, key=scores.get)
         self._frozen[name] = dict(choice=key, validation_score=scores[key])
+        if selection_only:
+            self.selection_only.add(name)
         return key
+
+    def select_operating_point(self, name, val_points, decisions_or_keys, *, rule='D1.7'):
+        """Freeze the D1.7 headline choice using this experiment's best single.
+
+        Points align with a sequence of Decisions (returns an index), a sequence
+        of serializable keys, or a mapping in insertion order (returns its key).
+        Callers must supply points measured on router_val, including overhead.
+        """
+        self._selection_guard(name)
+        if rule != 'D1.7':
+            raise ValueError('Unknown operating-point rule; expected D1.7')
+        points, choices = list(val_points), list(decisions_or_keys)
+        if len(points) != len(choices):
+            raise ValueError('Validation points and decisions/keys must align')
+        if any(isinstance(c, Decision) for c in choices):
+            if not all(isinstance(c, Decision) for c in choices):
+                raise ValueError('Do not mix decisions and keys')
+            choices = list(range(len(choices)))
+        target = float(self.val.success[:, self.val.arms.index(self.best_arm)].mean())
+        index = operating_point(points, target)
+        choice = choices[index]
+        json.dumps(choice)  # Reject nonserializable choice keys before recording.
+        self._frozen[name] = copy.deepcopy(dict(
+            choice=choice, rule=rule, validation_point=points[index],
+            best_single_val_accuracy=target))
+        return choice
 
     def freeze(self):
         self._locked = True
 
-    def evaluate_on(self, split_table, policies, *, final_eval=False):
+    def evaluate_on(self, split_table, policies, *, final_eval=False,
+                    fast_bootstrap=False, comparison_scope='all', contrast_pairs=()):
+        if comparison_scope not in {'all', 'best_single'}:
+            raise ValueError('Unknown comparison scope')
         table = split_table
         log = self.directory / 'evaluate_calls.jsonl'
         previous = ([json.loads(line) for line in log.read_text(encoding='utf-8').splitlines()]
@@ -312,7 +367,7 @@ class Experiment:
                   'final evaluation already completed for this split' if reserved and any(
                       entry['split'] == table.split and entry['status'] == 'completed'
                       for entry in previous) else
-                  'policy names must match frozen choices' if set(policies) != set(self._frozen) else None)
+                  'policy names must match frozen choices' if set(policies) != set(self._frozen) - self.selection_only else None)
         call = dict(split=table.split, time=datetime.now(timezone.utc).isoformat(),
                     n_items=len(table.ids), frozen_choices=self.frozen,
                     best_single_arm=self.best_arm, final_eval=final_eval,
@@ -339,11 +394,14 @@ class Experiment:
             vectors[name] = item_vectors(decision, table, overhead)
             decisions[name] = decision
             report_policies[name] = point(decision, table, overhead)
+            report_policies[name]['mean_overhead'] = float(np.mean(overhead)) if overhead is not None else 0.
             if 'curve' in spec:
                 curves[name] = [item_vectors(d, table, overhead) for d in spec['curve']]
+                if 'anchor' in spec:
+                    curves[name].insert(0, item_vectors(spec['anchor'], table))
         costs = [p['mean_cost'] for p in fixed_points]
         lo, hi = min(costs), max(costs)
-        for name, result in report_policies.items():
+        for name, result in ([] if fast_bootstrap else report_policies.items()):
             vec = vectors[name]
             def gap(idx):
                 return gap_closed(vec['correct'][idx].mean(), vectors['best_single']['correct'][idx].mean(),
@@ -361,12 +419,19 @@ class Experiment:
                 for key in ['normalized_auc', 'accuracy_at_best_single_cost', 'cost_at_best_single_accuracy']:
                     result[key] = bootstrap_curve_metric(lambda idx: metrics(idx)[key], n, self.n_boot, self.seed)
         comparisons = {}
-        for left, right in combinations(vectors, 2):
+        pairs = (combinations(vectors, 2) if comparison_scope == 'all' else
+                 [('best_single', name) for name in report_policies])
+        for left, right in ([] if fast_bootstrap else pairs):
             # The direction is left minus right, as named in the report.
             comparisons[f'{left} - {right}'] = dict(
                 correctness=paired_bootstrap(vectors[left]['correct'], vectors[right]['correct'], self.n_boot, self.seed),
                 cost=paired_bootstrap(vectors[left]['cost'], vectors[right]['cost'], self.n_boot, self.seed),
                 mcnemar=mcnemar(vectors[left]['correct'], vectors[right]['correct']))
+        contrasts = {}
+        if fast_bootstrap or contrast_pairs:
+            from .bootstrap import evaluate_batched
+            comparisons = evaluate_batched(table, vectors, curves, oracle_vec, report_policies,
+                                           self.n_boot, self.seed, comparison_scope, contrast_pairs, contrasts)
         frontier = pareto_frontier(fixed_points)
         report = dict(evaluation_call=call,
                       evaluate_calls=[json.loads(line) for line in log.read_text(encoding='utf-8').splitlines()],
@@ -374,6 +439,7 @@ class Experiment:
                       fixed_frontier_auc=normalized_auc(frontier, lo, hi),
                       cost_range=[lo, hi], best_single=best_point,
                       oracle=point(oracle_decision, table), policies=report_policies, comparisons=comparisons,
+                      contrasts=contrasts,
                       uncertainty=dict(n_boot=self.n_boot, seed=self.seed, refit=False,
                                        note='Percentile paired item bootstrap; null CI means undefined replicates.'))
         with (self.directory / 'decisions.csv').open('w', newline='', encoding='utf-8') as stream:

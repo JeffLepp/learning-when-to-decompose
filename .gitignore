@@ -11,3 +11,8 @@ probe_cache/
 workspace_logs/
 .gpu.lock
 results/v2/features/**/*.npy
+results/v2/runs/**/records.jsonl
+results/v2/runs/**/calls.jsonl
+results/v2/runs/**/warmup.jsonl
+results/v2/router/synthetic*/**/*.joblib
+results/v2/router/**/frozen/*.joblib

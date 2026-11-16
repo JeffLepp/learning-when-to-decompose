@@ -1,0 +1,32 @@
+ M v2/router/README.md
+ M v2/router/data.py
+ M v2/router/evaluate.py
+ M v2/router/plots.py
+ M v2/tests/test_router_plots.py
+?? data/v2/
+?? results/v2/prompt_dev/
+?? results/v2/router/mode_a_chainops/
+?? results/v2/router/mode_a_scan/
+?? results/v2/router/p4-v1adapter/
+?? results/v2/router/sim_check/figures/
+?? results/v2/router/synthetic16/
+?? results/v2/router/task_d/
+?? results/v2/router/task_e/
+?? results/v2/router/v1_adapter/figures/
+?? results/v2/runs/
+?? v2/__init__.py
+?? v2/build_data.py
+?? v2/build_labels.py
+?? v2/domains/
+?? v2/harness.py
+?? v2/harness_promptdev.py
+?? v2/router/bootstrap.py
+?? v2/router/readback_p4.py
+?? v2/router/run_final.py
+?? v2/router/run_p4.py
+?? v2/router/synth_labels.py
+?? v2/router/workflow.py
+?? v2/tests/test_foundations.py
+?? v2/tests/test_promptdev.py
+?? v2/tests/test_router_d1.py
+?? v2/tests/test_router_p4.py

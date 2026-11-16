@@ -1,0 +1,15 @@
+{
+  "generator": "v2.router.synth_labels",
+  "mode": "A",
+  "domain": "scan",
+  "seed": 437,
+  "labels_sha256": "cb6466de843767e2fc47071763357610df3b631d63c0236ce46f896ddb4d19e1",
+  "items_dir": "C:\\Users\\jeffe\\Desktop\\fall26\\437\\FinalProject\\data\\v2\\scan",
+  "item_sha256": {
+    "router_train.jsonl": "1c89c3029998e343965c81d77035fbcc409fdd43b07b8abda260a450d19665e5",
+    "router_val.jsonl": "eb0298b8d8f5ca87c5473f968bad74879520f7e1b91cd9ead38fd72b777db62b"
+  },
+  "n_items": 800,
+  "n_rows": 14200,
+  "note": "Synthetic labels; no model calls."
+}

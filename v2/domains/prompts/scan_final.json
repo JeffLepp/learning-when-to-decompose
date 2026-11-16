@@ -1,0 +1,586 @@
+{
+  "domain": "scan",
+  "version": "scan_final",
+  "exemplar_ids": [
+    "568f171d6404adfa",
+    "e9d62c6355dfe170",
+    "f92508adeac0ce55",
+    "f6878090e4631210",
+    "c6c307d20987d4eb",
+    "002c81350de97132",
+    "3f096829c65523a5",
+    "e4d6c6ce72a6f1ec",
+    "f26dd9fdafbb0115",
+    "5d0edf1701f582d7",
+    "c1edc4378ea89f73",
+    "0e652e8fbaf0f11a",
+    "34c1bca529150ab6",
+    "71a324b24eec58c4",
+    "38f3a9654d2edcc7",
+    "d7cd9cc586cbd041"
+  ],
+  "provenance": {
+    "S0": {
+      "round": 0,
+      "block_sha256": "12219fe6efba56802c71fc3c2db75189d2a8f8109cbabca6db1f8f75d20a6ae4"
+    },
+    "S1": {
+      "round": 1,
+      "block_sha256": "babe3431ce829a87c58a3f03195e07391c3e2d65e9e46c8d3d34120eb26bdf98"
+    },
+    "S3": {
+      "round": 1,
+      "block_sha256": "5ed3b2dbec523168210b4b54651bdc9acaa5d31d19a2ef57f7eb15e1c35a7891"
+    },
+    "S4": {
+      "round": 0,
+      "block_sha256": "6579937d47d7b29db6bd42cb485833f6eb0c0d29ba08ca66d54a03576ec61db0"
+    },
+    "S2": {
+      "round": 0,
+      "block_sha256": "12219fe6efba56802c71fc3c2db75189d2a8f8109cbabca6db1f8f75d20a6ae4",
+      "copied_from": "S0"
+    }
+  },
+  "S0": {
+    "direct": {
+      "system": "Translate SCAN commands into action tokens.\nwalk = I_WALK; run = I_RUN; jump = I_JUMP; look = I_LOOK.\nturn left = I_TURN_LEFT; turn right = I_TURN_RIGHT.\nFor an action left/right, turn once that direction then perform the action.\nFor an action opposite left/right, turn twice then perform the action once.\nFor an action around left/right, repeat (one turn then the action) four times.\nturn opposite left/right means two turns. turn around left/right means four turns.\ntwice repeats the entire preceding clause twice; thrice repeats it three times.\nA and B executes A then B. A after B executes B then A.\nReturn only the requested JSON. Do not explain.",
+      "instruction": "Translate the complete command. Apply all direction, modifier, repetition and execution-order rules. Return {\"actions\":[...]} only.",
+      "template": "Command: {input}",
+      "examples": []
+    }
+  },
+  "S1": {
+    "direct": {
+      "system": "You translate SCAN language into an ordered list of action tokens. Apply these exact rules.\nPrimitive actions: walk -> I_WALK; run -> I_RUN; look -> I_LOOK; jump -> I_JUMP.\nFor direction left, T is I_TURN_LEFT. For direction right, T is I_TURN_RIGHT.\nLet A be the primitive action token named in the clause. The exact clause patterns are:\naction alone: [A]\naction left/right: [T,A]\naction opposite left/right: [T,T,A]\naction around left/right: [T,A,T,A,T,A,T,A]\nturn left/right: [T]\nturn opposite left/right: [T,T]\nturn around left/right: [T,T,T,T]\nThe word turn never emits a walk/run/look/jump token. Turns always precede their action.\ntwice means concatenate TWO copies of the WHOLE clause pattern. thrice means THREE copies. No repetition word means ONE copy. Repeat turns as well as actions; never repeat only the final token.\nA and B: finish all of A, then all of B. A after B: finish all of B, then all of A. A clause's repetition stays attached to that clause when ordering changes.\nConcatenate without merging, deleting, or cancelling adjacent identical turns. Stop when both clauses are complete.\nOutput only JSON with an actions array of quoted tokens. Do not emit shorthand, counts, ellipses, or explanations.",
+      "instruction": "Translate the final Command below. First determine clause execution order, then each complete clause pattern and its repeat count. Concatenate the finished patterns in that order. Check the number of tokens and stop at the exact end. Return only {\"actions\":[...]}. Examples, if present, are separate tasks.",
+      "template": "Command: {input}\nFinal JSON:",
+      "examples": [
+        {
+          "id": "e9d62c6355dfe170",
+          "input": "Command: look twice after walk thrice\nWorked execution order: 1. walk: ['I_WALK']; concatenate 3 copies. 2. look: ['I_LOOK']; concatenate 2 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_WALK",
+              "I_WALK",
+              "I_WALK",
+              "I_LOOK",
+              "I_LOOK"
+            ]
+          }
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input": "Command: run left thrice after jump left twice\nWorked execution order: 1. jump left: ['I_TURN_LEFT', 'I_JUMP']; concatenate 2 copies. 2. run left: ['I_TURN_LEFT', 'I_RUN']; concatenate 3 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_RUN",
+              "I_TURN_LEFT",
+              "I_RUN",
+              "I_TURN_LEFT",
+              "I_RUN"
+            ]
+          }
+        },
+        {
+          "id": "c6c307d20987d4eb",
+          "input": "Command: run opposite left twice and turn right thrice\nWorked execution order: 1. run opposite left: ['I_TURN_LEFT', 'I_TURN_LEFT', 'I_RUN']; concatenate 2 copies. 2. turn right: ['I_TURN_RIGHT']; concatenate 3 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_RUN",
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_RUN",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT"
+            ]
+          }
+        },
+        {
+          "id": "002c81350de97132",
+          "input": "Command: look opposite right thrice and turn opposite right thrice\nWorked execution order: 1. look opposite right: ['I_TURN_RIGHT', 'I_TURN_RIGHT', 'I_LOOK']; concatenate 3 copies. 2. turn opposite right: ['I_TURN_RIGHT', 'I_TURN_RIGHT']; concatenate 3 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_LOOK",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_LOOK",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_LOOK",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT"
+            ]
+          }
+        },
+        {
+          "id": "f6878090e4631210",
+          "input": "Command: walk opposite left twice after jump around right\nWorked execution order: 1. jump around right: ['I_TURN_RIGHT', 'I_JUMP', 'I_TURN_RIGHT', 'I_JUMP', 'I_TURN_RIGHT', 'I_JUMP', 'I_TURN_RIGHT', 'I_JUMP']; concatenate 1 copies. 2. walk opposite left: ['I_TURN_LEFT', 'I_TURN_LEFT', 'I_WALK']; concatenate 2 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_WALK",
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_WALK"
+            ]
+          }
+        },
+        {
+          "id": "568f171d6404adfa",
+          "input": "Command: turn opposite right thrice and jump around left twice\nWorked execution order: 1. turn opposite right: ['I_TURN_RIGHT', 'I_TURN_RIGHT']; concatenate 3 copies. 2. jump around left: ['I_TURN_LEFT', 'I_JUMP', 'I_TURN_LEFT', 'I_JUMP', 'I_TURN_LEFT', 'I_JUMP', 'I_TURN_LEFT', 'I_JUMP']; concatenate 2 copies.\nFinal JSON:",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "S3": {
+    "plan": {
+      "system": "You extract a SCAN clause plan. Copy the command words; do not translate them into action tokens. Output only the specified JSON.",
+      "instruction": "Split the command at and or after into one or two clauses. For and, output left clause then right clause. For after, output RIGHT clause FIRST, then LEFT clause. Within each clause remove only a final twice/thrice and put its value 2/3 in repeat; otherwise repeat=1. Keep all remaining action/direction/around/opposite words in command. Do not remove direction or modifiers. Output {\"steps\":[{\"command\":\"...\",\"repeat\":1}]}. Each input clause appears exactly once; repeats are numbers, not extra steps.",
+      "template": "Command: {input}",
+      "examples": [
+        {
+          "id": "568f171d6404adfa",
+          "input": "Command: turn opposite right thrice and jump around left twice",
+          "output": {
+            "steps": [
+              {
+                "command": "turn opposite right",
+                "repeat": 3
+              },
+              {
+                "command": "jump around left",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e9d62c6355dfe170",
+          "input": "Command: look twice after walk thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "walk",
+                "repeat": 3
+              },
+              {
+                "command": "look",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input": "Command: run left thrice after jump left twice",
+          "output": {
+            "steps": [
+              {
+                "command": "jump left",
+                "repeat": 2
+              },
+              {
+                "command": "run left",
+                "repeat": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "f6878090e4631210",
+          "input": "Command: walk opposite left twice after jump around right",
+          "output": {
+            "steps": [
+              {
+                "command": "jump around right",
+                "repeat": 1
+              },
+              {
+                "command": "walk opposite left",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c6c307d20987d4eb",
+          "input": "Command: run opposite left twice and turn right thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "run opposite left",
+                "repeat": 2
+              },
+              {
+                "command": "turn right",
+                "repeat": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "002c81350de97132",
+          "input": "Command: look opposite right thrice and turn opposite right thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "look opposite right",
+                "repeat": 3
+              },
+              {
+                "command": "turn opposite right",
+                "repeat": 3
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "execute": {
+      "system": "You translate SCAN language into an ordered list of action tokens. Apply these exact rules.\nPrimitive actions: walk -> I_WALK; run -> I_RUN; look -> I_LOOK; jump -> I_JUMP.\nFor direction left, T is I_TURN_LEFT. For direction right, T is I_TURN_RIGHT.\nLet A be the primitive action token named in the clause. The exact clause patterns are:\naction alone: [A]\naction left/right: [T,A]\naction opposite left/right: [T,T,A]\naction around left/right: [T,A,T,A,T,A,T,A]\nturn left/right: [T]\nturn opposite left/right: [T,T]\nturn around left/right: [T,T,T,T]\nThe word turn never emits a walk/run/look/jump token. Turns always precede their action.\nOutput only {\"actions\":[...]} for this single clause. No repetition or conjunction is present.",
+      "instruction": "Match exactly one clause pattern. Substitute the named action and direction. opposite produces two turns then ONE action; around produces exactly FOUR turn/action pairs. Output the finite JSON array and stop.",
+      "template": "Command: {command}",
+      "examples": [
+        {
+          "id": "e9d62c6355dfe170",
+          "input": "Command: walk",
+          "output": {
+            "actions": [
+              "I_WALK"
+            ]
+          }
+        },
+        {
+          "id": "e9d62c6355dfe170",
+          "input": "Command: look",
+          "output": {
+            "actions": [
+              "I_LOOK"
+            ]
+          }
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input": "Command: jump left",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_JUMP"
+            ]
+          }
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input": "Command: run left",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_RUN"
+            ]
+          }
+        },
+        {
+          "id": "f6878090e4631210",
+          "input": "Command: walk opposite left",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_WALK"
+            ]
+          }
+        },
+        {
+          "id": "e4d6c6ce72a6f1ec",
+          "input": "Command: run opposite right",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_RUN"
+            ]
+          }
+        },
+        {
+          "id": "002c81350de97132",
+          "input": "Command: look opposite right",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT",
+              "I_LOOK"
+            ]
+          }
+        },
+        {
+          "id": "568f171d6404adfa",
+          "input": "Command: jump around left",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP",
+              "I_TURN_LEFT",
+              "I_JUMP"
+            ]
+          }
+        },
+        {
+          "id": "f6878090e4631210",
+          "input": "Command: jump around right",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP",
+              "I_TURN_RIGHT",
+              "I_JUMP"
+            ]
+          }
+        },
+        {
+          "id": "002c81350de97132",
+          "input": "Command: turn opposite right",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT",
+              "I_TURN_RIGHT"
+            ]
+          }
+        },
+        {
+          "id": "c1edc4378ea89f73",
+          "input": "Command: turn around left",
+          "output": {
+            "actions": [
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_TURN_LEFT",
+              "I_TURN_LEFT"
+            ]
+          }
+        },
+        {
+          "id": "c6c307d20987d4eb",
+          "input": "Command: turn right",
+          "output": {
+            "actions": [
+              "I_TURN_RIGHT"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "S4": {
+    "parse": {
+      "system": "Translate SCAN commands into action tokens.\nwalk = I_WALK; run = I_RUN; jump = I_JUMP; look = I_LOOK.\nturn left = I_TURN_LEFT; turn right = I_TURN_RIGHT.\nFor an action left/right, turn once that direction then perform the action.\nFor an action opposite left/right, turn twice then perform the action once.\nFor an action around left/right, repeat (one turn then the action) four times.\nturn opposite left/right means two turns. turn around left/right means four turns.\ntwice repeats the entire preceding clause twice; thrice repeats it three times.\nA and B executes A then B. A after B executes B then A.\nReturn only the requested JSON. Do not explain.",
+      "instruction": "Return {\"steps\":[{\"command\":\"...\",\"action\":\"jump\",\"direction\":\"right\",\"modifier\":\"around\",\"repeat\":1}]}. Use one or two clauses in execution order (reverse for after). command is the original clause without twice/thrice. action is walk/run/jump/look/turn; direction is left/right/none; modifier is none/opposite/around; repeat is 1/2/3. Preserve modifiers without expanding them. Use none for absent direction or modifier.",
+      "template": "Command: {input}",
+      "examples": [
+        {
+          "id": "568f171d6404adfa",
+          "input": "Command: turn opposite right thrice and jump around left twice",
+          "output": {
+            "steps": [
+              {
+                "command": "turn opposite right",
+                "action": "turn",
+                "direction": "right",
+                "modifier": "opposite",
+                "repeat": 3
+              },
+              {
+                "command": "jump around left",
+                "action": "jump",
+                "direction": "left",
+                "modifier": "around",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "e9d62c6355dfe170",
+          "input": "Command: look twice after walk thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "walk",
+                "action": "walk",
+                "direction": "none",
+                "modifier": "none",
+                "repeat": 3
+              },
+              {
+                "command": "look",
+                "action": "look",
+                "direction": "none",
+                "modifier": "none",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input": "Command: run left thrice after jump left twice",
+          "output": {
+            "steps": [
+              {
+                "command": "jump left",
+                "action": "jump",
+                "direction": "left",
+                "modifier": "none",
+                "repeat": 2
+              },
+              {
+                "command": "run left",
+                "action": "run",
+                "direction": "left",
+                "modifier": "none",
+                "repeat": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "f6878090e4631210",
+          "input": "Command: walk opposite left twice after jump around right",
+          "output": {
+            "steps": [
+              {
+                "command": "jump around right",
+                "action": "jump",
+                "direction": "right",
+                "modifier": "around",
+                "repeat": 1
+              },
+              {
+                "command": "walk opposite left",
+                "action": "walk",
+                "direction": "left",
+                "modifier": "opposite",
+                "repeat": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "c6c307d20987d4eb",
+          "input": "Command: run opposite left twice and turn right thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "run opposite left",
+                "action": "run",
+                "direction": "left",
+                "modifier": "opposite",
+                "repeat": 2
+              },
+              {
+                "command": "turn right",
+                "action": "turn",
+                "direction": "right",
+                "modifier": "none",
+                "repeat": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "002c81350de97132",
+          "input": "Command: look opposite right thrice and turn opposite right thrice",
+          "output": {
+            "steps": [
+              {
+                "command": "look opposite right",
+                "action": "look",
+                "direction": "right",
+                "modifier": "opposite",
+                "repeat": 3
+              },
+              {
+                "command": "turn opposite right",
+                "action": "turn",
+                "direction": "right",
+                "modifier": "opposite",
+                "repeat": 3
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "leaf": {
+      "system": "Translate SCAN commands into action tokens.\nwalk = I_WALK; run = I_RUN; jump = I_JUMP; look = I_LOOK.\nturn left = I_TURN_LEFT; turn right = I_TURN_RIGHT.\nFor an action left/right, turn once that direction then perform the action.\nFor an action opposite left/right, turn twice then perform the action once.\nFor an action around left/right, repeat (one turn then the action) four times.\nturn opposite left/right means two turns. turn around left/right means four turns.\ntwice repeats the entire preceding clause twice; thrice repeats it three times.\nA and B executes A then B. A after B executes B then A.\nReturn only the requested JSON. Do not explain.",
+      "instruction": "Translate this atomic command to {\"actions\":[...]}. A directed action means the turn FIRST, then the action. A turn alone outputs only its turn token.",
+      "template": "Command: {command}",
+      "examples": []
+    }
+  },
+  "S2": {
+    "direct": {
+      "system": "Translate SCAN commands into action tokens.\nwalk = I_WALK; run = I_RUN; jump = I_JUMP; look = I_LOOK.\nturn left = I_TURN_LEFT; turn right = I_TURN_RIGHT.\nFor an action left/right, turn once that direction then perform the action.\nFor an action opposite left/right, turn twice then perform the action once.\nFor an action around left/right, repeat (one turn then the action) four times.\nturn opposite left/right means two turns. turn around left/right means four turns.\ntwice repeats the entire preceding clause twice; thrice repeats it three times.\nA and B executes A then B. A after B executes B then A.\nReturn only the requested JSON. Do not explain.",
+      "instruction": "Translate the complete command. Apply all direction, modifier, repetition and execution-order rules. Return {\"actions\":[...]} only.",
+      "template": "Command: {input}",
+      "examples": []
+    }
+  }
+}

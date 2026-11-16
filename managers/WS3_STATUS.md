@@ -1,76 +1,115 @@
-# WS3 status — Router & evaluation library, phase A (stop point reached)
+# WS3 status — phase B (stop point reached)
 
-Date: 2026-11-15. Manager: Claude2 (WS3). Worker: `codex` (3 serial tasks: A library core, B evaluation/simulation/plots, C review fixes).
-Prompts and worker final messages: `workspace_logs/ws3-task{A,B,C}.prompt.md` / `.last.md`.
-Everything below marked **measured** was re-run by the manager after the worker finished, not copied from the worker.
+Date: 2026-11-15. Manager: Claude (fresh WS3 session; predecessor account hit its usage limit). Worker: `codex`, 3 serial tasks:
+- D: the D1 rules and the figures.
+- E: `run_p4`, `run_final` and synthetic labels.
+- F: review fixes for H3–H5 reporting and the Platt calibration fix.
+
+Task prompts and final messages are in `workspace_logs/ws3-task{D,E,F}.prompt.md` and `.last.md`. Everything marked **measured** below I re-ran myself after the worker finished. The numbers quoted from worker artifacts are labelled as such.
 
 ## Done (with evidence)
 
-1. **Library `v2/router/`** implementing DESIGN_V2 §6: `data.py`, `models.py`, `policies.py`, `evaluate.py`, `plots.py`, plus `simulate.py`, `readback.py`, `v1_repro.py`, `README.md` (API summary).
-2. **Tests (measured):** `.venv/Scripts/python.exe -B -m unittest discover -s v2/tests -p "test_router_*.py" -t .` → `Ran 42 tests in 7.3s, OK (skipped=1)`. The one skip is the plot test (matplotlib absent).
-3. **v1 regression (measured):** `.venv/Scripts/python.exe -B -m v2.router.v1_repro` → `match: true`. Threshold .5; validation 10/32, 629.9375 mean tokens; v1 audit **15/32, 625.09375 mean tokens**; all 32 per-item audit choices equal `results/controller-v1/audit_predictions.json`. Built only from the new library on the adapter CSV.
-4. **Simulation check (measured from `results/v2/router/sim_check/report.json`; worker ran `python -m v2.router.simulate`, I read the report back):** see numbers below. All five acceptance flags true.
-5. **Scope check (measured):** `git status` shows WS3 touched only `v2/router/`, `v2/tests/test_router_*.py`, `results/v2/router/`. No commits. No GPU/Ollama/network. No real `holdout`/`ood_*` file is opened by any router code (grep: the only references are the guard in `evaluate.py`).
+1. **D1 implemented**
+   - D1.7 operating point: `evaluate.operating_point(val_points, best_single_val_acc)` is the single rule for every headline single point. `Experiment.select_operating_point` freezes `{choice, rule:'D1.7', validation_point, best_single_val_accuracy}`.
+   - D1.5 coverage: `data.main_table(table, expected_n_arms=16)` raises if any item lacks a main arm and never drops items. `s2_table` holds the separate S2 subset. Both assert that G1/G2 are absent.
+   - D1.2 probe variants: `data.load_f3(features_dir, ids, layer_key, variant∈{own,small}, arms)` and `probe_overhead(...)`. The overhead is the S0 `prompt_tokens` from the labels once per distinct probed model, so `own` charges four models and `small` charges the 0.6B model only.
+   - Bootstrap default: 10,000 replicates is the library default and is asserted in tests.
+2. **Figures rendered (all four types, 150 dpi):**
+   - `results/v2/router/sim_check/figures/{cost_accuracy,reliability,learning_curve,auroc}.png`, rebuilt from the saved simulation artifacts without refitting.
+   - `results/v2/router/v1_adapter/figures/{cost_accuracy,reliability,learning_curve,auroc}.png`, on train/val only. The AUROC grid includes F3-own from WS2's real `scan_v1/qwen3-8b` features. I viewed cost_accuracy and auroc; they render correctly.
+   - The P4 drivers also write figures into `<out>/figures/`.
+3. **`v2/router/run_p4.py`** runs the full P4 analysis on router_train/router_val only:
+   - `load_labels(..., splits=[...])` skips other splits' rows while reading, and only the two dev item files are opened. A test patches `open` to prove this.
+   - Feature families F1, F2 and F3-own/F3-small. The layer for each F3 variant is selected on val with `Experiment.select`.
+   - Learners logreg, HGB and MLP, each in per-arm and shared mode.
+   - Calibration (none/Platt/isotonic) is chosen per predictor by 5-fold cross-fitted Brier on val. Val routing curves use the cross-fitted probabilities, and the frozen model is calibrated on all of val.
+   - Per-arm AUROC/Brier/ECE.
+   - Learning curves at 50/100/200/400/all training items, with 20 repeats.
+   - Policy suite:
+     - fixed arms and best single;
+     - cheapest arm meeting the target (best, best−.02, best−.05);
+     - heuristic grid;
+     - λ routing for every family×learner×mode;
+     - the v1 threshold rule;
+     - cascades over three ladder types (S0 by size, the val frontier, S0→S3 per model), each with logprob, agreement, learned-F4 and learned-F4+F1 confidence;
+     - the oracle as a reference only.
+   - Every single operating point uses D1.7. One selected router per family plus an overall and a cascade selection, all by val normalized AUC. Then `freeze()` and `evaluate_on(val)`.
+   - Outputs: `report.json` (sha256 of the labels, items, features index and every `v2/router/*.py`), `summary.md`, and `frozen/` (objects plus `selections.json`). All val numbers are labelled "validation (used for selection; optimistic)".
+4. **`v2/router/run_final.py`** is the one-shot P5 evaluation:
+   - It requires the `freeze-v2` tag. The tag is waived only with `--synthetic-test`, which itself requires Mode-B synthetic provenance, items outside `data/` and `synthetic-` ids.
+   - It verifies the router code, frozen artifacts, dev label rows and dev items by sha256. It applies the frozen objects without refitting and calls `evaluate_on(final_eval=True)` per split into `<p4>/final_<split>/`.
+   - It checks the one-shot log **before** opening any final rows.
+   - Final outputs include held-out predictor metrics (H3) and the pre-registered contrasts (H4/H5); the measured numbers are below.
+5. **Synthetic 16-arm fixture `v2/router/synth_labels.py`:**
+   - Columns are imported from WS1's `build_labels.COLUMNS`, which was read and not edited.
+   - Mode A uses the real router_train/router_val items. Mode B generates fake items for all splits, plus a synthetic F3 directory in WS2's index layout.
+   - It includes S2 on a subset, G1/G2 rows to prove they are excluded, and `total_tokens` that includes thinking tokens (D1.4).
+6. **Review fix (task F): Platt inversion.**
+   - Cross-fitted AUROC fell below raw AUROC (e.g. .5788 → .4960) because 376 of 1,920 fold×arm Platt fits had negative slopes, which invert the ranking.
+   - Platt now falls back to the constant prior when slope ≤ 0, with a count recorded (70 fallbacks in the synthetic frozen models). Isotonic is fitted increasing, and a unit test covers this.
+   - Pooled cross-fit AUROC can still sit below raw AUROC because each fold uses a different calibrator. **Headline AUROC should be raw scores (calibration-invariant).**
+7. **Measured verification**
+   - Router tests (`.venv/Scripts/python.exe -B -m unittest discover -s v2/tests -p "test_router_*.py" -t .`): `Ran 59 tests in 318.2s, OK`, 0 skipped.
+   - `python -m v2.router.v1_repro`: `"match": true`.
+   - Repeating `run_final --synthetic-test` on `synthetic16-f` holdout gives `RuntimeError: Final evaluation already completed for holdout`.
+   - Real-data `run_final` without the tag gives `RuntimeError: freeze-v2 git tag required; no final data were opened`.
+   - No GPU or Ollama use. No real `data/v2/*/holdout|ood_*` file was opened. No git writes.
 
-## API summary (details in `v2/router/README.md`)
+## Measured numbers (worker artifacts; fixture/dev only)
 
-- `data`: `load_labels(csv) -> {split: ArmTable}` (n_items × n_arms matrices: success, cost, prompt/completion tokens, seconds, n_calls, error, mean/min logprob, answer_sha1; NaN where an arm was not run, e.g. S2 subset; `.select()`, `.complete(arms)`). Tolerates WS1's extra columns (`thinking_tokens`, `run_name`). Loud errors on duplicates, cross-split ids, non-binary labels. `v1_label_rows` / `python -m v2.router.data v1-adapter`. Features: F1 `structural_features(inputs, domain, metas)` with `STRUCTURAL` hook (scan == v1 features, tested; chainops aligned to WS1's dev file), F2 `TfidfFeatures` (train-only fit), F3 `load_activations(npy, index.json, ids)` (aligns by id, asserts), F4 `posthoc_features(table, executed)`.
-- `models`: `SuccessPredictor(learner∈{logreg,hgb,mlp}, mode∈{per_arm,shared})` with `fit / calibrate(platt|isotonic, val only) / predict_proba`; constant-label arms fall back to the prior; accepts one X or one X per arm (F3 differs by model size); sparse OK. `CostPredictor(mean|rf|rf_joint)`.
-- `policies`: `Decision(executed, final)`; `fixed_arm`, `best_single_arm`, `cheapest_arm_meeting_target`, `heuristic(inputs, metas, rule, arms)` + `complexity_rule`, `predict_then_route` + `lambda_grid`, `threshold_route` (v1 rule), `cascade(table, ladder, confidence, tau)` (scalar or per-stage τ; cost = all executed arms), confidences `logprob_confidence`, `agreement_confidence`, `LearnedConfidence`, `oracle`.
-- `evaluate`: `point`, `pareto_frontier`, `curve_accuracy_at_cost`, `curve_cost_at_accuracy`, `normalized_auc`, `gap_closed`, `arm_metrics` (AUROC/Brier/ECE/reliability bins), `paired_bootstrap`, `bootstrap_curve_metric`, `mcnemar`, `learning_curve`, and `Experiment` (`select` on router_val only → `freeze()` → `evaluate_on(table, policies, final_eval=False)`; every call logged to `evaluate_calls.jsonl`; `holdout`/`ood_*` need `final_eval=True` and are refused a second time per experiment directory). Optional per-item `overhead` tokens per policy.
-- **Cascade availability is structural:** the confidence callback only ever receives `visible(table, executed_arms)`, a copy in which `success` and all columns of non-executed arms are NaN/None.
-- **Interpolation (documented in `evaluate.py`):** reduce a sweep to its non-dominated points, interpolate linearly between neighbours (achievable by per-item randomisation between two policies), NaN left of the cheapest point, flat to the right. Normalized AUC = mean accuracy over [cheapest fixed-arm mean cost, most expensive fixed-arm mean cost].
+- **v1 adapter P4** (`results/v2/router/p4-v1adapter-f/summary.md`, val n=32, optimistic):
+  - The selected overall router is F1/logreg/per-arm: .3125 accuracy at 601.6 tokens, versus the best single arm (8b|S3) at .3125 / 688.0.
+  - Normalized-AUC differences:
 
-## Measured numbers
+    | Contrast | Difference [95% CI] |
+    | --- | ---: |
+    | Selected overall − fixed frontier | +.0568 [.0014, .1133] |
+    | F3-own − F1 | −.1075 [−.1732, −.0449] |
+    | F3-small − F1 | −.0872 [−.1521, −.0141] |
+    | Agreement cascade − overall | −.1062 [−.1658, −.0438] |
 
-`results/v2/router/sim_check/report.json` (seed 437; 1000 val / 2000 sim_test items; 200 bootstrap replicates; 4 synthetic arms, one dominated; independent Bernoulli outcomes). Expected normalized AUC of predict-then-route on sim_test:
+  - Logprob and learned cascades were skipped because the v1 labels have no logprobs.
+  - n=32 is far too small to read anything into these numbers. This run only proves the pipeline runs end to end on real F3 features.
+- **Synthetic 16-arm** (`results/v2/router/synthetic16-f/p4/final_{holdout,ood_length}/report.json`, logreg/per-arm, 10,000 replicates):
 
-| n_train | logreg per-arm | analytic-optimal router | fixed-arm frontier |
-| ---: | ---: | ---: | ---: |
-| 200 | .716945 | .722271 | .622465 |
-| 600 | .720984 | .722271 | .622465 |
-| 5000 | .721735 | .722271 | .622465 |
+  | Contrast | Holdout | OOD |
+  | --- | ---: | ---: |
+  | AUROC: F3-own − F2 | .0764 [.0401, .1120] | .1020 [.0350, .1684] |
+  | AUROC: F2 − F1 | −.0751 [−.1032, −.0464] | not quoted here |
+  | H5, AUC: cascade − pre-generation | .0478 [.0280, .0648] | −.2576 [−.3043, −.2093] |
 
-- Gap to optimum shrinks .00533 → .00129 → .00054 (tolerance .02, not loosened). Worker reports all six learner×mode combinations also shrink; I verified only the logreg per-arm row above.
-- **Null check** (features carry no information): learned router accuracy .8985 = best single .8985, paired diff 0, CI [0, 0]; oracle .911. No spurious gain.
-- **Cascade, informative-feature regime:** pre-generation AUC .7184; logprob cascade .6366; learned-confidence .6394; agreement .5301. All cascades lose here (features reveal difficulty almost exactly, and a cascade always pays for its first arm).
-- **Cascade positive control** (uninformative features, informative post-hoc signals; n_train 5000): pre-generation .6226, frontier .5876; logprob cascade .6362, Δ vs pre-generation +.0136 [.0025, .0230], Δ vs frontier +.0486 [.0085, .0556]; learned-confidence cascade .6358, Δ +.0133 [.0028, .0222] and +.0483 [.0094, .0548]. Agreement cascade loses in both regimes (−.0929 vs pre-generation here).
-- Availability audit: 63 thresholds / 126 prefix checks passed in each regime.
-- `results/v2/router/v1_repro/report.json`: numbers in "Done" item 3.
-- `results/v2/router` total size: 5.06 MB (measured).
-
-These are properties of a synthetic generator. They validate the code; they say nothing about H3–H5.
+  - H5 on holdout at D1.7: accuracy +.035 [.0075, .0625], McNemar p=.0201.
+  - These properties come from the generator. They validate the code only.
+- **Wall times** (task F): adapter P4 54s, synthetic P4 290s, synthetic final 61s (holdout) + 47s (OOD). The real-data P4 should be minutes on CPU.
+- **Mode A** (real dev items, synthetic labels, `--quick`): both domains ran; summaries are at `results/v2/router/mode_a_{scan,chainops}/summary.md`.
 
 ## Files created/changed
 
-- Created: `v2/router/{__init__,data,models,policies,evaluate,simulate,readback,plots,v1_repro}.py`, `v2/router/README.md`, `v2/tests/test_router_{data,models,policies,v1,evaluate,simulate,plots}.py`.
-- Created artifacts: `results/v2/router/v1_adapter/{scan_v1_labels.csv,scan_v1_items.jsonl}`, `results/v2/router/v1_repro/report.json`, `results/v2/router/sim_check/**`, and worker review logs `results/v2/router/{review_baseline.json,review_validation.json,review_tests.log,sim_check_run.log}` (safe to leave uncommitted).
-- `v2/tests/__init__.py` exists (may have been created by WS1 or by the WS3 worker; one-line docstring). WS3 did not create or edit `v2/__init__.py`.
-- Not touched: v1 files, `data/`, `results/*-v1`, other workstreams' files, `HANDOFF.md`, git history.
+- **Modified:** `v2/router/{README.md,data.py,evaluate.py,models.py,plots.py}`, `v2/tests/test_router_plots.py`.
+- **New code:** `v2/router/{run_p4,run_final,workflow,synth_labels,bootstrap,predictor_report,readback_p4}.py`, `v2/tests/test_router_{d1,p4}.py`.
+- **New artifacts:** `results/v2/router/{p4-v1adapter-f,synthetic16-f,mode_a_scan,mode_a_chainops,task_d,task_e,sim_check/figures,v1_adapter/figures}`, plus `taskF-*` logs and evidence.
+- **Superseded but kept:** `p4-v1adapter/` (14.9 MB) and `synthetic16/` (25.4 MB), which predate the task F fixes. The worker's deletion attempt was policy-blocked.
+- **Not touched:** v1 files, `data/`, `results/*-v1`, other workstreams' files, `HANDOFF.md`, `DESIGN_V2.md`, git.
 
-## Problems / deviations from spec
+## Problems / deviations
 
-1. **Figures not produced.** matplotlib is not in `.venv`; per the brief it was not installed. `plots.py` is written (lazy import, Agg) but has never rendered; its test is skipped. **No figure example paths exist yet.**
-2. **v1 adapter split name.** v1 `audit[:32]` is exposed as split `v1_audit`, not `holdout`, so it cannot be confused with the v2 holdout or trip the final-eval guard. Strategies are labelled `S0`/`S3` although the v1 prompts differ from the v2 S0/S3 prompts.
-3. **v1 labels have no logprobs**, so F4 and the cascade were exercised only on synthetic data, never on real model signals.
-4. **Agreement cascade is weak as specified.** One threshold scale does not fit both a logprob (stage 0) and a 0/1 agreement flag (later stages); per-stage τ was added, but a ladder must run two arms before agreement means anything. Its behaviour on real labels is unknown.
-5. **Intermediate bloat, fixed.** Task B first wrote 327 MB of per-sweep-point decisions; task C reduced `decisions.csv` to selected policies only and removed superseded preliminary runs. Consequence: `readback.py` can no longer replay individual sweep points, only selected decisions and aggregate curves.
-6. Simulation used 200 bootstrap replicates for speed; the library default for real analysis is 10,000.
-7. The `Experiment` guard cannot stop a caller from computing decisions with test data inside its own callbacks; it enforces split names, freeze order, and logging only.
+1. **`results/v2/router` is 102 MB**, above the 50 MB guidance. Deleting the two superseded directories would bring it to about 62 MB; `synthetic16-f` alone is 36.5 MB, mostly frozen joblib objects. I recommend not committing the synthetic fixture runs, or committing only their `summary.md`/`report.json`.
+2. **Freeze invalidated by any router code edit.** `run_final` hashes every `v2/router/*.py` against the P4 report, so any edit after the real P4 run requires rerunning P4. This is intended.
+   - During task E, the worker fixed a metric bug after the synthetic final evaluation and rewrote the synthetic reports' statistics without a new `evaluate_on` call. The pre-fix reports are archived in `synthetic16/.../pre_metric_fix/`.
+   - That was acceptable for fixtures. **For real data, no such post-hoc correction path exists or should be used.**
+3. **v1-adapter-only fallback.** When an S0 arm for a probed model is absent (the v1 adapter has no 0.6B labels), the F3 overhead uses WS2's `index.json` `n_tokens`. On the real 16-arm tables every S0 arm exists, so the label `prompt_tokens` are used, as D1.2 says.
+4. **Speed paths.** `run_p4`/`run_final` use `fast_bootstrap=True` and `comparison_scope='best_single'`, so the long pairwise list compares each policy with the best single arm only. The H3/H4/H5 contrasts are computed separately with shared bootstrap indices, and tests cover their presence.
+5. **Small-sample statistics.** Arms with a single class in a bootstrap replicate are skipped and counted. On the v1 val set (32 items) some AUROCs rest on one or two positives.
 
 ## Decisions needed from orchestrator
 
-1. **Approve installing matplotlib into `.venv`** (and adding it to `requirements-lock.txt`)? Needed for every figure in the brief.
-2. **Probe overhead accounting.** DESIGN_V2 charges a probe forward pass "as prompt tokens on that model". Proposed: overhead[i] = S0 prompt-token count of item i for each model whose activations the router reads; a per-arm router that probes all four sizes pays all four. Alternatives: probe only the smallest model, or share one probe model across arms (cheaper, changes F3's "own size" definition). Which one is the headline?
-3. **F3 `index.json` key.** The loader expects the id order under `ids` (alias `item_ids`). Confirm with WS2, or tell me their key.
-4. **Cost for S2 (thinking).** Is `total_tokens` in the label CSV inclusive of `thinking_tokens`? The loader uses `total_tokens` as cost as-is.
-5. **Arms with partial coverage (S2 subset).** Proposed: main routing analysis over arms present for all items (`table.complete(arms)`), S2 analysed separately on its subset. OK?
-6. **Normalized-AUC range and left anchor.** Currently [cheapest, most expensive fixed arm] on the evaluated split, with the cheapest fixed arm added to every policy curve as the left anchor. Confirm, since this defines a headline metric.
-7. **Operating-point rule for single-point comparisons** (McNemar, gap closed). The simulation used max of accuracy − .001·tokens on val; the real study needs a pre-registered rule (e.g. cheapest val point with accuracy ≥ best single arm's).
+1. **Artifact policy.** Delete `p4-v1adapter/` and `synthetic16/`, and commit only summaries/reports of the synthetic fixture runs (not `frozen/*.joblib`)?
+2. **Headline AUROC = raw (uncalibrated) scores**, with Brier/ECE after the frozen full-val calibration. Confirm.
+3. **The H5 contrast as pre-registered:** the val-selected best cascade (by val normalized AUC) minus the val-selected best pre-generation router. The comparison uses normalized AUC plus D1.7 accuracy, tokens and McNemar. Confirm this is the H5 test.
+4. **Pre-registered H3 contrast list:** F3-own−F2, F3-own−F1, F2−F1, F3-own−F3-small, F3-small−F2 on mean-over-arms raw AUROC, per learner×mode, with logreg/per-arm as the headline. Confirm.
 
 ## Proposed next steps (not started)
 
-1. After decision 1: render the four figure types on the simulation and the v1 adapter data; un-skip the plot test.
-2. When WS1's `results/v2/labels/<domain>.csv` has `router_train`/`router_val` rows: run F1/F2 × three learners × per-arm/shared, calibration, learning curves, heuristic and cascade ladders on train/val only (P4). No holdout.
-3. When WS2 delivers features: wire F3 with layer selection on `router_val` via `Experiment.select`, and add the agreed probe overhead.
-4. Write the single frozen-evaluation driver script for P5 so the orchestrator runs holdout/OOD exactly once after `freeze-v2`.
+1. When WS1 publishes `results/v2/labels/<domain>.csv` with router_train/router_val rows, run `python -m v2.router.run_p4 --labels results/v2/labels/<domain>.csv --domain <domain> --items-dir data/v2/<domain> --features-dir results/v2/features/<domain> --out results/v2/router/p4-<domain>-v1`, separately for each domain.
+2. Freeze the router code before that real P4 run; any later edit forces a P4 rerun.
+3. After the `freeze-v2` tag, the orchestrator runs `run_final --splits holdout,<ood>` once per domain.

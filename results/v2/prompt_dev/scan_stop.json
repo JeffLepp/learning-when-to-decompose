@@ -1,0 +1,11 @@
+{
+  "domain": "scan",
+  "last_round": 2,
+  "reason": "No strategy strictly improved its two-model mean over the best earlier round; all also regressed versus round 1. Stop per protocol.",
+  "selected_rounds": {
+    "S0": 0,
+    "S1": 1,
+    "S3": 1,
+    "S4": 0
+  }
+}

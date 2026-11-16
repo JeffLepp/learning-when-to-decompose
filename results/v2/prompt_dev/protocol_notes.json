@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-11-16T00:44:42Z",
+  "task": "WS1 P1",
+  "scope": "dev only; 60 fixed score IDs per domain; 16 excluded exemplar IDs; 112 final IDs left for manager",
+  "round0": "v0 blocks unchanged, v0p exclusion pool expanded",
+  "example_construction": "Static worked examples use only the fixed exemplar pool. Clause/atomic examples are subproblems of pool items, tagged with their source item ID. Existing domain gold functions format these static examples offline; execution code is unchanged.",
+  "code_assistance": "S0/S1 have no answer-computing runtime code. S3/S4 retain exactly the harness code assistance documented in DESIGN_V2 and each raw record.",
+  "inference": "Only python -m v2.harness run, dev, qwen3:1.7b,qwen3:8b, S0,S1,S3,S4. Shared GPU lock held by harness. Calls/warmups journaled in each run directory.",
+  "selection": "Maximize mean accuracy across two models on score IDs; tie picks earliest round. S2 copies S0. Final prompts will not be run by this worker.",
+  "scope_note": "HANDOFF.md and managers files are outside the task write allowlist; P1 handoff will be in results/v2/prompt_dev."
+}

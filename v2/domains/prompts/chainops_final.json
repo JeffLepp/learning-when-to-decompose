@@ -1,0 +1,343 @@
+{
+  "domain": "chainops",
+  "version": "chainops_final",
+  "exemplar_ids": [
+    "fd443a793df1b5ba",
+    "4912d5d5e7da1e22",
+    "e4ee4674fd1a57b8",
+    "5e7e4bf81a7bf742",
+    "923bc544f7c48372",
+    "906dbd1c992a219e",
+    "a94ff622f75e4224",
+    "491cb9849acf517e",
+    "88215075612c733f",
+    "af720f70121036d1",
+    "e79b4d99c18750d7",
+    "23fb4e03dc29a322",
+    "da60648f1730ed6a",
+    "59eb31c3795b0015",
+    "65af34f3535f1ff8",
+    "b2a745ef9c1882b9"
+  ],
+  "provenance": {
+    "S0": {
+      "round": 0,
+      "block_sha256": "704117e37300dd4e8815997efe742f67e6ebc4549da247ff6845ea6b85706c08"
+    },
+    "S1": {
+      "round": 0,
+      "block_sha256": "17edabc36cbbb8b9c974e8f5a5dd81c280e75c9012129da01ccecdc34a3d1c9d"
+    },
+    "S3": {
+      "round": 0,
+      "block_sha256": "0001f3cec517221622993a31f82553a38381de994f2b49cc6182e65c86c9be70"
+    },
+    "S4": {
+      "round": 0,
+      "block_sha256": "6cd52fd180b38b9e450d291f33d5307283eb536ad402e8cd9038dd8eb505b982"
+    },
+    "S2": {
+      "round": 0,
+      "block_sha256": "704117e37300dd4e8815997efe742f67e6ebc4549da247ff6845ea6b85706c08",
+      "copied_from": "S0"
+    }
+  },
+  "S0": {
+    "direct": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Apply every instruction in order to the starting list. Return only {\"answer\":[...]} containing the final integer list.",
+      "template": "Task: {input}",
+      "examples": []
+    }
+  },
+  "S1": {
+    "direct": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Apply every instruction in order to the starting list. Return only {\"answer\":[...]} containing the final integer list.",
+      "template": "Task: {input}",
+      "examples": [
+        {
+          "id": "fd443a793df1b5ba",
+          "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.",
+          "output": {
+            "answer": [
+              8,
+              14,
+              6
+            ]
+          }
+        },
+        {
+          "id": "4912d5d5e7da1e22",
+          "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.",
+          "output": {
+            "answer": [
+              36,
+              6,
+              54,
+              1
+            ]
+          }
+        },
+        {
+          "id": "e4ee4674fd1a57b8",
+          "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.",
+          "output": {
+            "answer": [
+              7,
+              5
+            ]
+          }
+        },
+        {
+          "id": "5e7e4bf81a7bf742",
+          "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.",
+          "output": {
+            "answer": [
+              16,
+              14
+            ]
+          }
+        },
+        {
+          "id": "923bc544f7c48372",
+          "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.",
+          "output": {
+            "answer": [
+              3,
+              0,
+              4,
+              0
+            ]
+          }
+        },
+        {
+          "id": "906dbd1c992a219e",
+          "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+          "output": {
+            "answer": [
+              1,
+              13
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "S3": {
+    "plan": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Return {\"chunks\":[\"instruction text\",...]}. Partition the original instructions in order into chunks of one or two operations. Separate two operations within a chunk with \" Then \". Preserve all arguments and semantics. Do not include the starting list in a chunk. Do not execute or merge operations. Each sentence describes one operation.",
+      "template": "Task: {input}",
+      "examples": [
+        {
+          "id": "fd443a793df1b5ba",
+          "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.",
+          "output": {
+            "chunks": [
+              "Sort the list in descending order. Then Rotate left by 3 positions (move the first 3 elements to the end).",
+              "Reverse the list. Then Remove the first 1 elements."
+            ]
+          }
+        },
+        {
+          "id": "4912d5d5e7da1e22",
+          "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.",
+          "output": {
+            "chunks": [
+              "Swap the first and last elements. Then Keep only the first 3 elements.",
+              "Multiply each number by 3. Then Append 1 to the end of the list."
+            ]
+          }
+        },
+        {
+          "id": "e4ee4674fd1a57b8",
+          "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.",
+          "output": {
+            "chunks": [
+              "Add 5 to each number. Then Keep only odd numbers.",
+              "Remove all occurrences of 23."
+            ]
+          }
+        },
+        {
+          "id": "5e7e4bf81a7bf742",
+          "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.",
+          "output": {
+            "chunks": [
+              "Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end).",
+              "Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number."
+            ]
+          }
+        },
+        {
+          "id": "923bc544f7c48372",
+          "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.",
+          "output": {
+            "chunks": [
+              "Keep only the first 4 elements."
+            ]
+          }
+        },
+        {
+          "id": "906dbd1c992a219e",
+          "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+          "output": {
+            "chunks": [
+              "Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers."
+            ]
+          }
+        }
+      ]
+    },
+    "execute": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Execute only the supplied one or two instructions, in order, on the current list. Return {\"answer\":[...]}.",
+      "template": "Current list: {state}\nInstructions: {command}",
+      "examples": []
+    }
+  },
+  "S4": {
+    "parse": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Return {\"ops\":[{\"op\":\"reverse\",\"arg\":null},...]}, exactly one operation per instruction in execution order. Use the enum names in the rules. arg is the stated integer for remove_first, keep_first, remove_all, add, multiply, rotate_left, append; otherwise null. No start field. Do not execute.",
+      "template": "Task: {input}",
+      "examples": [
+        {
+          "id": "fd443a793df1b5ba",
+          "input": "Task: Start with [14, 6, 8, 7]. Sort the numbers from largest to smallest. Then Rotate left by 3 positions (move the first 3 elements to the end). Then Reverse the list. Then Delete the first 1 entries of the list.",
+          "output": {
+            "ops": [
+              {
+                "op": "sort_desc",
+                "arg": null
+              },
+              {
+                "op": "rotate_left",
+                "arg": 3
+              },
+              {
+                "op": "reverse",
+                "arg": null
+              },
+              {
+                "op": "remove_first",
+                "arg": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "4912d5d5e7da1e22",
+          "input": "Task: Start with [2, 2, 18, 12]. Swap the first and last elements. Then Retain just the first 3 entries of the list. Then Scale every number by a factor of 3. Then Append 1 to the end of the list.",
+          "output": {
+            "ops": [
+              {
+                "op": "swap_ends",
+                "arg": null
+              },
+              {
+                "op": "keep_first",
+                "arg": 3
+              },
+              {
+                "op": "multiply",
+                "arg": 3
+              },
+              {
+                "op": "append",
+                "arg": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "e4ee4674fd1a57b8",
+          "input": "Task: Start with [2, 13, 18, 0, 11, 17]. Increase every number by 5. Then Keep only odd numbers. Then Remove all occurrences of 23.",
+          "output": {
+            "ops": [
+              {
+                "op": "add",
+                "arg": 5
+              },
+              {
+                "op": "keep_odd",
+                "arg": null
+              },
+              {
+                "op": "remove_all",
+                "arg": 23
+              }
+            ]
+          }
+        },
+        {
+          "id": "5e7e4bf81a7bf742",
+          "input": "Task: Start with [5, 14, 7, 14, 16, 16]. Sort the list in ascending order. Then Rotate left by 5 positions (move the first 5 elements to the end). Then Keep only even numbers. Then Remove duplicates, keeping the first occurrence of each number.",
+          "output": {
+            "ops": [
+              {
+                "op": "sort_asc",
+                "arg": null
+              },
+              {
+                "op": "rotate_left",
+                "arg": 5
+              },
+              {
+                "op": "keep_even",
+                "arg": null
+              },
+              {
+                "op": "unique",
+                "arg": null
+              }
+            ]
+          }
+        },
+        {
+          "id": "923bc544f7c48372",
+          "input": "Task: Start with [3, 0, 4, 0, 18]. Retain just the first 4 entries of the list.",
+          "output": {
+            "ops": [
+              {
+                "op": "keep_first",
+                "arg": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "906dbd1c992a219e",
+          "input": "Task: Start with [8, 10, 1, 13, 8]. Remove duplicates, keeping the first occurrence of each number. Then Keep only odd numbers.",
+          "output": {
+            "ops": [
+              {
+                "op": "unique",
+                "arg": null
+              },
+              {
+                "op": "keep_odd",
+                "arg": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "leaf": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Execute only this one operation on the current list. Return {\"answer\":[...]}.",
+      "template": "Current list: {state}\nInstructions: {command}",
+      "examples": []
+    }
+  },
+  "S2": {
+    "direct": {
+      "system": "Execute ordered integer-list operations. Keep the remaining order unless sorting, reversing, rotating or swapping. Use exact integer arithmetic. Remove first k deletes exactly k leading elements; keep first k retains exactly k. Remove all x deletes every occurrence equal to x. Even includes zero. Rotate left moves the first k elements to the end in order. Swap first and last leaves the middle unchanged. Append adds one element at the end. Removing duplicates keeps first occurrences. Do not invent operations. Empty lists are valid execution answers. Return only requested JSON.\nOperation enums and canonical wording:\nreverse: Reverse the list.\nsort_asc: Sort the list in ascending order.\nsort_desc: Sort the list in descending order.\nremove_first: Remove the first {arg} elements.\nkeep_first: Keep only the first {arg} elements.\nremove_all: Remove all occurrences of {arg}.\nadd: Add {arg} to each number.\nmultiply: Multiply each number by {arg}.\nkeep_even: Keep only even numbers.\nkeep_odd: Keep only odd numbers.\nrotate_left: Rotate left by {arg} positions (move the first {arg} elements to the end).\nswap_ends: Swap the first and last elements.\nappend: Append {arg} to the end of the list.\nunique: Remove duplicates, keeping the first occurrence of each number.",
+      "instruction": "Apply every instruction in order to the starting list. Return only {\"answer\":[...]} containing the final integer list.",
+      "template": "Task: {input}",
+      "examples": []
+    }
+  }
+}

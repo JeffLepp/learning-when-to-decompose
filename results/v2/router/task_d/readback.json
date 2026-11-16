@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "n_pngs": 8,
+  "images": [
+    {
+      "path": "results/v2/router/sim_check/figures/cost_accuracy.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "05e1ba167b4427fca6b05b861ab1e4fa17d740a0130e0f7c6a396f3b53c3f6d3"
+    },
+    {
+      "path": "results/v2/router/sim_check/figures/reliability.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "84430e6d3720be3bc6fc23c44f0045adfe1495bb5c4de1e71897f0b648f3a1f7"
+    },
+    {
+      "path": "results/v2/router/sim_check/figures/learning_curve.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "73d96c33457d9093440f4af1277c8514277a26d9d73e127f5ba13e1af9ba7a2f"
+    },
+    {
+      "path": "results/v2/router/sim_check/figures/auroc.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "804f371476f9d6e94a979b1561b8c04e755f539d0ca9c448ebee94670d887f7b"
+    },
+    {
+      "path": "results/v2/router/v1_adapter/figures/cost_accuracy.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "a8a1725071e9317523144373d7b2fed78209aaa6c574fe93929ed60a08dda879"
+    },
+    {
+      "path": "results/v2/router/v1_adapter/figures/reliability.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "49fb42b48cd437fa1ada8f40f1f3ccbc6be014d9e92941daa76edaa038627ac0"
+    },
+    {
+      "path": "results/v2/router/v1_adapter/figures/learning_curve.png",
+      "dimensions": [
+        1050,
+        675
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "e67b908cf5bc9d644ed6dd06416b82979d7c11739d21d3e7bbf04c75b2349a8d"
+    },
+    {
+      "path": "results/v2/router/v1_adapter/figures/auroc.png",
+      "dimensions": [
+        1050,
+        753
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "sha256": "61a03152ac9715f1b67bc6fd45f2ddf06726dcb4698931ba6d30995899d3bb58"
+    }
+  ],
+  "checks": [
+    "Train/validation ID alignment",
+    "9 AUROC rows from saved predictions",
+    "18 F3 layer/pooling candidates per learner and selection",
+    "Fixed points, both sweeps, D1.7 records, and oracle replay",
+    "Reliability bins and learning-curve summaries",
+    "PNG decoding and 150 dpi"
+  ],
+  "limits": "No refitting; candidate F3 predictions and individual learning subsamples were not saved.",
+  "metrics_sha256": "20d5d808fa7251710f82601fcf5f7ff1f997c1c6712f08633b5001b802aba69a"
+}

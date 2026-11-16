@@ -1,0 +1,82 @@
+{
+  "qwen3:1.7b/S0": {
+    "n": 60,
+    "accuracy": 0.016666666666666666,
+    "mean_seconds": 1.0602512799999506,
+    "median_seconds": 0.6434381500021118,
+    "mean_tokens": 494.78333333333336,
+    "truncation_rate": 0.11666666666666667,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S1": {
+    "n": 60,
+    "accuracy": 0.05,
+    "mean_seconds": 0.5133925600000414,
+    "median_seconds": 0.41607939999994414,
+    "mean_tokens": 881.3166666666667,
+    "truncation_rate": 0.016666666666666666,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:1.7b/S3": {
+    "n": 60,
+    "accuracy": 0.2833333333333333,
+    "mean_seconds": 0.7625477999998111,
+    "median_seconds": 0.7536588999992091,
+    "mean_tokens": 1274.3333333333333,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.03333333333333333
+  },
+  "qwen3:1.7b/S4": {
+    "n": 60,
+    "accuracy": 0.05,
+    "mean_seconds": 1.0921650449996985,
+    "median_seconds": 1.0993409500006237,
+    "mean_tokens": 997.45,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.03333333333333333
+  },
+  "qwen3:8b/S0": {
+    "n": 60,
+    "accuracy": 0.016666666666666666,
+    "mean_seconds": 1.749643736666682,
+    "median_seconds": 0.8729158499991172,
+    "mean_tokens": 484.85,
+    "truncation_rate": 0.05,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S1": {
+    "n": 60,
+    "accuracy": 0.18333333333333332,
+    "mean_seconds": 0.939400443333155,
+    "median_seconds": 0.9430227499997272,
+    "mean_tokens": 885.45,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  },
+  "qwen3:8b/S3": {
+    "n": 60,
+    "accuracy": 0.9666666666666667,
+    "mean_seconds": 1.1299108749995261,
+    "median_seconds": 1.1195748499994806,
+    "mean_tokens": 1280.3666666666666,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0.016666666666666666
+  },
+  "qwen3:8b/S4": {
+    "n": 60,
+    "accuracy": 0.21666666666666667,
+    "mean_seconds": 1.5827039716668272,
+    "median_seconds": 1.5227131999981793,
+    "mean_tokens": 1014.8666666666667,
+    "truncation_rate": 0,
+    "format_failure_rate": 0,
+    "invalid_plan_rate": 0
+  }
+}

@@ -1,4 +1,3 @@
-import importlib.util
 import unittest
 
 from v2.router.evaluate import arm_metrics
@@ -6,7 +5,6 @@ from v2.router import plots
 from v2.tests.test_router_data import TempCase
 
 
-@unittest.skipUnless(importlib.util.find_spec('matplotlib'), 'matplotlib not installed')
 class PlotTests(TempCase):
     def test_all_pngs(self):
         points = [dict(mean_cost=10, accuracy=.5, arm='small'),

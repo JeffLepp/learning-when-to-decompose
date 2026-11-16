@@ -1,0 +1,6 @@
+F1: six learners fitted and five-fold calibration selected
+F2: six learners fitted and five-fold calibration selected
+Frozen 61 policies; evaluating validation with 200 paired bootstrap replicates
+F1: learning curves completed
+F2: learning curves completed
+P4 completed: C:\Users\jeffe\Desktop\fall26\437\FinalProject\results\v2\router\mode_a_chainops\p4; 343.26s

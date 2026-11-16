@@ -1,0 +1,103 @@
+{
+  "records": [
+    {
+      "report": "results\\v2\\router\\p4-v1adapter\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "e036eb7290a2c6fcee3ae3d8f33a4888140922e3b954cdf65209331084118337",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_0.json.xz",
+      "unchanged_selected_decision_rows": 1248,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": true,
+      "corrected_utc": "2026-11-16T02:04:00.210326+00:00",
+      "wall_seconds": 1.6694829999978538
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\s2\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "d3b4d388970a406ff814a069f3bcc633637a15f97a4119acc6c1e5139c9e11cf",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_4.json.xz",
+      "unchanged_selected_decision_rows": 2100,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": true,
+      "corrected_utc": "2026-11-16T02:04:03.327153+00:00",
+      "wall_seconds": 1.0444115999998758
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "0cf4f489ec22359ecd9fc39eb602a65f7c087a6dc20437b4f69dcac1a1183610",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_1.json.xz",
+      "unchanged_selected_decision_rows": 15000,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": true,
+      "corrected_utc": "2026-11-16T02:04:17.863178+00:00",
+      "wall_seconds": 14.524893800000427
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_holdout\\s2\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "95716eac099cc8ddfaf4f093814fa6169095b1a1d4d62d2d1d730ef375c37fbc",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_6.json.xz",
+      "unchanged_selected_decision_rows": 3150,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": false,
+      "corrected_utc": "2026-11-16T02:04:18.799779+00:00",
+      "wall_seconds": 0.7538367000015569
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_holdout\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "ef2d34ba8fde93c22ec4fb388b3e519d82f037135fd3798d10f77670b03c3156",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_2.json.xz",
+      "unchanged_selected_decision_rows": 30000,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": false,
+      "corrected_utc": "2026-11-16T02:04:27.200998+00:00",
+      "wall_seconds": 8.394862499997544
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_ood_length\\s2\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "dfc08ab0961c0810204e457dcc6d3242fc947113824c1f5378cb08ab1e015249",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_5.json.xz",
+      "unchanged_selected_decision_rows": 2100,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": false,
+      "corrected_utc": "2026-11-16T02:04:27.882795+00:00",
+      "wall_seconds": 0.623790800000279
+    },
+    {
+      "report": "results\\v2\\router\\synthetic16\\p4\\final_ood_length\\report.json",
+      "reason": "Numerical ties at Pareto support/target endpoints now use 1e-12 relative token tolerance and 1e-12 accuracy tolerance.",
+      "original_report_sha256": "5a5738f19b8be3927120fe98c8e280d3b9d221b9525e913690ab8345aff1afaf",
+      "original_report_archive": "results\\v2\\router\\task_e\\pre_metric_fix\\report_3.json.xz",
+      "unchanged_selected_decision_rows": 22500,
+      "execution_models_refit": false,
+      "policy_selection_repeated": false,
+      "evaluation_call_repeated": false,
+      "bootstrap_seed_and_replicates_unchanged": true,
+      "validation_crossfit_calibrators_recreated": false,
+      "corrected_utc": "2026-11-16T02:04:34.762616+00:00",
+      "wall_seconds": 6.873679500000435
+    }
+  ],
+  "script_sha256": "603b9b13a8385dab44ac7118ef469e2f60fbc965d7071bc102850924cce50e82"
+}

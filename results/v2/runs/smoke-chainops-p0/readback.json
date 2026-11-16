@@ -1,0 +1,183 @@
+{
+  "verified": true,
+  "records": 42,
+  "physical_scored_calls": 60,
+  "physical_warmup_calls": 2,
+  "thinking_checks": [
+    {
+      "id": "90d67cde9aaa3331",
+      "model": "qwen3:0.6b",
+      "eval_count": 530,
+      "thinking_tokens": 502,
+      "content_tokens": 27,
+      "logprob_entries": 529,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    },
+    {
+      "id": "269fdefc54e27c1a",
+      "model": "qwen3:0.6b",
+      "eval_count": 394,
+      "thinking_tokens": 379,
+      "content_tokens": 14,
+      "logprob_entries": 393,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    },
+    {
+      "id": "1fe2deef0d654396",
+      "model": "qwen3:0.6b",
+      "eval_count": 327,
+      "thinking_tokens": 299,
+      "content_tokens": 27,
+      "logprob_entries": 326,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    },
+    {
+      "id": "90d67cde9aaa3331",
+      "model": "qwen3:8b",
+      "eval_count": 252,
+      "thinking_tokens": 242,
+      "content_tokens": 9,
+      "logprob_entries": 251,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    },
+    {
+      "id": "269fdefc54e27c1a",
+      "model": "qwen3:8b",
+      "eval_count": 144,
+      "thinking_tokens": 128,
+      "content_tokens": 15,
+      "logprob_entries": 143,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    },
+    {
+      "id": "1fe2deef0d654396",
+      "model": "qwen3:8b",
+      "eval_count": 314,
+      "thinking_tokens": 294,
+      "content_tokens": 19,
+      "logprob_entries": 313,
+      "unreported_tokens": 1,
+      "done_reason": "stop"
+    }
+  ],
+  "table": [
+    {
+      "model": "qwen3:0.6b",
+      "arm": "G1",
+      "correct": 1,
+      "mean_seconds": 0.29218230000030115,
+      "mean_tokens": 687,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "G2",
+      "correct": 2,
+      "mean_seconds": 0.19881123333288997,
+      "mean_tokens": 897.6666666666666,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "S0",
+      "correct": 0,
+      "mean_seconds": 0.2648738000001079,
+      "mean_tokens": 366.3333333333333,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "S1",
+      "correct": 0,
+      "mean_seconds": 0.23837376666657897,
+      "mean_tokens": 732.3333333333334,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "S2",
+      "correct": 2,
+      "mean_seconds": 2.650032966666307,
+      "mean_tokens": 756.3333333333334,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "S3",
+      "correct": 1,
+      "mean_seconds": 0.5724665333327721,
+      "mean_tokens": 1375,
+      "errors": []
+    },
+    {
+      "model": "qwen3:0.6b",
+      "arm": "S4",
+      "correct": 0,
+      "mean_seconds": 0.4690066999998332,
+      "mean_tokens": 1364,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "G1",
+      "correct": 3,
+      "mean_seconds": 0.5451634000006985,
+      "mean_tokens": 684.6666666666666,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "G2",
+      "correct": 3,
+      "mean_seconds": 0.6157755666657371,
+      "mean_tokens": 903.3333333333334,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "S0",
+      "correct": 2,
+      "mean_seconds": 0.28086400000029244,
+      "mean_tokens": 360,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "S1",
+      "correct": 2,
+      "mean_seconds": 0.38260313333315327,
+      "mean_tokens": 729,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "S2",
+      "correct": 3,
+      "mean_seconds": 3.9086946666666336,
+      "mean_tokens": 576,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "S3",
+      "correct": 2,
+      "mean_seconds": 0.9408339333337304,
+      "mean_tokens": 1364.3333333333333,
+      "errors": []
+    },
+    {
+      "model": "qwen3:8b",
+      "arm": "S4",
+      "correct": 3,
+      "mean_seconds": 1.219000366666781,
+      "mean_tokens": 1588,
+      "errors": []
+    }
+  ],
+  "records_sha256": "95a661a2b4babcc1538cfadd54954807bc6d0b7f6056145bc99e4abc5298e1bd"
+}
