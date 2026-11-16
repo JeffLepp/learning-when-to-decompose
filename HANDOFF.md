@@ -1,5 +1,25 @@
 # Fresh session handoff
 
+## v2 expansion status (current; updated 2026-11-15)
+
+- The user asked the orchestrator (Claude) to design and drive a larger study. The binding spec is `DESIGN_V2.md`, which covers the RQs, hypotheses, arms, the ML router, integrity rules, and phases.
+- The user approved:
+  - a multi-agent structure: Claude2 managers directing Codex/Codex2 workers;
+  - model and PyTorch downloads;
+  - full-auto agents confined to `FinalProject/`;
+  - local-only git, with commits made only by the orchestrator;
+  - including the second domain, ChainOps, now.
+- Done:
+  - Backup zip at `../FinalProject-backup-20261115-162041.zip`.
+  - Git baseline commit `741c1c3`.
+  - `qwen3:0.6b` and `qwen3:4b` pulled.
+  - GPU lock `v2/gpulock.py` tested.
+- **Phase A launched at 16:24.** WS1 (harness + prompt dev + timing pilot), WS2 (probe environment + feature extraction + v1 feasibility probe), and WS3 (router library). Session outputs are in `workspace_logs/WS*-session-A.json`; reports go to `managers/WS*_STATUS.md`.
+- Next obligation: review each status report and its diff, commit accepted work, approve the P3 collection budget, then continue the phases in DESIGN_V2 §7.
+- Caveats:
+  - The Claude2 sign-in expires around Nov 19–22.
+  - Ollama embeddings are disabled on this server; activations come from HF models instead.
+
 ## Start here
 
 This is Jefferson Kline's **CS 437 machine-learning final project**, titled **Learning When to Decompose Complex Tasks for Local Language Models**. The user requested a durable handoff so a new session can form its own plan without losing the project's goals, evidence, or decisions.

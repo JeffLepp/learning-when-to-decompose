@@ -1,0 +1,37 @@
+{
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m unittest discover -s v2/tests -p \"test_router_*.py\" -t .",
+    "count": 42,
+    "seconds": 7.52,
+    "skipped": 1,
+    "exit_code": 0
+  },
+  "cli_exit_codes": {
+    "simulate": 0,
+    "readback": 0,
+    "v1_repro": 0
+  },
+  "selected_csv_rows": 78000,
+  "baseline_changes": [
+    {
+      "n_train": 200,
+      "learner": "mlp_per_arm",
+      "metric": "learned",
+      "before": 0.7093929001227399,
+      "after": 0.7093978840475564
+    }
+  ],
+  "unchanged": [
+    "non-MLP expected AUCs",
+    "analytic and fixed-frontier expected AUCs",
+    "null check",
+    "ordinary cascade AUCs"
+  ],
+  "preliminary_cleanup_verified": true,
+  "mlp_warning_present": false,
+  "v1_match": true,
+  "limitations": [
+    "matplotlib absent; plotting test skipped",
+    "Readback replays selected item decisions and integrates aggregate curve points; it does not replay bootstrap CIs or per-item sweep decisions."
+  ]
+}

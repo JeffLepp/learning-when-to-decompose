@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "n200_independent": {
+      "rows": 16000,
+      "decision_sets": 8,
+      "passed": true
+    },
+    "n600_independent": {
+      "rows": 16000,
+      "decision_sets": 8,
+      "passed": true
+    },
+    "n5000_independent": {
+      "rows": 16000,
+      "decision_sets": 8,
+      "passed": true
+    },
+    "cascades_independent": {
+      "rows": 12000,
+      "decision_sets": 6,
+      "passed": true
+    },
+    "null_independent": {
+      "rows": 6000,
+      "decision_sets": 3,
+      "passed": true
+    },
+    "cascade_positive_control_independent": {
+      "rows": 12000,
+      "decision_sets": 6,
+      "passed": true
+    }
+  },
+  "all_passed": true,
+  "report_sha256": "35b9d2977203761c43e34860197dab5eba2822a81f60c64bee183042aaa6d36c",
+  "source_sha256": {
+    "v2\\router\\__init__.py": "b59969467921ffa1024507cbe0c6304212f693abae3f65161ec5107af824d0fc",
+    "v2\\router\\data.py": "b16086d6581027f24204e2ec7507010246f562448f2499c8c159b294513eba4a",
+    "v2\\router\\evaluate.py": "2417932e40420a855b58304c48163095b4221f3761f29c73df71822b3fe02c48",
+    "v2\\router\\models.py": "17783c3514db48a74f0361f5e0baa180ed86008bb52d1d5113d875b0c9a80b5b",
+    "v2\\router\\plots.py": "14d3ceebe3148e73f769ff665bc8baa8377747f5803bf740adc10a5a5ad52d76",
+    "v2\\router\\policies.py": "be4b2d17386f6a9f739d66c2ba304e3c7bf5d5e99a1970dbbf7772f4af2ef507",
+    "v2\\router\\readback.py": "06662ffa6ad7ab3cc2650840b7fd215ec0b97816dbdff692439cacf88a7ade72",
+    "v2\\router\\simulate.py": "f2b34966907e3a7dfa4a611548ef613e9c28e08b04ca0637028eaeaa9f39f920",
+    "v2\\router\\v1_repro.py": "cfb28170e8a9ddd2441f3d8d461dd42f2fb7e091cc3cd8841f36470008b5ab6c"
+  },
+  "note": "Replayed selected decisions against deterministic synthetic outcomes; integrated saved aggregate curves. No refitting or per-item sweep/expected-AUC/CI replay."
+}

@@ -1,0 +1,591 @@
+{
+  "evaluation_call": {
+    "split": "sim_test",
+    "time": "2026-11-16T01:04:11.684261+00:00",
+    "n_items": 2000,
+    "frozen_choices": {
+      "logreg": {
+        "choice": 0,
+        "validation_score": 0.887
+      }
+    },
+    "best_single_arm": "sim3|S0",
+    "final_eval": false,
+    "status": "started",
+    "reason": null
+  },
+  "evaluate_calls": [
+    {
+      "split": "sim_test",
+      "time": "2026-11-16T00:52:32.458366+00:00",
+      "n_items": 2000,
+      "frozen_choices": {
+        "logreg": {
+          "choice": 0,
+          "validation_score": 0.887
+        }
+      },
+      "best_single_arm": "sim3|S0",
+      "final_eval": false,
+      "status": "started",
+      "reason": null
+    },
+    {
+      "split": "sim_test",
+      "time": "2026-11-16T01:04:11.684261+00:00",
+      "n_items": 2000,
+      "frozen_choices": {
+        "logreg": {
+          "choice": 0,
+          "validation_score": 0.887
+        }
+      },
+      "best_single_arm": "sim3|S0",
+      "final_eval": false,
+      "status": "started",
+      "reason": null
+    },
+    {
+      "split": "sim_test",
+      "time": "2026-11-16T01:04:13.407589+00:00",
+      "n_items": 2000,
+      "frozen_choices": {
+        "logreg": {
+          "choice": 0,
+          "validation_score": 0.887
+        }
+      },
+      "best_single_arm": "sim3|S0",
+      "final_eval": false,
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "fixed_points": [
+    {
+      "arm": "sim0|S0",
+      "n": 2000,
+      "accuracy": 0.291,
+      "mean_cost": 100.0375,
+      "correct": 582.0
+    },
+    {
+      "arm": "sim1|S0",
+      "n": 2000,
+      "accuracy": 0.295,
+      "mean_cost": 219.795,
+      "correct": 590.0
+    },
+    {
+      "arm": "sim2|S0",
+      "n": 2000,
+      "accuracy": 0.6235,
+      "mean_cost": 350.179,
+      "correct": 1247.0
+    },
+    {
+      "arm": "sim3|S0",
+      "n": 2000,
+      "accuracy": 0.8985,
+      "mean_cost": 650.015,
+      "correct": 1797.0
+    }
+  ],
+  "fixed_frontier": [
+    {
+      "arm": "sim0|S0",
+      "n": 2000,
+      "accuracy": 0.291,
+      "mean_cost": 100.0375,
+      "correct": 582.0
+    },
+    {
+      "arm": "sim1|S0",
+      "n": 2000,
+      "accuracy": 0.295,
+      "mean_cost": 219.795,
+      "correct": 590.0
+    },
+    {
+      "arm": "sim2|S0",
+      "n": 2000,
+      "accuracy": 0.6235,
+      "mean_cost": 350.179,
+      "correct": 1247.0
+    },
+    {
+      "arm": "sim3|S0",
+      "n": 2000,
+      "accuracy": 0.8985,
+      "mean_cost": 650.015,
+      "correct": 1797.0
+    }
+  ],
+  "fixed_frontier_auc": 0.5875567555036343,
+  "cost_range": [
+    100.0375,
+    650.015
+  ],
+  "best_single": {
+    "n": 2000,
+    "accuracy": 0.8985,
+    "mean_cost": 650.015,
+    "correct": 1797.0
+  },
+  "oracle": {
+    "n": 2000,
+    "accuracy": 0.911,
+    "mean_cost": 322.3,
+    "correct": 1822.0
+  },
+  "policies": {
+    "logreg": {
+      "n": 2000,
+      "accuracy": 0.8985,
+      "mean_cost": 650.015,
+      "correct": 1797.0,
+      "gap_closed": {
+        "value": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_defined": 200,
+        "n_boot": 200
+      },
+      "curve": [
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8985,
+          "mean_cost": 650.015,
+          "correct": 1797.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.898,
+          "mean_cost": 649.42,
+          "correct": 1796.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.8295,
+          "mean_cost": 571.922,
+          "correct": 1659.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.635,
+          "mean_cost": 362.296,
+          "correct": 1270.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.617,
+          "mean_cost": 345.5295,
+          "correct": 1234.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.433,
+          "mean_cost": 210.1525,
+          "correct": 866.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.2835,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        },
+        {
+          "n": 2000,
+          "accuracy": 0.291,
+          "mean_cost": 100.0375,
+          "correct": 582.0
+        }
+      ],
+      "normalized_auc": {
+        "value": 0.6225752485328945,
+        "ci95": [
+          0.6085376600362714,
+          0.6384756409405493
+        ],
+        "n_defined": 200,
+        "n_boot": 200
+      },
+      "accuracy_at_best_single_cost": {
+        "value": 0.8985,
+        "ci95": [
+          0.88645,
+          0.9120125
+        ],
+        "n_defined": 200,
+        "n_boot": 200
+      },
+      "cost_at_best_single_accuracy": {
+        "value": 650.015,
+        "ci95": [
+          649.0572625,
+          650.1840374999999
+        ],
+        "n_defined": 200,
+        "n_boot": 200
+      }
+    }
+  },
+  "comparisons": {
+    "best_single - logreg": {
+      "correctness": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_two_sided": 1.0
+      },
+      "cost": {
+        "diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "p_two_sided": 1.0
+      },
+      "mcnemar": {
+        "b": 0,
+        "c": 0,
+        "p_exact": 1.0
+      }
+    }
+  },
+  "uncertainty": {
+    "n_boot": 200,
+    "seed": 437,
+    "refit": false,
+    "note": "Percentile paired item bootstrap; null CI means undefined replicates."
+  },
+  "evaluation_status": "completed"
+}

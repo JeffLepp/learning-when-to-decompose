@@ -1,0 +1,3 @@
+{"split": "sim_test", "time": "2026-11-16T00:52:32.458366+00:00", "n_items": 2000, "frozen_choices": {"logreg": {"choice": 0, "validation_score": 0.887}}, "best_single_arm": "sim3|S0", "final_eval": false, "status": "started", "reason": null}
+{"split": "sim_test", "time": "2026-11-16T01:04:11.684261+00:00", "n_items": 2000, "frozen_choices": {"logreg": {"choice": 0, "validation_score": 0.887}}, "best_single_arm": "sim3|S0", "final_eval": false, "status": "started", "reason": null}
+{"split": "sim_test", "time": "2026-11-16T01:04:13.407589+00:00", "n_items": 2000, "frozen_choices": {"logreg": {"choice": 0, "validation_score": 0.887}}, "best_single_arm": "sim3|S0", "final_eval": false, "status": "completed", "reason": null}

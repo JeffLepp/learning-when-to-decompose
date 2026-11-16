@@ -1,0 +1,122 @@
+{
+  "bytes_before": 342587012,
+  "sizes": {
+    "200": {
+      "logreg_per_arm": {
+        "learned": 0.7169446338086352,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "logreg_shared": {
+        "learned": 0.7209694502358613,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_per_arm": {
+        "learned": 0.6935855467293919,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_shared": {
+        "learned": 0.7027163727123661,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_per_arm": {
+        "learned": 0.7093929001227399,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_shared": {
+        "learned": 0.7189864355856396,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      }
+    },
+    "600": {
+      "logreg_per_arm": {
+        "learned": 0.7209841383444112,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "logreg_shared": {
+        "learned": 0.7212855356746982,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_per_arm": {
+        "learned": 0.6982872376159457,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_shared": {
+        "learned": 0.7074151716980556,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_per_arm": {
+        "learned": 0.7181658701275033,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_shared": {
+        "learned": 0.7199721565465527,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      }
+    },
+    "5000": {
+      "logreg_per_arm": {
+        "learned": 0.7217351368816147,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "logreg_shared": {
+        "learned": 0.721867591915771,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_per_arm": {
+        "learned": 0.7123349061849601,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "hgb_shared": {
+        "learned": 0.7195607922033425,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_per_arm": {
+        "learned": 0.721395585203779,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      },
+      "mlp_shared": {
+        "learned": 0.721514459197496,
+        "optimal": 0.7222709864676553,
+        "frontier": 0.6224653401053034
+      }
+    }
+  },
+  "null": {
+    "learned_accuracy": 0.8985,
+    "best_single_accuracy": 0.8985,
+    "oracle_accuracy": 0.911,
+    "learned_minus_best": {
+      "diff": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_two_sided": 1.0
+    },
+    "no_significant_gain": true,
+    "report": "results/v2/router/sim_check/null_independent/report.json"
+  },
+  "cascade_auc": {
+    "pregeneration": 0.7183709663122582,
+    "logprob": 0.6366125685435247,
+    "agreement": 0.5300847529104089,
+    "learned": 0.6393869112827343
+  }
+}

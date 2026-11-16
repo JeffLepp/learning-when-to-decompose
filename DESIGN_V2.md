@@ -152,3 +152,24 @@ Gold plan + code leaves must score 100%; this is a unit-test sanity check, not a
 - **WS2 Probe features** (Claude2 manager; Codex2 worker): `.venv-probe`, HF weights, the F3 extraction pipeline, and a first sanity probe on v1 pilot labels.
 - **WS3 Router & evaluation** (Claude2 manager; Codex worker): the §6 library, statistics, and figures. Developed first against v1 labels and simulated labels, then against the real v2 labels.
 - **Orchestrator (Claude):** design, reviews, decisions recorded in this file, git commits, the freeze, the final analysis, and the report.
+
+## 10. Decision log (orchestrator; binding unless superseded here)
+
+**D1 (2026-11-15). Response to WS3 phase A.**
+
+1. **matplotlib** is installed in `.venv` and recorded in the lock file.
+2. **Probe overhead.** Every model whose activations a router reads is charged the item's S0 prompt-token count on that model. Two F3 routing variants are pre-registered and both reported:
+   - **F3-own**: each arm's success is predicted from its own model's activations. Overhead is the sum over the probed models. This variant is the RQ3 headline.
+   - **F3-small**: every arm is predicted from `qwen3:0.6b` activations. Overhead is one 0.6B prompt.
+   - The choice between them is never made on holdout.
+3. **F3 index key** is `ids` (WS2 must comply).
+4. **`total_tokens`** = prompt + completion, and completion *includes* thinking tokens. `thinking_tokens` is a separate informational column.
+5. **Coverage.**
+   - The main routing analysis uses arms present for every item (S0, S1, S3, S4 × 4 models = 16 arms).
+   - S2 (thinking) is analysed separately on its subset, both as an arm and as a routing extension.
+   - G1/G2 are never routing arms.
+6. **Normalized AUC** is computed over [cheapest fixed-arm mean cost, most expensive fixed-arm mean cost] on the evaluated split, with the cheapest fixed arm as every curve's left anchor. **Confirmed.**
+7. **Pre-registered operating point** for single-point comparisons (McNemar, gap closed, headline table):
+   - Take the cheapest validation point whose validation accuracy ≥ the best single arm's validation accuracy.
+   - If no such point exists, take the validation point with maximum accuracy, breaking ties by cost.
+   - The headline bootstrap uses 10,000 replicates.
