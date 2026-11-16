@@ -14,6 +14,19 @@
   - Git baseline commit `741c1c3`.
   - `qwen3:0.6b` and `qwen3:4b` pulled.
   - GPU lock `v2/gpulock.py` tested.
+- **PAUSED 20:58 at the user's request** (so they could restart the PC). All managers, Codex workers and jobs were killed mid-coding. No GPU collection had started.
+  - The uncommitted work-in-progress edits are left in the working tree for the managers to re-check: `v2/harness.py`, `v2/probe/*`, `v2/harness_subsets.py`, and tests.
+  - **To resume:** use `claude2 -p --resume <id>` for WS1 (`8a8dc553-e2cc-4c61-a4e9-5a7b7c8cb5fe`) and WS2 (`1fb74485-d520-4083-90f2-e107beef0135`), and `claude -p --resume 994b1d89-f6bb-4a1b-847d-be785c458683` for WS3. Resend the prompts `workspace_logs/WS1-prompt-B.txt`, `WS2-prompt-B.txt`, `WS3-prompt-C.txt`, prefixed with a note that they were interrupted and must verify partial edits with `git diff` first.
+- **Update 21:10:**
+  - Phase A of all three workstreams is reviewed and committed (`f514b42`), with decisions D1–D3 in DESIGN_V2 §10.
+  - The 4B rung is now `qwen3-hybrid:4b`.
+  - Launched: WS1-B (4B dev rerun, ChainOps S3 round, prompt freeze, detached P3 collection), WS2-B (feature extraction for all splits), WS3-C (per-domain arm sets, RQ1/RQ2 analysis script).
+  - Session JSONs: `workspace_logs/WS1-session-B.json`, `WS2-session-B.json`, `WS3-session-C.json`.
+  - Orchestrator to-do:
+    - tag `prompts-frozen-v2` after WS1 writes the `*_frozen.json` prompt files;
+    - monitor P3 (about 17 GPU-h);
+    - run P4 per domain;
+    - freeze, then the final evaluation and the report.
 - **Phase A launched at 16:24.** WS1 (harness + prompt dev + timing pilot), WS2 (probe environment + feature extraction + v1 feasibility probe), and WS3 (router library). Session outputs are in `workspace_logs/WS*-session-A.json`; reports go to `managers/WS*_STATUS.md`.
 - Next obligation: review each status report and its diff, commit accepted work, approve the P3 collection budget, then continue the phases in DESIGN_V2 §7.
 - Caveats:
