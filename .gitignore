@@ -10,3 +10,4 @@ probe_cache/
 .claude/
 workspace_logs/
 .gpu.lock
+results/v2/features/**/*.npy

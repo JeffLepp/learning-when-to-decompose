@@ -1,0 +1,4493 @@
+{
+  "feature_extraction": {
+    "qwen3-0.6b": {
+      "forward_calls": 92,
+      "warmup_calls": 1,
+      "warmup_ids": [
+        "ebf838872ee27ed5",
+        "5be91e50604a1f25"
+      ],
+      "warmup_real_input_tokens": 369,
+      "real_input_tokens": 34137,
+      "batches": [
+        {
+          "ids": [
+            "e76254892720c6a8",
+            "9e8c94ebdc346a52"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "dfc276f196058fb0",
+            "091a8e5a6d6f7e43"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "874807622c311d95",
+            "c50b541ac383cb44"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "af9d106392ca475a",
+            "30c283cd16868d33"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "147ce0cd0ea0b957",
+            "94a501d371d03c06"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "e589cf3d29594466",
+            "5f8918eb0b78db65"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "3d067d2bf7c1c750",
+            "8229f1627aa19723"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "8e9f225104de71a6",
+            "ebf838872ee27ed5"
+          ],
+          "real_input_tokens": 367,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "112a5a7689785fa7",
+            "dc86f50b2433786a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "47539589300861cc",
+            "a5eb265a7961ceb7"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8bc9551c200ac59f",
+            "678531cfc45088e9"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8b8ee5c05ce8f130",
+            "3d08de1cdab9d820"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "214b6f3cdd6ea620",
+            "cf6ce9803a32d3ba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "af679ec95ea53871",
+            "333107e07e98cb42"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "d121ee2f3c02080b",
+            "8dc3186d75523c6a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "f929c9f42b4c2cb3",
+            "77f3bf7dd3f781c2"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b725c31e0c827427",
+            "da831c0fe5543aba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b257c9b9e9899e59",
+            "d69ec4ee03d4bd52"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5511aa89e5d6376c",
+            "df3a3f006f9c3c60"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "cbe27cdb0fa0acac",
+            "ef0ce987b55aea08"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "31fdd30b522209ed",
+            "514bcda102c0602b"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "3fbbf377fe381268",
+            "fc5af095ac8eeb68"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "e9d62c6355dfe170",
+            "1072cd632fb289a1"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "82342d6c05928c37",
+            "765107a674fb1336"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5035d292d6b4f261",
+            "c8f2d2c5c1a3c360"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5be91e50604a1f25",
+            "7a03b4e9c9ed7521"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "a5a5cac2f9b42e1d",
+            "c20497cf47692ab9"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "dc20d06ae86d1ebd",
+            "8ac8a2d3a4accf3a"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "7ab021ba460b3d1d",
+            "e0c65a57f2d94910"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "15befffc63e8cd8c",
+            "610b8d11600b3228"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "0b2c5abb81484f2f",
+            "66ba33d6fcddcbf8"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b77f8fd3744af903",
+            "4683987ce160c45d"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "96ad6dbbfdff3af6",
+            "535b4a3c90757b92"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "3a882eb3b4dfab1f",
+            "76bd88a0f536cee6"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "ab9b803215505524",
+            "fc9895ba55d696f2"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "115fc19b485ea206",
+            "38b136b7a571560b"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "bc49eef43c1c47e6",
+            "9a57d25c82d6f727"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "019eb75e8b65591a",
+            "0093a5abb5250549"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "2180d2802ddd7be5",
+            "c25c035d2b124f1c"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b98d7e4330172bce",
+            "ca9928e5dc0abfbc"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "6893e4a4f1c616ec",
+            "e668c07a4d27be00"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "f3005c0edabbfa5d",
+            "d6c90d1fa8c83742"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "5d941d3563cd70bc",
+            "b9acdf97ce047306"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "9db58898adfbfe6c",
+            "63ad5316f65e8a49"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "adfe44601c2871e7",
+            "dde557c8be770cdf"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "219dd659a5092a77",
+            "bf6ac31cfeb90d54"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "eecbee011778c7dc",
+            "bc42daf37fd433a8"
+          ],
+          "real_input_tokens": 371,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "11d0ae664950f9f1",
+            "3691bb2daf76eabd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "61d74b610145de9e",
+            "437ad7936f3bfafe"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "831a1ebe8ef41d41",
+            "cf69bbf4fe29b9be"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1490232e8db652bf",
+            "e408d743b8c57b73"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d2b38a28c07da693",
+            "8bb477af50d6019e"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "47c10e3467076718",
+            "a154650734e43db8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d23dfdd7e442b31f",
+            "023d23b40de88df6"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d5a4c3746a377e79",
+            "6e8359388c5738dc"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ed38a2c9ddfebc74",
+            "83c1051b3c0ce3fd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "69d67e4d46a6e6ba",
+            "22b11c809b88159d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "4d9a563b5edde3ab",
+            "f145e59afd888b5f"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "40238fc22ba36fa1",
+            "01c05a371b0d290d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "3fb82a6fabf225dd",
+            "75b057bcef38e9e4"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1a050af1b9fc46fa",
+            "f77c92d3beafbf5c"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "08239a170ae76842",
+            "b012a1c0aef484f0"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "f6878090e4631210",
+            "f92508adeac0ce55"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "0a75c1f5de5d0a57",
+            "2603dea69795e3e8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ec5e83b39125fc25",
+            "a11a3b620e624ebd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "9043faf3f4d30367",
+            "deee3773881d3a40"
+          ],
+          "real_input_tokens": 373,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "98913a3d72715d1d",
+            "e9eab3477d8dd584"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8fcf2933b0d25ca5",
+            "23af3c7f19ffe6ea"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "9e0e3e5e4d2bfc8e",
+            "862bd9f6b2439567"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "394ea9dc91e60ea4",
+            "f37d6f850a414dfd"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8ad71d2ea52db900",
+            "a1054223e13dfa41"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "6ecd0cdea97d225c",
+            "23b164a1c54bd68c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "f923841d87218edb",
+            "6fcdd65d22d3597e"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2bdbe217dcdab230",
+            "a0255daf0e541a0b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2ca1095d0c7bccfc",
+            "fea0572a7014906c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "7fd394be806fad70",
+            "bac1ec514cc39475"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "efae9ea757927ebc",
+            "677264c0b4d56d79"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "ca32154b70b6bb87",
+            "771769c0d09d9d9b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "589b8e316d17948e",
+            "5cc243309a96b58c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "c950042cddc34970",
+            "b4b16885cf6f7e0a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "0eb515aae8c649e1",
+            "9e8fd1f036c9df93"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "e008306069547f32",
+            "c6c307d20987d4eb"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "853f820b9ca8a132",
+            "8da12e78d8347c30"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "30402a46c51ddf9a",
+            "7ff88840423b7f3a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "4a02cf56889e0593",
+            "b52c1d798b62f614"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "5cf8bad987d766e3",
+            "037d21719223f9db"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "1940339315c18011",
+            "57583269643b8528"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "b9b1f2866033703a",
+            "1c71d5b83a26d6b0"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "fba2a94a4456576e",
+            "79c76483a7dd594c"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "9016cf0371708721",
+            "168f01eeeb58424b"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "4a7a8d633c891880",
+            "1ca7f45216754561"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "0e667401e3dececf",
+            "002c81350de97132"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        }
+      ],
+      "wall_seconds_excluding_warmup": 7.8102990000006685,
+      "load_seconds": 10.826127899999847
+    },
+    "qwen3-1.7b": {
+      "forward_calls": 92,
+      "warmup_calls": 1,
+      "warmup_ids": [
+        "ebf838872ee27ed5",
+        "5be91e50604a1f25"
+      ],
+      "warmup_real_input_tokens": 369,
+      "real_input_tokens": 34137,
+      "batches": [
+        {
+          "ids": [
+            "e76254892720c6a8",
+            "9e8c94ebdc346a52"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "dfc276f196058fb0",
+            "091a8e5a6d6f7e43"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "874807622c311d95",
+            "c50b541ac383cb44"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "af9d106392ca475a",
+            "30c283cd16868d33"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "147ce0cd0ea0b957",
+            "94a501d371d03c06"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "e589cf3d29594466",
+            "5f8918eb0b78db65"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "3d067d2bf7c1c750",
+            "8229f1627aa19723"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "8e9f225104de71a6",
+            "ebf838872ee27ed5"
+          ],
+          "real_input_tokens": 367,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "112a5a7689785fa7",
+            "dc86f50b2433786a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "47539589300861cc",
+            "a5eb265a7961ceb7"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8bc9551c200ac59f",
+            "678531cfc45088e9"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8b8ee5c05ce8f130",
+            "3d08de1cdab9d820"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "214b6f3cdd6ea620",
+            "cf6ce9803a32d3ba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "af679ec95ea53871",
+            "333107e07e98cb42"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "d121ee2f3c02080b",
+            "8dc3186d75523c6a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "f929c9f42b4c2cb3",
+            "77f3bf7dd3f781c2"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b725c31e0c827427",
+            "da831c0fe5543aba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b257c9b9e9899e59",
+            "d69ec4ee03d4bd52"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5511aa89e5d6376c",
+            "df3a3f006f9c3c60"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "cbe27cdb0fa0acac",
+            "ef0ce987b55aea08"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "31fdd30b522209ed",
+            "514bcda102c0602b"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "3fbbf377fe381268",
+            "fc5af095ac8eeb68"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "e9d62c6355dfe170",
+            "1072cd632fb289a1"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "82342d6c05928c37",
+            "765107a674fb1336"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5035d292d6b4f261",
+            "c8f2d2c5c1a3c360"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5be91e50604a1f25",
+            "7a03b4e9c9ed7521"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "a5a5cac2f9b42e1d",
+            "c20497cf47692ab9"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "dc20d06ae86d1ebd",
+            "8ac8a2d3a4accf3a"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "7ab021ba460b3d1d",
+            "e0c65a57f2d94910"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "15befffc63e8cd8c",
+            "610b8d11600b3228"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "0b2c5abb81484f2f",
+            "66ba33d6fcddcbf8"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b77f8fd3744af903",
+            "4683987ce160c45d"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "96ad6dbbfdff3af6",
+            "535b4a3c90757b92"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "3a882eb3b4dfab1f",
+            "76bd88a0f536cee6"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "ab9b803215505524",
+            "fc9895ba55d696f2"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "115fc19b485ea206",
+            "38b136b7a571560b"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "bc49eef43c1c47e6",
+            "9a57d25c82d6f727"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "019eb75e8b65591a",
+            "0093a5abb5250549"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "2180d2802ddd7be5",
+            "c25c035d2b124f1c"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b98d7e4330172bce",
+            "ca9928e5dc0abfbc"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "6893e4a4f1c616ec",
+            "e668c07a4d27be00"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "f3005c0edabbfa5d",
+            "d6c90d1fa8c83742"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "5d941d3563cd70bc",
+            "b9acdf97ce047306"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "9db58898adfbfe6c",
+            "63ad5316f65e8a49"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "adfe44601c2871e7",
+            "dde557c8be770cdf"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "219dd659a5092a77",
+            "bf6ac31cfeb90d54"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "eecbee011778c7dc",
+            "bc42daf37fd433a8"
+          ],
+          "real_input_tokens": 371,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "11d0ae664950f9f1",
+            "3691bb2daf76eabd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "61d74b610145de9e",
+            "437ad7936f3bfafe"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "831a1ebe8ef41d41",
+            "cf69bbf4fe29b9be"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1490232e8db652bf",
+            "e408d743b8c57b73"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d2b38a28c07da693",
+            "8bb477af50d6019e"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "47c10e3467076718",
+            "a154650734e43db8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d23dfdd7e442b31f",
+            "023d23b40de88df6"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d5a4c3746a377e79",
+            "6e8359388c5738dc"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ed38a2c9ddfebc74",
+            "83c1051b3c0ce3fd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "69d67e4d46a6e6ba",
+            "22b11c809b88159d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "4d9a563b5edde3ab",
+            "f145e59afd888b5f"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "40238fc22ba36fa1",
+            "01c05a371b0d290d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "3fb82a6fabf225dd",
+            "75b057bcef38e9e4"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1a050af1b9fc46fa",
+            "f77c92d3beafbf5c"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "08239a170ae76842",
+            "b012a1c0aef484f0"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "f6878090e4631210",
+            "f92508adeac0ce55"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "0a75c1f5de5d0a57",
+            "2603dea69795e3e8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ec5e83b39125fc25",
+            "a11a3b620e624ebd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "9043faf3f4d30367",
+            "deee3773881d3a40"
+          ],
+          "real_input_tokens": 373,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "98913a3d72715d1d",
+            "e9eab3477d8dd584"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8fcf2933b0d25ca5",
+            "23af3c7f19ffe6ea"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "9e0e3e5e4d2bfc8e",
+            "862bd9f6b2439567"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "394ea9dc91e60ea4",
+            "f37d6f850a414dfd"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8ad71d2ea52db900",
+            "a1054223e13dfa41"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "6ecd0cdea97d225c",
+            "23b164a1c54bd68c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "f923841d87218edb",
+            "6fcdd65d22d3597e"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2bdbe217dcdab230",
+            "a0255daf0e541a0b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2ca1095d0c7bccfc",
+            "fea0572a7014906c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "7fd394be806fad70",
+            "bac1ec514cc39475"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "efae9ea757927ebc",
+            "677264c0b4d56d79"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "ca32154b70b6bb87",
+            "771769c0d09d9d9b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "589b8e316d17948e",
+            "5cc243309a96b58c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "c950042cddc34970",
+            "b4b16885cf6f7e0a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "0eb515aae8c649e1",
+            "9e8fd1f036c9df93"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "e008306069547f32",
+            "c6c307d20987d4eb"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "853f820b9ca8a132",
+            "8da12e78d8347c30"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "30402a46c51ddf9a",
+            "7ff88840423b7f3a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "4a02cf56889e0593",
+            "b52c1d798b62f614"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "5cf8bad987d766e3",
+            "037d21719223f9db"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "1940339315c18011",
+            "57583269643b8528"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "b9b1f2866033703a",
+            "1c71d5b83a26d6b0"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "fba2a94a4456576e",
+            "79c76483a7dd594c"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "9016cf0371708721",
+            "168f01eeeb58424b"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "4a7a8d633c891880",
+            "1ca7f45216754561"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "0e667401e3dececf",
+            "002c81350de97132"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        }
+      ],
+      "wall_seconds_excluding_warmup": 8.03135520000069,
+      "load_seconds": 12.41050449999966
+    },
+    "qwen3-4b": {
+      "forward_calls": 92,
+      "warmup_calls": 1,
+      "warmup_ids": [
+        "ebf838872ee27ed5",
+        "5be91e50604a1f25"
+      ],
+      "warmup_real_input_tokens": 357,
+      "real_input_tokens": 33033,
+      "batches": [
+        {
+          "ids": [
+            "e76254892720c6a8",
+            "9e8c94ebdc346a52"
+          ],
+          "real_input_tokens": 352,
+          "padded_input_tokens": 352
+        },
+        {
+          "ids": [
+            "dfc276f196058fb0",
+            "091a8e5a6d6f7e43"
+          ],
+          "real_input_tokens": 352,
+          "padded_input_tokens": 352
+        },
+        {
+          "ids": [
+            "874807622c311d95",
+            "c50b541ac383cb44"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "af9d106392ca475a",
+            "30c283cd16868d33"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "147ce0cd0ea0b957",
+            "94a501d371d03c06"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "e589cf3d29594466",
+            "5f8918eb0b78db65"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "3d067d2bf7c1c750",
+            "8229f1627aa19723"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "8e9f225104de71a6",
+            "ebf838872ee27ed5"
+          ],
+          "real_input_tokens": 355,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "112a5a7689785fa7",
+            "dc86f50b2433786a"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "47539589300861cc",
+            "a5eb265a7961ceb7"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "8bc9551c200ac59f",
+            "678531cfc45088e9"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "8b8ee5c05ce8f130",
+            "3d08de1cdab9d820"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "214b6f3cdd6ea620",
+            "cf6ce9803a32d3ba"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "af679ec95ea53871",
+            "333107e07e98cb42"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "d121ee2f3c02080b",
+            "8dc3186d75523c6a"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "f929c9f42b4c2cb3",
+            "77f3bf7dd3f781c2"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "b725c31e0c827427",
+            "da831c0fe5543aba"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "b257c9b9e9899e59",
+            "d69ec4ee03d4bd52"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5511aa89e5d6376c",
+            "df3a3f006f9c3c60"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "cbe27cdb0fa0acac",
+            "ef0ce987b55aea08"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "31fdd30b522209ed",
+            "514bcda102c0602b"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "3fbbf377fe381268",
+            "fc5af095ac8eeb68"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "e9d62c6355dfe170",
+            "1072cd632fb289a1"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "82342d6c05928c37",
+            "765107a674fb1336"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5035d292d6b4f261",
+            "c8f2d2c5c1a3c360"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5be91e50604a1f25",
+            "7a03b4e9c9ed7521"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "a5a5cac2f9b42e1d",
+            "c20497cf47692ab9"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "dc20d06ae86d1ebd",
+            "8ac8a2d3a4accf3a"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "7ab021ba460b3d1d",
+            "e0c65a57f2d94910"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "15befffc63e8cd8c",
+            "610b8d11600b3228"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "0b2c5abb81484f2f",
+            "66ba33d6fcddcbf8"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "b77f8fd3744af903",
+            "4683987ce160c45d"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "96ad6dbbfdff3af6",
+            "535b4a3c90757b92"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "3a882eb3b4dfab1f",
+            "76bd88a0f536cee6"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "ab9b803215505524",
+            "fc9895ba55d696f2"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "115fc19b485ea206",
+            "38b136b7a571560b"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "bc49eef43c1c47e6",
+            "9a57d25c82d6f727"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "019eb75e8b65591a",
+            "0093a5abb5250549"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "2180d2802ddd7be5",
+            "c25c035d2b124f1c"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "b98d7e4330172bce",
+            "ca9928e5dc0abfbc"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "6893e4a4f1c616ec",
+            "e668c07a4d27be00"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "f3005c0edabbfa5d",
+            "d6c90d1fa8c83742"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "5d941d3563cd70bc",
+            "b9acdf97ce047306"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "9db58898adfbfe6c",
+            "63ad5316f65e8a49"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "adfe44601c2871e7",
+            "dde557c8be770cdf"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "219dd659a5092a77",
+            "bf6ac31cfeb90d54"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "eecbee011778c7dc",
+            "bc42daf37fd433a8"
+          ],
+          "real_input_tokens": 359,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "11d0ae664950f9f1",
+            "3691bb2daf76eabd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "61d74b610145de9e",
+            "437ad7936f3bfafe"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "831a1ebe8ef41d41",
+            "cf69bbf4fe29b9be"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "1490232e8db652bf",
+            "e408d743b8c57b73"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d2b38a28c07da693",
+            "8bb477af50d6019e"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "47c10e3467076718",
+            "a154650734e43db8"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d23dfdd7e442b31f",
+            "023d23b40de88df6"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d5a4c3746a377e79",
+            "6e8359388c5738dc"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "ed38a2c9ddfebc74",
+            "83c1051b3c0ce3fd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "69d67e4d46a6e6ba",
+            "22b11c809b88159d"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "4d9a563b5edde3ab",
+            "f145e59afd888b5f"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "40238fc22ba36fa1",
+            "01c05a371b0d290d"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "3fb82a6fabf225dd",
+            "75b057bcef38e9e4"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "1a050af1b9fc46fa",
+            "f77c92d3beafbf5c"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "08239a170ae76842",
+            "b012a1c0aef484f0"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "f6878090e4631210",
+            "f92508adeac0ce55"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "0a75c1f5de5d0a57",
+            "2603dea69795e3e8"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "ec5e83b39125fc25",
+            "a11a3b620e624ebd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "9043faf3f4d30367",
+            "deee3773881d3a40"
+          ],
+          "real_input_tokens": 361,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "98913a3d72715d1d",
+            "e9eab3477d8dd584"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "8fcf2933b0d25ca5",
+            "23af3c7f19ffe6ea"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "9e0e3e5e4d2bfc8e",
+            "862bd9f6b2439567"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "394ea9dc91e60ea4",
+            "f37d6f850a414dfd"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "8ad71d2ea52db900",
+            "a1054223e13dfa41"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "6ecd0cdea97d225c",
+            "23b164a1c54bd68c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "f923841d87218edb",
+            "6fcdd65d22d3597e"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "2bdbe217dcdab230",
+            "a0255daf0e541a0b"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "2ca1095d0c7bccfc",
+            "fea0572a7014906c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "7fd394be806fad70",
+            "bac1ec514cc39475"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "efae9ea757927ebc",
+            "677264c0b4d56d79"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "ca32154b70b6bb87",
+            "771769c0d09d9d9b"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "589b8e316d17948e",
+            "5cc243309a96b58c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "c950042cddc34970",
+            "b4b16885cf6f7e0a"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "0eb515aae8c649e1",
+            "9e8fd1f036c9df93"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "e008306069547f32",
+            "c6c307d20987d4eb"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "853f820b9ca8a132",
+            "8da12e78d8347c30"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "30402a46c51ddf9a",
+            "7ff88840423b7f3a"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "4a02cf56889e0593",
+            "b52c1d798b62f614"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "5cf8bad987d766e3",
+            "037d21719223f9db"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "1940339315c18011",
+            "57583269643b8528"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "b9b1f2866033703a",
+            "1c71d5b83a26d6b0"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "fba2a94a4456576e",
+            "79c76483a7dd594c"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "9016cf0371708721",
+            "168f01eeeb58424b"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "4a7a8d633c891880",
+            "1ca7f45216754561"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "0e667401e3dececf",
+            "002c81350de97132"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        }
+      ],
+      "wall_seconds_excluding_warmup": 85.26844729999902,
+      "load_seconds": 26.069424399998752
+    },
+    "qwen3-8b": {
+      "forward_calls": 92,
+      "warmup_calls": 1,
+      "warmup_ids": [
+        "ebf838872ee27ed5",
+        "5be91e50604a1f25"
+      ],
+      "warmup_real_input_tokens": 369,
+      "real_input_tokens": 34137,
+      "batches": [
+        {
+          "ids": [
+            "e76254892720c6a8",
+            "9e8c94ebdc346a52"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "dfc276f196058fb0",
+            "091a8e5a6d6f7e43"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "874807622c311d95",
+            "c50b541ac383cb44"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "af9d106392ca475a",
+            "30c283cd16868d33"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "147ce0cd0ea0b957",
+            "94a501d371d03c06"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "e589cf3d29594466",
+            "5f8918eb0b78db65"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "3d067d2bf7c1c750",
+            "8229f1627aa19723"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "8e9f225104de71a6",
+            "ebf838872ee27ed5"
+          ],
+          "real_input_tokens": 367,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "112a5a7689785fa7",
+            "dc86f50b2433786a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "47539589300861cc",
+            "a5eb265a7961ceb7"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8bc9551c200ac59f",
+            "678531cfc45088e9"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "8b8ee5c05ce8f130",
+            "3d08de1cdab9d820"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "214b6f3cdd6ea620",
+            "cf6ce9803a32d3ba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "af679ec95ea53871",
+            "333107e07e98cb42"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "d121ee2f3c02080b",
+            "8dc3186d75523c6a"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "f929c9f42b4c2cb3",
+            "77f3bf7dd3f781c2"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b725c31e0c827427",
+            "da831c0fe5543aba"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "b257c9b9e9899e59",
+            "d69ec4ee03d4bd52"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5511aa89e5d6376c",
+            "df3a3f006f9c3c60"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "cbe27cdb0fa0acac",
+            "ef0ce987b55aea08"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "31fdd30b522209ed",
+            "514bcda102c0602b"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "3fbbf377fe381268",
+            "fc5af095ac8eeb68"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "e9d62c6355dfe170",
+            "1072cd632fb289a1"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "82342d6c05928c37",
+            "765107a674fb1336"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5035d292d6b4f261",
+            "c8f2d2c5c1a3c360"
+          ],
+          "real_input_tokens": 368,
+          "padded_input_tokens": 368
+        },
+        {
+          "ids": [
+            "5be91e50604a1f25",
+            "7a03b4e9c9ed7521"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "a5a5cac2f9b42e1d",
+            "c20497cf47692ab9"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "dc20d06ae86d1ebd",
+            "8ac8a2d3a4accf3a"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "7ab021ba460b3d1d",
+            "e0c65a57f2d94910"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "15befffc63e8cd8c",
+            "610b8d11600b3228"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "0b2c5abb81484f2f",
+            "66ba33d6fcddcbf8"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b77f8fd3744af903",
+            "4683987ce160c45d"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "96ad6dbbfdff3af6",
+            "535b4a3c90757b92"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "3a882eb3b4dfab1f",
+            "76bd88a0f536cee6"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "ab9b803215505524",
+            "fc9895ba55d696f2"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "115fc19b485ea206",
+            "38b136b7a571560b"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "bc49eef43c1c47e6",
+            "9a57d25c82d6f727"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "019eb75e8b65591a",
+            "0093a5abb5250549"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "2180d2802ddd7be5",
+            "c25c035d2b124f1c"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "b98d7e4330172bce",
+            "ca9928e5dc0abfbc"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "6893e4a4f1c616ec",
+            "e668c07a4d27be00"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "f3005c0edabbfa5d",
+            "d6c90d1fa8c83742"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "5d941d3563cd70bc",
+            "b9acdf97ce047306"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "9db58898adfbfe6c",
+            "63ad5316f65e8a49"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "adfe44601c2871e7",
+            "dde557c8be770cdf"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "219dd659a5092a77",
+            "bf6ac31cfeb90d54"
+          ],
+          "real_input_tokens": 370,
+          "padded_input_tokens": 370
+        },
+        {
+          "ids": [
+            "eecbee011778c7dc",
+            "bc42daf37fd433a8"
+          ],
+          "real_input_tokens": 371,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "11d0ae664950f9f1",
+            "3691bb2daf76eabd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "61d74b610145de9e",
+            "437ad7936f3bfafe"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "831a1ebe8ef41d41",
+            "cf69bbf4fe29b9be"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1490232e8db652bf",
+            "e408d743b8c57b73"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d2b38a28c07da693",
+            "8bb477af50d6019e"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "47c10e3467076718",
+            "a154650734e43db8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d23dfdd7e442b31f",
+            "023d23b40de88df6"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "d5a4c3746a377e79",
+            "6e8359388c5738dc"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ed38a2c9ddfebc74",
+            "83c1051b3c0ce3fd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "69d67e4d46a6e6ba",
+            "22b11c809b88159d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "4d9a563b5edde3ab",
+            "f145e59afd888b5f"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "40238fc22ba36fa1",
+            "01c05a371b0d290d"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "3fb82a6fabf225dd",
+            "75b057bcef38e9e4"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "1a050af1b9fc46fa",
+            "f77c92d3beafbf5c"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "08239a170ae76842",
+            "b012a1c0aef484f0"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "f6878090e4631210",
+            "f92508adeac0ce55"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "0a75c1f5de5d0a57",
+            "2603dea69795e3e8"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "ec5e83b39125fc25",
+            "a11a3b620e624ebd"
+          ],
+          "real_input_tokens": 372,
+          "padded_input_tokens": 372
+        },
+        {
+          "ids": [
+            "9043faf3f4d30367",
+            "deee3773881d3a40"
+          ],
+          "real_input_tokens": 373,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "98913a3d72715d1d",
+            "e9eab3477d8dd584"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8fcf2933b0d25ca5",
+            "23af3c7f19ffe6ea"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "9e0e3e5e4d2bfc8e",
+            "862bd9f6b2439567"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "394ea9dc91e60ea4",
+            "f37d6f850a414dfd"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "8ad71d2ea52db900",
+            "a1054223e13dfa41"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "6ecd0cdea97d225c",
+            "23b164a1c54bd68c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "f923841d87218edb",
+            "6fcdd65d22d3597e"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2bdbe217dcdab230",
+            "a0255daf0e541a0b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "2ca1095d0c7bccfc",
+            "fea0572a7014906c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "7fd394be806fad70",
+            "bac1ec514cc39475"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "efae9ea757927ebc",
+            "677264c0b4d56d79"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "ca32154b70b6bb87",
+            "771769c0d09d9d9b"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "589b8e316d17948e",
+            "5cc243309a96b58c"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "c950042cddc34970",
+            "b4b16885cf6f7e0a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "0eb515aae8c649e1",
+            "9e8fd1f036c9df93"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "e008306069547f32",
+            "c6c307d20987d4eb"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "853f820b9ca8a132",
+            "8da12e78d8347c30"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "30402a46c51ddf9a",
+            "7ff88840423b7f3a"
+          ],
+          "real_input_tokens": 374,
+          "padded_input_tokens": 374
+        },
+        {
+          "ids": [
+            "4a02cf56889e0593",
+            "b52c1d798b62f614"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "5cf8bad987d766e3",
+            "037d21719223f9db"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "1940339315c18011",
+            "57583269643b8528"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "b9b1f2866033703a",
+            "1c71d5b83a26d6b0"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "fba2a94a4456576e",
+            "79c76483a7dd594c"
+          ],
+          "real_input_tokens": 376,
+          "padded_input_tokens": 376
+        },
+        {
+          "ids": [
+            "9016cf0371708721",
+            "168f01eeeb58424b"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "4a7a8d633c891880",
+            "1ca7f45216754561"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        },
+        {
+          "ids": [
+            "0e667401e3dececf",
+            "002c81350de97132"
+          ],
+          "real_input_tokens": 378,
+          "padded_input_tokens": 378
+        }
+      ],
+      "wall_seconds_excluding_warmup": 74.6694176000019,
+      "load_seconds": 63.16726830000334
+    },
+    "qwen3-4b-nf4": {
+      "forward_calls": 92,
+      "warmup_calls": 1,
+      "warmup_ids": [
+        "ebf838872ee27ed5",
+        "5be91e50604a1f25"
+      ],
+      "warmup_real_input_tokens": 357,
+      "real_input_tokens": 33033,
+      "batches": [
+        {
+          "ids": [
+            "e76254892720c6a8",
+            "9e8c94ebdc346a52"
+          ],
+          "real_input_tokens": 352,
+          "padded_input_tokens": 352
+        },
+        {
+          "ids": [
+            "dfc276f196058fb0",
+            "091a8e5a6d6f7e43"
+          ],
+          "real_input_tokens": 352,
+          "padded_input_tokens": 352
+        },
+        {
+          "ids": [
+            "874807622c311d95",
+            "c50b541ac383cb44"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "af9d106392ca475a",
+            "30c283cd16868d33"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "147ce0cd0ea0b957",
+            "94a501d371d03c06"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "e589cf3d29594466",
+            "5f8918eb0b78db65"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "3d067d2bf7c1c750",
+            "8229f1627aa19723"
+          ],
+          "real_input_tokens": 354,
+          "padded_input_tokens": 354
+        },
+        {
+          "ids": [
+            "8e9f225104de71a6",
+            "ebf838872ee27ed5"
+          ],
+          "real_input_tokens": 355,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "112a5a7689785fa7",
+            "dc86f50b2433786a"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "47539589300861cc",
+            "a5eb265a7961ceb7"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "8bc9551c200ac59f",
+            "678531cfc45088e9"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "8b8ee5c05ce8f130",
+            "3d08de1cdab9d820"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "214b6f3cdd6ea620",
+            "cf6ce9803a32d3ba"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "af679ec95ea53871",
+            "333107e07e98cb42"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "d121ee2f3c02080b",
+            "8dc3186d75523c6a"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "f929c9f42b4c2cb3",
+            "77f3bf7dd3f781c2"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "b725c31e0c827427",
+            "da831c0fe5543aba"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "b257c9b9e9899e59",
+            "d69ec4ee03d4bd52"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5511aa89e5d6376c",
+            "df3a3f006f9c3c60"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "cbe27cdb0fa0acac",
+            "ef0ce987b55aea08"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "31fdd30b522209ed",
+            "514bcda102c0602b"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "3fbbf377fe381268",
+            "fc5af095ac8eeb68"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "e9d62c6355dfe170",
+            "1072cd632fb289a1"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "82342d6c05928c37",
+            "765107a674fb1336"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5035d292d6b4f261",
+            "c8f2d2c5c1a3c360"
+          ],
+          "real_input_tokens": 356,
+          "padded_input_tokens": 356
+        },
+        {
+          "ids": [
+            "5be91e50604a1f25",
+            "7a03b4e9c9ed7521"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "a5a5cac2f9b42e1d",
+            "c20497cf47692ab9"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "dc20d06ae86d1ebd",
+            "8ac8a2d3a4accf3a"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "7ab021ba460b3d1d",
+            "e0c65a57f2d94910"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "15befffc63e8cd8c",
+            "610b8d11600b3228"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "0b2c5abb81484f2f",
+            "66ba33d6fcddcbf8"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "b77f8fd3744af903",
+            "4683987ce160c45d"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "96ad6dbbfdff3af6",
+            "535b4a3c90757b92"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "3a882eb3b4dfab1f",
+            "76bd88a0f536cee6"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "ab9b803215505524",
+            "fc9895ba55d696f2"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "115fc19b485ea206",
+            "38b136b7a571560b"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "bc49eef43c1c47e6",
+            "9a57d25c82d6f727"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "019eb75e8b65591a",
+            "0093a5abb5250549"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "2180d2802ddd7be5",
+            "c25c035d2b124f1c"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "b98d7e4330172bce",
+            "ca9928e5dc0abfbc"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "6893e4a4f1c616ec",
+            "e668c07a4d27be00"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "f3005c0edabbfa5d",
+            "d6c90d1fa8c83742"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "5d941d3563cd70bc",
+            "b9acdf97ce047306"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "9db58898adfbfe6c",
+            "63ad5316f65e8a49"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "adfe44601c2871e7",
+            "dde557c8be770cdf"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "219dd659a5092a77",
+            "bf6ac31cfeb90d54"
+          ],
+          "real_input_tokens": 358,
+          "padded_input_tokens": 358
+        },
+        {
+          "ids": [
+            "eecbee011778c7dc",
+            "bc42daf37fd433a8"
+          ],
+          "real_input_tokens": 359,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "11d0ae664950f9f1",
+            "3691bb2daf76eabd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "61d74b610145de9e",
+            "437ad7936f3bfafe"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "831a1ebe8ef41d41",
+            "cf69bbf4fe29b9be"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "1490232e8db652bf",
+            "e408d743b8c57b73"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d2b38a28c07da693",
+            "8bb477af50d6019e"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "47c10e3467076718",
+            "a154650734e43db8"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d23dfdd7e442b31f",
+            "023d23b40de88df6"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "d5a4c3746a377e79",
+            "6e8359388c5738dc"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "ed38a2c9ddfebc74",
+            "83c1051b3c0ce3fd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "69d67e4d46a6e6ba",
+            "22b11c809b88159d"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "4d9a563b5edde3ab",
+            "f145e59afd888b5f"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "40238fc22ba36fa1",
+            "01c05a371b0d290d"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "3fb82a6fabf225dd",
+            "75b057bcef38e9e4"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "1a050af1b9fc46fa",
+            "f77c92d3beafbf5c"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "08239a170ae76842",
+            "b012a1c0aef484f0"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "f6878090e4631210",
+            "f92508adeac0ce55"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "0a75c1f5de5d0a57",
+            "2603dea69795e3e8"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "ec5e83b39125fc25",
+            "a11a3b620e624ebd"
+          ],
+          "real_input_tokens": 360,
+          "padded_input_tokens": 360
+        },
+        {
+          "ids": [
+            "9043faf3f4d30367",
+            "deee3773881d3a40"
+          ],
+          "real_input_tokens": 361,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "98913a3d72715d1d",
+            "e9eab3477d8dd584"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "8fcf2933b0d25ca5",
+            "23af3c7f19ffe6ea"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "9e0e3e5e4d2bfc8e",
+            "862bd9f6b2439567"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "394ea9dc91e60ea4",
+            "f37d6f850a414dfd"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "8ad71d2ea52db900",
+            "a1054223e13dfa41"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "6ecd0cdea97d225c",
+            "23b164a1c54bd68c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "f923841d87218edb",
+            "6fcdd65d22d3597e"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "2bdbe217dcdab230",
+            "a0255daf0e541a0b"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "2ca1095d0c7bccfc",
+            "fea0572a7014906c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "7fd394be806fad70",
+            "bac1ec514cc39475"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "efae9ea757927ebc",
+            "677264c0b4d56d79"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "ca32154b70b6bb87",
+            "771769c0d09d9d9b"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "589b8e316d17948e",
+            "5cc243309a96b58c"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "c950042cddc34970",
+            "b4b16885cf6f7e0a"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "0eb515aae8c649e1",
+            "9e8fd1f036c9df93"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "e008306069547f32",
+            "c6c307d20987d4eb"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "853f820b9ca8a132",
+            "8da12e78d8347c30"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "30402a46c51ddf9a",
+            "7ff88840423b7f3a"
+          ],
+          "real_input_tokens": 362,
+          "padded_input_tokens": 362
+        },
+        {
+          "ids": [
+            "4a02cf56889e0593",
+            "b52c1d798b62f614"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "5cf8bad987d766e3",
+            "037d21719223f9db"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "1940339315c18011",
+            "57583269643b8528"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "b9b1f2866033703a",
+            "1c71d5b83a26d6b0"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "fba2a94a4456576e",
+            "79c76483a7dd594c"
+          ],
+          "real_input_tokens": 364,
+          "padded_input_tokens": 364
+        },
+        {
+          "ids": [
+            "9016cf0371708721",
+            "168f01eeeb58424b"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "4a7a8d633c891880",
+            "1ca7f45216754561"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        },
+        {
+          "ids": [
+            "0e667401e3dececf",
+            "002c81350de97132"
+          ],
+          "real_input_tokens": 366,
+          "padded_input_tokens": 366
+        }
+      ],
+      "wall_seconds_excluding_warmup": 15.91340990000026,
+      "load_seconds": 28.308748399998876
+    }
+  },
+  "teacher_forced": {
+    "qwen3:8b": {
+      "forward_calls": 96,
+      "total_input_tokens": 22837,
+      "calls": [
+        {
+          "id": "ebf838872ee27ed5",
+          "input_tokens": 205,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 21
+        },
+        {
+          "id": "5be91e50604a1f25",
+          "input_tokens": 216,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "bc42daf37fd433a8",
+          "input_tokens": 225,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 39
+        },
+        {
+          "id": "4a02cf56889e0593",
+          "input_tokens": 700,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 512
+        },
+        {
+          "id": "7a03b4e9c9ed7521",
+          "input_tokens": 274,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 89
+        },
+        {
+          "id": "a5a5cac2f9b42e1d",
+          "input_tokens": 208,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "c20497cf47692ab9",
+          "input_tokens": 286,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 101
+        },
+        {
+          "id": "deee3773881d3a40",
+          "input_tokens": 214,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 27
+        },
+        {
+          "id": "98913a3d72715d1d",
+          "input_tokens": 253,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 66
+        },
+        {
+          "id": "11d0ae664950f9f1",
+          "input_tokens": 221,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 35
+        },
+        {
+          "id": "112a5a7689785fa7",
+          "input_tokens": 209,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "3691bb2daf76eabd",
+          "input_tokens": 221,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 35
+        },
+        {
+          "id": "dc86f50b2433786a",
+          "input_tokens": 207,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "e9eab3477d8dd584",
+          "input_tokens": 223,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 36
+        },
+        {
+          "id": "47539589300861cc",
+          "input_tokens": 209,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "a5eb265a7961ceb7",
+          "input_tokens": 219,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 35
+        },
+        {
+          "id": "61d74b610145de9e",
+          "input_tokens": 238,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 52
+        },
+        {
+          "id": "8fcf2933b0d25ca5",
+          "input_tokens": 232,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 45
+        },
+        {
+          "id": "874807622c311d95",
+          "input_tokens": 200,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "dc20d06ae86d1ebd",
+          "input_tokens": 208,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "437ad7936f3bfafe",
+          "input_tokens": 209,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "e76254892720c6a8",
+          "input_tokens": 198,
+          "prompt_tokens": 182,
+          "recorded_generated_tokens": 16
+        },
+        {
+          "id": "831a1ebe8ef41d41",
+          "input_tokens": 229,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 43
+        },
+        {
+          "id": "8ac8a2d3a4accf3a",
+          "input_tokens": 202,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "8bc9551c200ac59f",
+          "input_tokens": 201,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "678531cfc45088e9",
+          "input_tokens": 214,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 30
+        },
+        {
+          "id": "7ab021ba460b3d1d",
+          "input_tokens": 207,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 22
+        },
+        {
+          "id": "9e8c94ebdc346a52",
+          "input_tokens": 201,
+          "prompt_tokens": 182,
+          "recorded_generated_tokens": 19
+        },
+        {
+          "id": "8b8ee5c05ce8f130",
+          "input_tokens": 201,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "3d08de1cdab9d820",
+          "input_tokens": 230,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 46
+        },
+        {
+          "id": "e0c65a57f2d94910",
+          "input_tokens": 210,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "15befffc63e8cd8c",
+          "input_tokens": 241,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 56
+        },
+        {
+          "id": "610b8d11600b3228",
+          "input_tokens": 219,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 34
+        },
+        {
+          "id": "23af3c7f19ffe6ea",
+          "input_tokens": 241,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 54
+        },
+        {
+          "id": "cf69bbf4fe29b9be",
+          "input_tokens": 214,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 28
+        },
+        {
+          "id": "0b2c5abb81484f2f",
+          "input_tokens": 203,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 18
+        },
+        {
+          "id": "66ba33d6fcddcbf8",
+          "input_tokens": 216,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "9016cf0371708721",
+          "input_tokens": 264,
+          "prompt_tokens": 189,
+          "recorded_generated_tokens": 75
+        },
+        {
+          "id": "214b6f3cdd6ea620",
+          "input_tokens": 215,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "c50b541ac383cb44",
+          "input_tokens": 201,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 18
+        },
+        {
+          "id": "1490232e8db652bf",
+          "input_tokens": 214,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 28
+        },
+        {
+          "id": "9e0e3e5e4d2bfc8e",
+          "input_tokens": 246,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 59
+        },
+        {
+          "id": "b77f8fd3744af903",
+          "input_tokens": 216,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "862bd9f6b2439567",
+          "input_tokens": 256,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 69
+        },
+        {
+          "id": "4683987ce160c45d",
+          "input_tokens": 214,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 29
+        },
+        {
+          "id": "96ad6dbbfdff3af6",
+          "input_tokens": 206,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 21
+        },
+        {
+          "id": "e408d743b8c57b73",
+          "input_tokens": 204,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 18
+        },
+        {
+          "id": "af9d106392ca475a",
+          "input_tokens": 202,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 19
+        },
+        {
+          "id": "535b4a3c90757b92",
+          "input_tokens": 207,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 22
+        },
+        {
+          "id": "30c283cd16868d33",
+          "input_tokens": 200,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "3a882eb3b4dfab1f",
+          "input_tokens": 247,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 62
+        },
+        {
+          "id": "394ea9dc91e60ea4",
+          "input_tokens": 230,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 43
+        },
+        {
+          "id": "f37d6f850a414dfd",
+          "input_tokens": 221,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 34
+        },
+        {
+          "id": "168f01eeeb58424b",
+          "input_tokens": 237,
+          "prompt_tokens": 189,
+          "recorded_generated_tokens": 48
+        },
+        {
+          "id": "147ce0cd0ea0b957",
+          "input_tokens": 197,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 14
+        },
+        {
+          "id": "8ad71d2ea52db900",
+          "input_tokens": 217,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 30
+        },
+        {
+          "id": "d2b38a28c07da693",
+          "input_tokens": 235,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 49
+        },
+        {
+          "id": "8bb477af50d6019e",
+          "input_tokens": 219,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 33
+        },
+        {
+          "id": "a1054223e13dfa41",
+          "input_tokens": 334,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 147
+        },
+        {
+          "id": "cf6ce9803a32d3ba",
+          "input_tokens": 266,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 82
+        },
+        {
+          "id": "af679ec95ea53871",
+          "input_tokens": 215,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "4a7a8d633c891880",
+          "input_tokens": 237,
+          "prompt_tokens": 189,
+          "recorded_generated_tokens": 48
+        },
+        {
+          "id": "47c10e3467076718",
+          "input_tokens": 245,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 59
+        },
+        {
+          "id": "b52c1d798b62f614",
+          "input_tokens": 700,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 512
+        },
+        {
+          "id": "333107e07e98cb42",
+          "input_tokens": 209,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "6ecd0cdea97d225c",
+          "input_tokens": 255,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 68
+        },
+        {
+          "id": "23b164a1c54bd68c",
+          "input_tokens": 697,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 510
+        },
+        {
+          "id": "5cf8bad987d766e3",
+          "input_tokens": 225,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 37
+        },
+        {
+          "id": "76bd88a0f536cee6",
+          "input_tokens": 210,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "d121ee2f3c02080b",
+          "input_tokens": 201,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "a154650734e43db8",
+          "input_tokens": 215,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 29
+        },
+        {
+          "id": "8dc3186d75523c6a",
+          "input_tokens": 215,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "037d21719223f9db",
+          "input_tokens": 245,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 57
+        },
+        {
+          "id": "1940339315c18011",
+          "input_tokens": 239,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 51
+        },
+        {
+          "id": "f929c9f42b4c2cb3",
+          "input_tokens": 243,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 59
+        },
+        {
+          "id": "d23dfdd7e442b31f",
+          "input_tokens": 268,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 82
+        },
+        {
+          "id": "f923841d87218edb",
+          "input_tokens": 242,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 55
+        },
+        {
+          "id": "6fcdd65d22d3597e",
+          "input_tokens": 210,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "77f3bf7dd3f781c2",
+          "input_tokens": 200,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 16
+        },
+        {
+          "id": "023d23b40de88df6",
+          "input_tokens": 231,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 45
+        },
+        {
+          "id": "d5a4c3746a377e79",
+          "input_tokens": 222,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 36
+        },
+        {
+          "id": "b725c31e0c827427",
+          "input_tokens": 210,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 26
+        },
+        {
+          "id": "ab9b803215505524",
+          "input_tokens": 212,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 27
+        },
+        {
+          "id": "2bdbe217dcdab230",
+          "input_tokens": 214,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 27
+        },
+        {
+          "id": "da831c0fe5543aba",
+          "input_tokens": 198,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 14
+        },
+        {
+          "id": "fc9895ba55d696f2",
+          "input_tokens": 204,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 19
+        },
+        {
+          "id": "a0255daf0e541a0b",
+          "input_tokens": 207,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 20
+        },
+        {
+          "id": "2ca1095d0c7bccfc",
+          "input_tokens": 210,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "6e8359388c5738dc",
+          "input_tokens": 219,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 33
+        },
+        {
+          "id": "fea0572a7014906c",
+          "input_tokens": 238,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 51
+        },
+        {
+          "id": "ed38a2c9ddfebc74",
+          "input_tokens": 233,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 47
+        },
+        {
+          "id": "7fd394be806fad70",
+          "input_tokens": 231,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 44
+        },
+        {
+          "id": "115fc19b485ea206",
+          "input_tokens": 230,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 45
+        },
+        {
+          "id": "38b136b7a571560b",
+          "input_tokens": 216,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "57583269643b8528",
+          "input_tokens": 236,
+          "prompt_tokens": 188,
+          "recorded_generated_tokens": 48
+        },
+        {
+          "id": "b257c9b9e9899e59",
+          "input_tokens": 203,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 19
+        }
+      ],
+      "wall_seconds": null
+    },
+    "qwen3:1.7b": {
+      "forward_calls": 24,
+      "total_input_tokens": 5073,
+      "calls": [
+        {
+          "id": "f6878090e4631210",
+          "input_tokens": 218,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 32
+        },
+        {
+          "id": "f92508adeac0ce55",
+          "input_tokens": 218,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 32
+        },
+        {
+          "id": "c6c307d20987d4eb",
+          "input_tokens": 227,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 40
+        },
+        {
+          "id": "002c81350de97132",
+          "input_tokens": 211,
+          "prompt_tokens": 189,
+          "recorded_generated_tokens": 22
+        },
+        {
+          "id": "853f820b9ca8a132",
+          "input_tokens": 233,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 46
+        },
+        {
+          "id": "e9d62c6355dfe170",
+          "input_tokens": 210,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 26
+        },
+        {
+          "id": "219dd659a5092a77",
+          "input_tokens": 203,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 18
+        },
+        {
+          "id": "0a75c1f5de5d0a57",
+          "input_tokens": 215,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 29
+        },
+        {
+          "id": "8e9f225104de71a6",
+          "input_tokens": 194,
+          "prompt_tokens": 183,
+          "recorded_generated_tokens": 11
+        },
+        {
+          "id": "bf6ac31cfeb90d54",
+          "input_tokens": 208,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "091a8e5a6d6f7e43",
+          "input_tokens": 199,
+          "prompt_tokens": 182,
+          "recorded_generated_tokens": 17
+        },
+        {
+          "id": "1072cd632fb289a1",
+          "input_tokens": 205,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 21
+        },
+        {
+          "id": "2603dea69795e3e8",
+          "input_tokens": 236,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 50
+        },
+        {
+          "id": "ec5e83b39125fc25",
+          "input_tokens": 212,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 26
+        },
+        {
+          "id": "a11a3b620e624ebd",
+          "input_tokens": 211,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 25
+        },
+        {
+          "id": "eecbee011778c7dc",
+          "input_tokens": 206,
+          "prompt_tokens": 185,
+          "recorded_generated_tokens": 21
+        },
+        {
+          "id": "8da12e78d8347c30",
+          "input_tokens": 218,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 31
+        },
+        {
+          "id": "30402a46c51ddf9a",
+          "input_tokens": 209,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 22
+        },
+        {
+          "id": "7ff88840423b7f3a",
+          "input_tokens": 217,
+          "prompt_tokens": 187,
+          "recorded_generated_tokens": 30
+        },
+        {
+          "id": "9043faf3f4d30367",
+          "input_tokens": 212,
+          "prompt_tokens": 186,
+          "recorded_generated_tokens": 26
+        },
+        {
+          "id": "82342d6c05928c37",
+          "input_tokens": 207,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 23
+        },
+        {
+          "id": "765107a674fb1336",
+          "input_tokens": 206,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 22
+        },
+        {
+          "id": "5035d292d6b4f261",
+          "input_tokens": 198,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 14
+        },
+        {
+          "id": "c8f2d2c5c1a3c360",
+          "input_tokens": 200,
+          "prompt_tokens": 184,
+          "recorded_generated_tokens": 16
+        }
+      ],
+      "wall_seconds": null
+    }
+  },
+  "prompt_checks": "v2/probe/prompt_format_check.json",
+  "failures": "results/v2/features/scan_v1/execution_failures.json",
+  "caveat": "Forward input-token counts measure processing cost, not generated tokens or FLOPs. Per-batch wall times and teacher-forced wall times were not recorded; extraction wall time is available in aggregate."
+}

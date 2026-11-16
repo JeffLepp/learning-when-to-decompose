@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "feature_sets": {
+    "qwen3-0.6b": {
+      "n": 184,
+      "n_files": 14,
+      "array_sha256": {
+        "L04_last": "9534e48dc121075b19e47bf9b4e98547217dff4d7c8c550468f37745e89a76e4",
+        "L04_mean": "78164c7ab40297e83b41f126dd924ee07a1423b427928e4920ff8337f5ea82fd",
+        "L08_last": "66dcbb9b21a26f172e36edd586b153982bde5847330f1bc27b2a1e873ee73a4b",
+        "L08_mean": "68b63e6ed867235b2216254c70a62fdd3ae6f65edbadbeacda7bf77bad5a4196",
+        "L12_last": "17cf37cf9920115f3a79dc526dcbd6a44d0ee485a3b1bf3861652a462c1e259b",
+        "L12_mean": "16400bb05238397eb5745863a949c8b5151d7dc2251a657924dd0a766ae5477e",
+        "L16_last": "3c7718a71af04428859a482b05a49d6331cb77db843d4d7b368357ea709c3787",
+        "L16_mean": "69e733b3ed4ca5c5a55b760efcbce25e95ae95d305a1dd65ae653f0ddb43132f",
+        "L20_last": "d05ff880df3e4f04dddabf3c0a9f55923fd6827bda3ea6abcdeca181e4b6322d",
+        "L20_mean": "506ccc4f27051617380c6d930cb929f945a15e467f7a9dff88e0efac37295bb8",
+        "L24_last": "96bebc45d6cf9e058e2fa59cca815219322bbf3e3f5cd9d8bf1f181b6beb289a",
+        "L24_mean": "6b783c59f7b97621c7fa7d14f47e4e5400f78a6b197ebea8d137b31793259c52",
+        "L28_last": "8b6ee265dabeda9df6fdfe785cd885d3028dee68d1994d73433dd4391ca807f2",
+        "L28_mean": "6a23d48f2c3ddf2e9c29f3e28fee7a3a0e0c273cbaca36048abe8319ca9a6983"
+      },
+      "bytes": 5327212
+    },
+    "qwen3-1.7b": {
+      "n": 184,
+      "n_files": 14,
+      "array_sha256": {
+        "L04_last": "eb08d517736dadc5ef21589326a42868f776377b0a1915ed22d3b486ade0b18c",
+        "L04_mean": "ebdf807f9d1e3466a4e9641c898155ac6065be02a68d6a6e673380441a0d9b12",
+        "L08_last": "5c674cdab56249f1269d7183c8998268ed199911a3a9f30deda030cf12f30143",
+        "L08_mean": "076205f0212343a79884186dafd128ac127e8533d221465326ad20630a32e430",
+        "L12_last": "ed17f1f417ab19f0c8a57e3d05c6852b3bac238d7e4a3c841e0a1b2a8ac16c71",
+        "L12_mean": "e75e0e3ee5dd99e47373b4eb52bf2a34b015731125ea26e148bf1405f3abc59f",
+        "L16_last": "d134d33fffd7dac059d536837f942f494f9c8540175600da2d98f6fa2fdcfce1",
+        "L16_mean": "75c8df16244b8704d692907b341251507b0aae5f938bc55828094dc3d5e3a099",
+        "L20_last": "f5b894ccd9843f6c030f7efde23b391d7dd817ceb8a72087c7893d3003f9d8cf",
+        "L20_mean": "f9b698b89a3313aa0615d5f7eca46ba6ac3069ce30d246c51b4141ab2ae7e7e9",
+        "L24_last": "7421167c7b6264bd8c31e4fe33dcb81278a2351b5bba8dc22afe4b05abe5ac8e",
+        "L24_mean": "ad0561150e7d73cf7d1c8163f3d39bb6fc8313698140c06a5658a56278175a09",
+        "L28_last": "c5b944a3a545cebd15df4f62fc0374b1dc41f33fdd05f6fbe8d048cbb809be71",
+        "L28_mean": "5a54edd25efbeb825d413afea43df55f741f3b9770385b5d40c420af624aabe0"
+      },
+      "bytes": 10602858
+    },
+    "qwen3-4b": {
+      "n": 184,
+      "n_files": 18,
+      "array_sha256": {
+        "L04_last": "a5b5486757a4ce9c30b3ec161b574b5f79e57a71ad44278a990fe0a0ed3511e0",
+        "L04_mean": "e2df5fae6aa17a997888fa8b103bfb1120cace0499cdf0d4ab04794c92ab7f94",
+        "L08_last": "6987b9fdb778d98efbb162f64b1f0de02e166e28ef14ceb4a294a285f2a2c431",
+        "L08_mean": "cdbf089bb30a138266011db143d41fc9d421454779a5f82afc6928cd0e30d0df",
+        "L12_last": "895839e43cec465c75586f3d39445839d5857361c1a71ee06b756d74f459f55b",
+        "L12_mean": "cde4e7aa7212969b7c513d4c0f42e5253bf70e7c3cff4bd4dd9df296ed49a2d0",
+        "L16_last": "5c6f446988b01ae520b20165402623f08052031c5e5fe3db5dbd69cee93470ca",
+        "L16_mean": "2dd8ece7d4b300bfa3dac18d5137b859aaaa2a98c3aed94625a62b48be633103",
+        "L20_last": "4feac6ee8659e98b43310a3434f37d9f73054bd37a55ffbcc8104ad90f87ff67",
+        "L20_mean": "47373a0ed9735ed4ef853d18a57f6494fb2113bea36316be3c415dcfb97cb244",
+        "L24_last": "73cc2de44b0d6fb11358fe90f1503a111b8c9df12df39ff756f7aa5758e37734",
+        "L24_mean": "7126b8af8a79e296f8724ec4ab84da55c1ff8a5bd6d573bac3b52fa6b1a5e41f",
+        "L28_last": "20e5478ae68b7d94c19fb312ce8b35f2fde1d18de5deb81fdd8c387c82b6ab7a",
+        "L28_mean": "ac3185d5233305f944feedd15864e4aaef85c68769611e57cdcfd4cd90269157",
+        "L32_last": "614f0f05961496d000a804d355a9c60ecc68cfd7d28cc451bede757af1cbcf45",
+        "L32_mean": "a99911fd768b6d6ecb632cba5fb9794c6e7250d84c77e594fff3b556c153d369",
+        "L36_last": "02b035d2826bbedcdd03622f3b3a80e886696cc0675c3f4978f287736faecaeb",
+        "L36_mean": "4abc13bd030f6e09799eb3dff15d0fe9be4ec53aba9aea80683823efb7fa1346"
+      },
+      "bytes": 17010829
+    },
+    "qwen3-8b": {
+      "n": 184,
+      "n_files": 18,
+      "array_sha256": {
+        "L04_last": "2eb6da8ce49dda3c09c733fbec8772475d2e91acde979006607a8698e33203b2",
+        "L04_mean": "1c33370c8871d9007e10f9c7167ee48006b6877697feebe364480a74381d0eff",
+        "L08_last": "5ace973b336cdb6aae261136ca27a2596c106460f1c3e22a14346a54f225d43d",
+        "L08_mean": "9d47fdd2156811deb36c5f9167198ebb6368ca2e75cb719982fc450fecce3649",
+        "L12_last": "65ef0401f36c486e4f60a01e4dc338c0b9dc4c6ea89da26af63b7ad4870cd89f",
+        "L12_mean": "f36310e927a699f4e926b933bf1e080b90fd6810f1b9eac6376822ba41da69b0",
+        "L16_last": "5b170758013ff29111db9a73be90248586f8e5bf3f09e5a0b7628d24627073d8",
+        "L16_mean": "d126a09f6c36a3debf0c701cc1197beedfccd2c4ea194f7190e11e63e47389d4",
+        "L20_last": "aeb183dae130c35927c95ffed9a77fc1d1035a4b3d720ba1c9dd4882640786fb",
+        "L20_mean": "a8438710858f4c97d8e1ef1affe4db85d2184e0f4239ee16e4b717415c59d4d0",
+        "L24_last": "b26ddb2ceb76ca8aac9c6e65a513e1c421cd24d3c10a3481860e0d5299e3f980",
+        "L24_mean": "11e1b2a69573de4be34133d462f1e8a43ccba8f0b19a642864904efeabebb7b9",
+        "L28_last": "ba72d8ee85155908c619953e29267a17f0df745b4a8a8be865307235b2667452",
+        "L28_mean": "37841e938abd54fb795d79490743d7041e132a381b3a0b5186ed156d9b23a1c2",
+        "L32_last": "085c0937080343f4b1e3a23f8f68302ca31d82bb79e27e4a1b2cf0fcc92f07ec",
+        "L32_mean": "8f9a4e6a587418d5f19f013d7b482abed74eaefb28207c0d87938eb0275b9f1e",
+        "L36_last": "904873a49734fc1474630ac93e4ff5a229af753c2f874881a9421f9fac6b3c83",
+        "L36_mean": "0b82613c1db4c408afedd423bd55b000902fd04afe8e2612a93fb583b57460fd"
+      },
+      "bytes": 27184235
+    },
+    "qwen3-4b-nf4": {
+      "n": 184,
+      "n_files": 18,
+      "array_sha256": {
+        "L04_last": "65a201f07cb03e3ed99250d567230cf3408593fa507c12c2b461c1b447dc37ab",
+        "L04_mean": "634e7356c07f3b404e6d1c95ff70373e8880d94e757a8ab0559a3d275b63da6a",
+        "L08_last": "ff5b6dfad484a14776840d766f5c3de1c97cdf9e1f80d490c042ec368efed1ac",
+        "L08_mean": "cf25bce18657bdff32498b87b4581c834bd7a14686c9d33206b5f95ac4850e02",
+        "L12_last": "e25de4226248cd8daae8e6f4e88847e2d294768fe030202284b6ab6dc52b6282",
+        "L12_mean": "ff9e17f0e7bbbc5fe6b7c54363eb9ac7c61cde27b8ef8788de97e478b71fc075",
+        "L16_last": "960594985f0d580e50f1b10ca4f800b75cb24a89c9278826d22f6d9ea991cbd4",
+        "L16_mean": "cbd13652eb08a7011f04d516a089863830e1d7a14c1c0f16ce800f7bc592b752",
+        "L20_last": "4f70aefab0d82bb13a638eb84f1310e1252b2b6fc2c943ae4b8f3945e9d05c2c",
+        "L20_mean": "2078ae357e11cdb01095581f299bd7018f437a75142183f82a9364be8306f977",
+        "L24_last": "6a1c0a1b844be7a78d038884e52fec39f38d0e11da1f9b95160a076455dcad7b",
+        "L24_mean": "54379d9b7033a5e29b417d6525ae643075eff55a96bc3fa8188cff7e7496df09",
+        "L28_last": "c39600b05e790c7ba7987a263622082508941c0f12db37a292ad8c7bacb215c1",
+        "L28_mean": "a48e6020691d11e6881a82c0689a2d356a0ae2f891a8067220b04be504d2f36e",
+        "L32_last": "837f92e8fc08b159ee62cc609ff095d3be1ce83e860d6d16b53d67cbba2c58dc",
+        "L32_mean": "113f93a51bf57784949c2e9512f150b835e9171a5fa35897a11652699e2b8ddb",
+        "L36_last": "7735de0a89f0627dc966d85dd363cf96602159d77544cada11c098271601cc6a",
+        "L36_mean": "dcc1d35c540a90fd1146c3fbc2133958184d0618bb31deb4ee60c4784b9eb902"
+      },
+      "bytes": 17009654
+    }
+  },
+  "prompt_wrapper_models": 4,
+  "selected": {
+    "feature_set": "L32_mean",
+    "layer": 32,
+    "pooling": "mean",
+    "target": "y_decomposed",
+    "criterion": "highest mean repeated OOF AUROC"
+  },
+  "agreement_counts_verified": true,
+  "audit_auroc_verified": true
+}

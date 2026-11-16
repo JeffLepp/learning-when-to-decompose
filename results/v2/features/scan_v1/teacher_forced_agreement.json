@@ -1,0 +1,986 @@
+{
+  "qwen3:1.7b": {
+    "positions": 623,
+    "matches": 563,
+    "letter_positions": 349,
+    "letter_matches": 317,
+    "agreement": 0.9036918138041734,
+    "letter_agreement": 0.9083094555873925,
+    "n_items": 24,
+    "records": [
+      {
+        "id": "f6878090e4631210",
+        "positions": 32,
+        "matches": 25,
+        "letter_positions": 18,
+        "letter_matches": 13,
+        "recorded_eval_count": 33
+      },
+      {
+        "id": "f92508adeac0ce55",
+        "positions": 32,
+        "matches": 28,
+        "letter_positions": 16,
+        "letter_matches": 14,
+        "recorded_eval_count": 33
+      },
+      {
+        "id": "c6c307d20987d4eb",
+        "positions": 40,
+        "matches": 35,
+        "letter_positions": 22,
+        "letter_matches": 19,
+        "recorded_eval_count": 41
+      },
+      {
+        "id": "002c81350de97132",
+        "positions": 22,
+        "matches": 21,
+        "letter_positions": 12,
+        "letter_matches": 12,
+        "recorded_eval_count": 23
+      },
+      {
+        "id": "853f820b9ca8a132",
+        "positions": 46,
+        "matches": 43,
+        "letter_positions": 26,
+        "letter_matches": 25,
+        "recorded_eval_count": 47
+      },
+      {
+        "id": "e9d62c6355dfe170",
+        "positions": 26,
+        "matches": 26,
+        "letter_positions": 14,
+        "letter_matches": 14,
+        "recorded_eval_count": 27
+      },
+      {
+        "id": "219dd659a5092a77",
+        "positions": 18,
+        "matches": 18,
+        "letter_positions": 10,
+        "letter_matches": 10,
+        "recorded_eval_count": 19
+      },
+      {
+        "id": "0a75c1f5de5d0a57",
+        "positions": 29,
+        "matches": 27,
+        "letter_positions": 20,
+        "letter_matches": 19,
+        "recorded_eval_count": 30
+      },
+      {
+        "id": "8e9f225104de71a6",
+        "positions": 11,
+        "matches": 10,
+        "letter_positions": 5,
+        "letter_matches": 5,
+        "recorded_eval_count": 12
+      },
+      {
+        "id": "bf6ac31cfeb90d54",
+        "positions": 23,
+        "matches": 21,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "091a8e5a6d6f7e43",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "1072cd632fb289a1",
+        "positions": 21,
+        "matches": 17,
+        "letter_positions": 14,
+        "letter_matches": 12,
+        "recorded_eval_count": 22
+      },
+      {
+        "id": "2603dea69795e3e8",
+        "positions": 50,
+        "matches": 48,
+        "letter_positions": 28,
+        "letter_matches": 27,
+        "recorded_eval_count": 51
+      },
+      {
+        "id": "ec5e83b39125fc25",
+        "positions": 26,
+        "matches": 25,
+        "letter_positions": 14,
+        "letter_matches": 13,
+        "recorded_eval_count": 27
+      },
+      {
+        "id": "a11a3b620e624ebd",
+        "positions": 25,
+        "matches": 23,
+        "letter_positions": 13,
+        "letter_matches": 12,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "eecbee011778c7dc",
+        "positions": 21,
+        "matches": 19,
+        "letter_positions": 11,
+        "letter_matches": 10,
+        "recorded_eval_count": 22
+      },
+      {
+        "id": "8da12e78d8347c30",
+        "positions": 31,
+        "matches": 29,
+        "letter_positions": 17,
+        "letter_matches": 15,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "30402a46c51ddf9a",
+        "positions": 22,
+        "matches": 20,
+        "letter_positions": 12,
+        "letter_matches": 12,
+        "recorded_eval_count": 23
+      },
+      {
+        "id": "7ff88840423b7f3a",
+        "positions": 30,
+        "matches": 26,
+        "letter_positions": 16,
+        "letter_matches": 13,
+        "recorded_eval_count": 31
+      },
+      {
+        "id": "9043faf3f4d30367",
+        "positions": 26,
+        "matches": 24,
+        "letter_positions": 14,
+        "letter_matches": 12,
+        "recorded_eval_count": 27
+      },
+      {
+        "id": "82342d6c05928c37",
+        "positions": 23,
+        "matches": 20,
+        "letter_positions": 16,
+        "letter_matches": 16,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "765107a674fb1336",
+        "positions": 22,
+        "matches": 17,
+        "letter_positions": 12,
+        "letter_matches": 8,
+        "recorded_eval_count": 23
+      },
+      {
+        "id": "5035d292d6b4f261",
+        "positions": 14,
+        "matches": 11,
+        "letter_positions": 9,
+        "letter_matches": 7,
+        "recorded_eval_count": 15
+      },
+      {
+        "id": "c8f2d2c5c1a3c360",
+        "positions": 16,
+        "matches": 13,
+        "letter_positions": 8,
+        "letter_matches": 7,
+        "recorded_eval_count": 17
+      }
+    ],
+    "caveat": "Ollama used JSON-schema grammar; HF argmax is unconstrained. Only generated tokens present in recorded context are scored."
+  },
+  "qwen3:8b": {
+    "positions": 5025,
+    "matches": 4907,
+    "letter_positions": 3485,
+    "letter_matches": 3407,
+    "agreement": 0.9765174129353233,
+    "letter_agreement": 0.9776183644189383,
+    "n_items": 96,
+    "records": [
+      {
+        "id": "ebf838872ee27ed5",
+        "positions": 21,
+        "matches": 21,
+        "letter_positions": 14,
+        "letter_matches": 14,
+        "recorded_eval_count": 22
+      },
+      {
+        "id": "5be91e50604a1f25",
+        "positions": 31,
+        "matches": 31,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "bc42daf37fd433a8",
+        "positions": 39,
+        "matches": 37,
+        "letter_positions": 28,
+        "letter_matches": 27,
+        "recorded_eval_count": 40
+      },
+      {
+        "id": "4a02cf56889e0593",
+        "positions": 512,
+        "matches": 511,
+        "letter_positions": 382,
+        "letter_matches": 382,
+        "recorded_eval_count": 512
+      },
+      {
+        "id": "7a03b4e9c9ed7521",
+        "positions": 89,
+        "matches": 88,
+        "letter_positions": 64,
+        "letter_matches": 64,
+        "recorded_eval_count": 90
+      },
+      {
+        "id": "a5a5cac2f9b42e1d",
+        "positions": 23,
+        "matches": 22,
+        "letter_positions": 16,
+        "letter_matches": 15,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "c20497cf47692ab9",
+        "positions": 101,
+        "matches": 99,
+        "letter_positions": 45,
+        "letter_matches": 44,
+        "recorded_eval_count": 102
+      },
+      {
+        "id": "deee3773881d3a40",
+        "positions": 27,
+        "matches": 25,
+        "letter_positions": 19,
+        "letter_matches": 17,
+        "recorded_eval_count": 28
+      },
+      {
+        "id": "98913a3d72715d1d",
+        "positions": 66,
+        "matches": 64,
+        "letter_positions": 46,
+        "letter_matches": 45,
+        "recorded_eval_count": 67
+      },
+      {
+        "id": "11d0ae664950f9f1",
+        "positions": 35,
+        "matches": 34,
+        "letter_positions": 25,
+        "letter_matches": 25,
+        "recorded_eval_count": 36
+      },
+      {
+        "id": "112a5a7689785fa7",
+        "positions": 25,
+        "matches": 25,
+        "letter_positions": 17,
+        "letter_matches": 17,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "3691bb2daf76eabd",
+        "positions": 35,
+        "matches": 34,
+        "letter_positions": 25,
+        "letter_matches": 25,
+        "recorded_eval_count": 36
+      },
+      {
+        "id": "dc86f50b2433786a",
+        "positions": 23,
+        "matches": 21,
+        "letter_positions": 15,
+        "letter_matches": 14,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "e9eab3477d8dd584",
+        "positions": 36,
+        "matches": 36,
+        "letter_positions": 25,
+        "letter_matches": 25,
+        "recorded_eval_count": 37
+      },
+      {
+        "id": "47539589300861cc",
+        "positions": 25,
+        "matches": 21,
+        "letter_positions": 16,
+        "letter_matches": 14,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "a5eb265a7961ceb7",
+        "positions": 35,
+        "matches": 32,
+        "letter_positions": 23,
+        "letter_matches": 21,
+        "recorded_eval_count": 36
+      },
+      {
+        "id": "61d74b610145de9e",
+        "positions": 52,
+        "matches": 51,
+        "letter_positions": 37,
+        "letter_matches": 36,
+        "recorded_eval_count": 53
+      },
+      {
+        "id": "8fcf2933b0d25ca5",
+        "positions": 45,
+        "matches": 42,
+        "letter_positions": 31,
+        "letter_matches": 29,
+        "recorded_eval_count": 46
+      },
+      {
+        "id": "874807622c311d95",
+        "positions": 17,
+        "matches": 16,
+        "letter_positions": 11,
+        "letter_matches": 10,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "dc20d06ae86d1ebd",
+        "positions": 23,
+        "matches": 22,
+        "letter_positions": 15,
+        "letter_matches": 14,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "437ad7936f3bfafe",
+        "positions": 23,
+        "matches": 22,
+        "letter_positions": 16,
+        "letter_matches": 16,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "e76254892720c6a8",
+        "positions": 16,
+        "matches": 15,
+        "letter_positions": 10,
+        "letter_matches": 9,
+        "recorded_eval_count": 17
+      },
+      {
+        "id": "831a1ebe8ef41d41",
+        "positions": 43,
+        "matches": 41,
+        "letter_positions": 29,
+        "letter_matches": 28,
+        "recorded_eval_count": 44
+      },
+      {
+        "id": "8ac8a2d3a4accf3a",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "8bc9551c200ac59f",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "678531cfc45088e9",
+        "positions": 30,
+        "matches": 29,
+        "letter_positions": 21,
+        "letter_matches": 20,
+        "recorded_eval_count": 31
+      },
+      {
+        "id": "7ab021ba460b3d1d",
+        "positions": 22,
+        "matches": 21,
+        "letter_positions": 14,
+        "letter_matches": 13,
+        "recorded_eval_count": 23
+      },
+      {
+        "id": "9e8c94ebdc346a52",
+        "positions": 19,
+        "matches": 18,
+        "letter_positions": 13,
+        "letter_matches": 12,
+        "recorded_eval_count": 20
+      },
+      {
+        "id": "8b8ee5c05ce8f130",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "3d08de1cdab9d820",
+        "positions": 46,
+        "matches": 45,
+        "letter_positions": 32,
+        "letter_matches": 31,
+        "recorded_eval_count": 47
+      },
+      {
+        "id": "e0c65a57f2d94910",
+        "positions": 25,
+        "matches": 24,
+        "letter_positions": 17,
+        "letter_matches": 16,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "15befffc63e8cd8c",
+        "positions": 56,
+        "matches": 51,
+        "letter_positions": 24,
+        "letter_matches": 21,
+        "recorded_eval_count": 57
+      },
+      {
+        "id": "610b8d11600b3228",
+        "positions": 34,
+        "matches": 32,
+        "letter_positions": 24,
+        "letter_matches": 23,
+        "recorded_eval_count": 35
+      },
+      {
+        "id": "23af3c7f19ffe6ea",
+        "positions": 54,
+        "matches": 52,
+        "letter_positions": 37,
+        "letter_matches": 36,
+        "recorded_eval_count": 55
+      },
+      {
+        "id": "cf69bbf4fe29b9be",
+        "positions": 28,
+        "matches": 28,
+        "letter_positions": 19,
+        "letter_matches": 19,
+        "recorded_eval_count": 29
+      },
+      {
+        "id": "0b2c5abb81484f2f",
+        "positions": 18,
+        "matches": 17,
+        "letter_positions": 12,
+        "letter_matches": 11,
+        "recorded_eval_count": 19
+      },
+      {
+        "id": "66ba33d6fcddcbf8",
+        "positions": 31,
+        "matches": 31,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "9016cf0371708721",
+        "positions": 75,
+        "matches": 73,
+        "letter_positions": 55,
+        "letter_matches": 55,
+        "recorded_eval_count": 76
+      },
+      {
+        "id": "214b6f3cdd6ea620",
+        "positions": 31,
+        "matches": 31,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "c50b541ac383cb44",
+        "positions": 18,
+        "matches": 18,
+        "letter_positions": 12,
+        "letter_matches": 12,
+        "recorded_eval_count": 19
+      },
+      {
+        "id": "1490232e8db652bf",
+        "positions": 28,
+        "matches": 27,
+        "letter_positions": 19,
+        "letter_matches": 18,
+        "recorded_eval_count": 29
+      },
+      {
+        "id": "9e0e3e5e4d2bfc8e",
+        "positions": 59,
+        "matches": 58,
+        "letter_positions": 34,
+        "letter_matches": 34,
+        "recorded_eval_count": 60
+      },
+      {
+        "id": "b77f8fd3744af903",
+        "positions": 31,
+        "matches": 31,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "862bd9f6b2439567",
+        "positions": 69,
+        "matches": 67,
+        "letter_positions": 48,
+        "letter_matches": 46,
+        "recorded_eval_count": 70
+      },
+      {
+        "id": "4683987ce160c45d",
+        "positions": 29,
+        "matches": 29,
+        "letter_positions": 20,
+        "letter_matches": 20,
+        "recorded_eval_count": 30
+      },
+      {
+        "id": "96ad6dbbfdff3af6",
+        "positions": 21,
+        "matches": 21,
+        "letter_positions": 14,
+        "letter_matches": 14,
+        "recorded_eval_count": 22
+      },
+      {
+        "id": "e408d743b8c57b73",
+        "positions": 18,
+        "matches": 15,
+        "letter_positions": 12,
+        "letter_matches": 10,
+        "recorded_eval_count": 19
+      },
+      {
+        "id": "af9d106392ca475a",
+        "positions": 19,
+        "matches": 18,
+        "letter_positions": 13,
+        "letter_matches": 12,
+        "recorded_eval_count": 20
+      },
+      {
+        "id": "535b4a3c90757b92",
+        "positions": 22,
+        "matches": 20,
+        "letter_positions": 15,
+        "letter_matches": 13,
+        "recorded_eval_count": 23
+      },
+      {
+        "id": "30c283cd16868d33",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "3a882eb3b4dfab1f",
+        "positions": 62,
+        "matches": 61,
+        "letter_positions": 44,
+        "letter_matches": 43,
+        "recorded_eval_count": 63
+      },
+      {
+        "id": "394ea9dc91e60ea4",
+        "positions": 43,
+        "matches": 43,
+        "letter_positions": 31,
+        "letter_matches": 31,
+        "recorded_eval_count": 44
+      },
+      {
+        "id": "f37d6f850a414dfd",
+        "positions": 34,
+        "matches": 33,
+        "letter_positions": 23,
+        "letter_matches": 22,
+        "recorded_eval_count": 35
+      },
+      {
+        "id": "168f01eeeb58424b",
+        "positions": 48,
+        "matches": 47,
+        "letter_positions": 34,
+        "letter_matches": 33,
+        "recorded_eval_count": 49
+      },
+      {
+        "id": "147ce0cd0ea0b957",
+        "positions": 14,
+        "matches": 14,
+        "letter_positions": 9,
+        "letter_matches": 9,
+        "recorded_eval_count": 15
+      },
+      {
+        "id": "8ad71d2ea52db900",
+        "positions": 30,
+        "matches": 30,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 31
+      },
+      {
+        "id": "d2b38a28c07da693",
+        "positions": 49,
+        "matches": 46,
+        "letter_positions": 35,
+        "letter_matches": 32,
+        "recorded_eval_count": 50
+      },
+      {
+        "id": "8bb477af50d6019e",
+        "positions": 33,
+        "matches": 31,
+        "letter_positions": 23,
+        "letter_matches": 22,
+        "recorded_eval_count": 34
+      },
+      {
+        "id": "a1054223e13dfa41",
+        "positions": 147,
+        "matches": 145,
+        "letter_positions": 67,
+        "letter_matches": 67,
+        "recorded_eval_count": 148
+      },
+      {
+        "id": "cf6ce9803a32d3ba",
+        "positions": 82,
+        "matches": 81,
+        "letter_positions": 59,
+        "letter_matches": 58,
+        "recorded_eval_count": 83
+      },
+      {
+        "id": "af679ec95ea53871",
+        "positions": 31,
+        "matches": 29,
+        "letter_positions": 21,
+        "letter_matches": 20,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "4a7a8d633c891880",
+        "positions": 48,
+        "matches": 45,
+        "letter_positions": 33,
+        "letter_matches": 31,
+        "recorded_eval_count": 49
+      },
+      {
+        "id": "47c10e3467076718",
+        "positions": 59,
+        "matches": 56,
+        "letter_positions": 43,
+        "letter_matches": 43,
+        "recorded_eval_count": 60
+      },
+      {
+        "id": "b52c1d798b62f614",
+        "positions": 512,
+        "matches": 507,
+        "letter_positions": 383,
+        "letter_matches": 378,
+        "recorded_eval_count": 512
+      },
+      {
+        "id": "333107e07e98cb42",
+        "positions": 25,
+        "matches": 25,
+        "letter_positions": 17,
+        "letter_matches": 17,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "6ecd0cdea97d225c",
+        "positions": 68,
+        "matches": 67,
+        "letter_positions": 49,
+        "letter_matches": 48,
+        "recorded_eval_count": 69
+      },
+      {
+        "id": "23b164a1c54bd68c",
+        "positions": 510,
+        "matches": 508,
+        "letter_positions": 381,
+        "letter_matches": 381,
+        "recorded_eval_count": 512
+      },
+      {
+        "id": "5cf8bad987d766e3",
+        "positions": 37,
+        "matches": 36,
+        "letter_positions": 25,
+        "letter_matches": 24,
+        "recorded_eval_count": 38
+      },
+      {
+        "id": "76bd88a0f536cee6",
+        "positions": 25,
+        "matches": 24,
+        "letter_positions": 17,
+        "letter_matches": 16,
+        "recorded_eval_count": 26
+      },
+      {
+        "id": "d121ee2f3c02080b",
+        "positions": 17,
+        "matches": 17,
+        "letter_positions": 11,
+        "letter_matches": 11,
+        "recorded_eval_count": 18
+      },
+      {
+        "id": "a154650734e43db8",
+        "positions": 29,
+        "matches": 27,
+        "letter_positions": 19,
+        "letter_matches": 17,
+        "recorded_eval_count": 30
+      },
+      {
+        "id": "8dc3186d75523c6a",
+        "positions": 31,
+        "matches": 29,
+        "letter_positions": 21,
+        "letter_matches": 20,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "037d21719223f9db",
+        "positions": 57,
+        "matches": 54,
+        "letter_positions": 40,
+        "letter_matches": 39,
+        "recorded_eval_count": 58
+      },
+      {
+        "id": "1940339315c18011",
+        "positions": 51,
+        "matches": 50,
+        "letter_positions": 37,
+        "letter_matches": 36,
+        "recorded_eval_count": 52
+      },
+      {
+        "id": "f929c9f42b4c2cb3",
+        "positions": 59,
+        "matches": 57,
+        "letter_positions": 41,
+        "letter_matches": 40,
+        "recorded_eval_count": 60
+      },
+      {
+        "id": "d23dfdd7e442b31f",
+        "positions": 82,
+        "matches": 80,
+        "letter_positions": 60,
+        "letter_matches": 59,
+        "recorded_eval_count": 83
+      },
+      {
+        "id": "f923841d87218edb",
+        "positions": 55,
+        "matches": 54,
+        "letter_positions": 38,
+        "letter_matches": 37,
+        "recorded_eval_count": 56
+      },
+      {
+        "id": "6fcdd65d22d3597e",
+        "positions": 23,
+        "matches": 23,
+        "letter_positions": 16,
+        "letter_matches": 16,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "77f3bf7dd3f781c2",
+        "positions": 16,
+        "matches": 16,
+        "letter_positions": 10,
+        "letter_matches": 10,
+        "recorded_eval_count": 17
+      },
+      {
+        "id": "023d23b40de88df6",
+        "positions": 45,
+        "matches": 42,
+        "letter_positions": 31,
+        "letter_matches": 28,
+        "recorded_eval_count": 46
+      },
+      {
+        "id": "d5a4c3746a377e79",
+        "positions": 36,
+        "matches": 35,
+        "letter_positions": 25,
+        "letter_matches": 24,
+        "recorded_eval_count": 37
+      },
+      {
+        "id": "b725c31e0c827427",
+        "positions": 26,
+        "matches": 25,
+        "letter_positions": 18,
+        "letter_matches": 17,
+        "recorded_eval_count": 27
+      },
+      {
+        "id": "ab9b803215505524",
+        "positions": 27,
+        "matches": 25,
+        "letter_positions": 19,
+        "letter_matches": 17,
+        "recorded_eval_count": 28
+      },
+      {
+        "id": "2bdbe217dcdab230",
+        "positions": 27,
+        "matches": 26,
+        "letter_positions": 19,
+        "letter_matches": 19,
+        "recorded_eval_count": 28
+      },
+      {
+        "id": "da831c0fe5543aba",
+        "positions": 14,
+        "matches": 14,
+        "letter_positions": 9,
+        "letter_matches": 9,
+        "recorded_eval_count": 15
+      },
+      {
+        "id": "fc9895ba55d696f2",
+        "positions": 19,
+        "matches": 19,
+        "letter_positions": 13,
+        "letter_matches": 13,
+        "recorded_eval_count": 20
+      },
+      {
+        "id": "a0255daf0e541a0b",
+        "positions": 20,
+        "matches": 20,
+        "letter_positions": 13,
+        "letter_matches": 13,
+        "recorded_eval_count": 21
+      },
+      {
+        "id": "2ca1095d0c7bccfc",
+        "positions": 23,
+        "matches": 23,
+        "letter_positions": 16,
+        "letter_matches": 16,
+        "recorded_eval_count": 24
+      },
+      {
+        "id": "6e8359388c5738dc",
+        "positions": 33,
+        "matches": 32,
+        "letter_positions": 23,
+        "letter_matches": 22,
+        "recorded_eval_count": 34
+      },
+      {
+        "id": "fea0572a7014906c",
+        "positions": 51,
+        "matches": 50,
+        "letter_positions": 37,
+        "letter_matches": 36,
+        "recorded_eval_count": 52
+      },
+      {
+        "id": "ed38a2c9ddfebc74",
+        "positions": 47,
+        "matches": 45,
+        "letter_positions": 33,
+        "letter_matches": 32,
+        "recorded_eval_count": 48
+      },
+      {
+        "id": "7fd394be806fad70",
+        "positions": 44,
+        "matches": 41,
+        "letter_positions": 31,
+        "letter_matches": 28,
+        "recorded_eval_count": 45
+      },
+      {
+        "id": "115fc19b485ea206",
+        "positions": 45,
+        "matches": 44,
+        "letter_positions": 31,
+        "letter_matches": 30,
+        "recorded_eval_count": 46
+      },
+      {
+        "id": "38b136b7a571560b",
+        "positions": 31,
+        "matches": 30,
+        "letter_positions": 21,
+        "letter_matches": 21,
+        "recorded_eval_count": 32
+      },
+      {
+        "id": "57583269643b8528",
+        "positions": 48,
+        "matches": 48,
+        "letter_positions": 33,
+        "letter_matches": 33,
+        "recorded_eval_count": 49
+      },
+      {
+        "id": "b257c9b9e9899e59",
+        "positions": 19,
+        "matches": 19,
+        "letter_positions": 13,
+        "letter_matches": 13,
+        "recorded_eval_count": 20
+      }
+    ],
+    "caveat": "Ollama used JSON-schema grammar; HF argmax is unconstrained. Only generated tokens present in recorded context are scored."
+  }
+}

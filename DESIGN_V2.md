@@ -173,3 +173,20 @@ Gold plan + code leaves must score 100%; this is a unit-test sanity check, not a
    - Take the cheapest validation point whose validation accuracy ≥ the best single arm's validation accuracy.
    - If no such point exists, take the validation point with maximum accuracy, breaking ties by cost.
    - The headline bootstrap uses 10,000 replicates.
+
+**D2 (2026-11-15 ~18:00). Response to WS2 phase A.**
+
+1. **4B rung replaced.**
+   - *Problem:* Ollama `qwen3:4b` is Qwen3-4B-Thinking-2507, a different release from the other rungs. It is thinking-only, and its template always opens `<think>`.
+   - *Fix:* the orchestrator pulled `hf.co/Qwen/Qwen3-4B-GGUF:Q4_K_M`, the official Qwen GGUF of the original hybrid Qwen3-4B (context 40960, matching 0.6b/1.7b/8b). It is registered as Ollama model **`qwen3-hybrid:4b`**, using the template and default parameters copied byte-for-byte from `qwen3:8b`. The `think:false` and `think:true` behaviour was verified.
+   - The ladder is now `qwen3:0.6b, qwen3:1.7b, qwen3-hybrid:4b, qwen3:8b`. `qwen3:4b` (2507) is excluded from v2 arms. Any run that used it is pilot or timing data only.
+   - *Caveat:* the 4B Q4_K_M quantization came from Qwen; the other three came from Ollama's library. These are the same quantization type from a different producer.
+   - *Process note:* two 1-token verification calls ran without the GPU lock at about 17:58. Their timing impact on any concurrent run is negligible but is noted here.
+2. **4B probe:** HF `Qwen/Qwen3-4B` (original hybrid) in bf16 with CPU offload, as specified.
+3. **Feature layout contract:**
+   - one file per layer and pooling, `L{layer:02d}_{pooling}.npy`;
+   - an `index.json` listing them under `files` and the item order under `ids`;
+   - directory names in the form `qwen3-8b`. The `qwen3-hybrid:4b` features go in `qwen3-4b`, with the model recorded in `index.json`.
+   - **Accepted.**
+4. **Holdout features:** forward-pass extraction of `holdout` (and OOD) activations before the freeze is allowed. These files must not be read by any selection or analysis code until after the freeze. WS3's `Experiment` guard governs evaluation.
+5. **Feasibility result (v1, n=128, exploratory):** a probe AUROC of 0.855 for predicting decomposed success, compared with TF-IDF 0.834 and structural features 0.787. This supports keeping F3. TF-IDF is a strong competitor; H3's probe > TF-IDF ordering is uncertain.

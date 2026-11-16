@@ -1,0 +1,26 @@
+{
+  "failures": [
+    {
+      "model": "qwen3:8b",
+      "quantization": "nf4",
+      "phase": "first warmup batch",
+      "attempted_items": 2,
+      "error": "NotImplementedError: Cannot copy out of meta tensor; no data!",
+      "cause": "Automatic CPU device mapping after bitsandbytes conversion left quantization state on meta.",
+      "wall_seconds": null,
+      "cost_limitation": "Failed load/warmup duration and peak allocation were not captured; traceback is preserved in workspace_logs/WS2-v1-features.log.",
+      "partial_feature_directory_written": false,
+      "fix": "Explicit device map before conversion; CPU embedding and output tables, NF4 transformer blocks on GPU; follow the embedding hook execution device for inputs.",
+      "verification": "Resumed 8B extraction completed for all 184 items."
+    }
+  ],
+  "process_restarts": "The original model process failed at 8B warmup. Two waiting replacement processes were stopped to load code fixes and a shorter supported lock polling interval; they had not acquired the GPU lock or loaded models. Completed feature extraction was preserved.",
+  "deviation": "The five successful configurations were completed across two GPU-owning processes instead of one uninterrupted process. No completed model extraction or Ollama formatting generation was repeated.",
+  "test_integrity_deviation": {
+    "event": "Two unguarded full-suite runs (45 tests initially, 60 in the captured later run) invoked existing WS1 tests, including DomainTests.test_scan_all_official_lines_both_executors, which reads the official length-test file. The worker did not inspect those tests before executing the suite. The number of file opens was not instrumented.",
+    "model_inference_on_official_test": false,
+    "feature_selection_using_official_test": false,
+    "mitigation": "v2/probe/safe_discovery.py blocks Path.open for the forbidden file and turns that read attempt into a skipped test. v2/probe/test_logged.py now uses the guarded route; original and guarded logs are preserved separately.",
+    "scope": "No other workstream test source or official data was edited."
+  }
+}
